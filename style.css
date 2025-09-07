@@ -1,5 +1,5 @@
 /* ==========================================================================
-   KHEM PRADHAN | Personal Visionary Platform CSS (Version 2.0)
+   KHEM PRADHAN | Personal Visionary Platform CSS (Version 2.1)
    ========================================================================== */
 
 /* -------------------------
@@ -50,7 +50,6 @@ body {
     margin: 0 auto;
 }
 
-/* A container for text-heavy sections to improve readability */
 .text-container {
     max-width: 800px;
     margin: 0 auto;
@@ -215,7 +214,6 @@ nav {
     margin-bottom: 3rem;
 }
 
-/* Callout for quotes */
 .callout {
     border-left: 4px solid var(--prana-red);
     padding-left: 2rem;
@@ -233,7 +231,6 @@ nav {
    5. Page-Specific Styles
    ------------------------- */
 
-/* Generic Page Header (for Story, Vision, etc.) */
 .page-header {
     background-color: var(--shunya-black);
     color: var(--white);
@@ -254,8 +251,7 @@ nav {
     margin: 0 auto;
 }
 
-/* Story Page Styles */
-.story-container p {
+.story-container p, .work-section ul li {
     margin-bottom: 1.5rem;
 }
 
@@ -274,6 +270,7 @@ nav {
     padding: 3rem;
     background-color: var(--manjusha-sand);
     border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
 .story-cta h3 {
@@ -282,7 +279,6 @@ nav {
     margin-bottom: 1.5rem;
 }
 
-/* Philosophy Page (Vision) Styles */
 .philosophy-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -302,7 +298,6 @@ nav {
     color: var(--prana-red);
 }
 
-/* Work (HUNATE) Page Styles */
 .work-section {
     padding-bottom: 4rem;
 }
@@ -315,7 +310,6 @@ nav {
     border-bottom: 2px solid var(--prana-red);
 }
 
-/* Join/Support Form Styles */
 .hunate-form {
     max-width: 700px;
     margin: 3rem auto 0;
@@ -345,6 +339,7 @@ nav {
     border-radius: 4px;
     font-family: var(--font-body);
     font-size: 1rem;
+    background-color: #f9f9f9;
 }
 
 .form-group textarea {
@@ -352,7 +347,6 @@ nav {
     min-height: 120px;
 }
 
-/* Journal (Updates) Page Styles */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -365,6 +359,7 @@ nav {
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.07);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
 }
 
 .blog-card:hover {
@@ -375,6 +370,8 @@ nav {
 .blog-card-link {
     text-decoration: none;
     color: inherit;
+    display: block;
+    height: 100%;
 }
 
 .blog-card-content {
@@ -396,6 +393,7 @@ nav {
     font-family: var(--font-heading);
     font-size: 1.4rem;
     margin-bottom: 0.8rem;
+    line-height: 1.3;
 }
 
 .blog-card-excerpt {
@@ -452,9 +450,18 @@ footer h3, footer h4 {
 
 .social-icons {
     margin-bottom: 1rem;
-    display: flex;
-    gap: 1.5rem;
 }
+
+/* *** NEW CSS FOR FOOTER FIX *** */
+.social-icons p {
+    margin: 0; /* Removes default paragraph spacing */
+    line-height: 1.5; /* Improves line spacing */
+}
+
+.social-icons p:first-child {
+    margin-bottom: 0.5rem; /* Adds a small gap between the two lines */
+}
+/* *** END NEW CSS *** */
 
 .footer-bottom {
     text-align: center;
@@ -474,7 +481,7 @@ footer h3, footer h4 {
     }
 
     .hero-personal-image {
-        grid-row: 1; /* Move image to the top on smaller screens */
+        grid-row: 1;
         margin: 0 auto 3rem;
     }
 
@@ -494,7 +501,7 @@ footer h3, footer h4 {
     }
 
     .nav-links {
-        display: none; /* Simplification for this example. A real mobile site needs a hamburger menu. */
+        display: none;
     }
 
     .section-title {
@@ -511,6 +518,6 @@ footer h3, footer h4 {
     }
 
     .social-icons {
-        justify-content: center;
+        display: inline-block; /* Allows centered text to work properly */
     }
 }
