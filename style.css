@@ -5,6 +5,12 @@
 /* -------------------------
    1. Root Variables & Global Styles
    ------------------------- */
+body {
+    /* ... existing styles ... */
+    overflow-wrap: break-word; /* Prevents text overflow */
+    word-wrap: break-word; /* Legacy support */
+}
+
 :root {
     /* Color Palette */
     --prana-red: #A42A28;
@@ -306,6 +312,8 @@ nav {
     padding: 2rem;
     border: 1px solid #ddd;
     border-radius: 8px;
+    background-color: var(--white); /* Explicitly set a background */
+    min-width: 0; /* A key fix for flex/grid items */
 }
 
 .philosophy-card h3 {
