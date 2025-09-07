@@ -1,0 +1,169 @@
+/* General Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color & Font Variables from Your Brand Guide */
+:root {
+    --prana-red: #A42A28;
+    --shunya-black: #1E1E1E;
+    --bhumi-clay: #D8C3A5;
+    --himal-stone: #8E8D8A;
+    --manjusha-sand: #EAE7DC;
+    --akasha-blue: #4A6D7C;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Merriweather', serif;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.7;
+    color: var(--shunya-black);
+    background-color: var(--manjusha-sand);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; color: var(--prana-red); }
+h3 { font-size: 1.5rem; color: var(--himal-stone); }
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: var(--akasha-blue);
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: var(--manjusha-sand);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--prana-red);
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav ul li {
+    margin-left: 2rem;
+}
+
+.navbar nav ul li a {
+    color: var(--shunya-black);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: var(--prana-red);
+}
+
+.cta-button {
+    background-color: var(--prana-red);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--akasha-blue);
+    color: white !important;
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 0;
+    text-align: center;
+    background-color: #f4f1eb; /* Slightly different from sand */
+}
+
+.hero h1 {
+    color: var(--shunya-black);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 1rem auto 0;
+    color: var(--himal-stone);
+}
+
+/* Content Sections */
+.content-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.content-section.bg-light {
+    background-color: #f4f1eb;
+}
+
+.content-section .container {
+    max-width: 750px;
+}
+
+.learn-more {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: transform 0.3s;
+}
+
+.learn-more:hover {
+    transform: translateX(5px);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--shunya-black);
+    color: var(--manjusha-sand);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: var(--bhumi-clay);
+    font-weight: 600;
+}
