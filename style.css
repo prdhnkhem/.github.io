@@ -1,169 +1,226 @@
-/* General Reset & Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Color & Font Variables from Your Brand Guide */
-:root {
-    --prana-red: #A42A28;
-    --shunya-black: #1E1E1E;
-    --bhumi-clay: #D8C3A5;
-    --himal-stone: #8E8D8A;
-    --manjusha-sand: #EAE7DC;
-    --akasha-blue: #4A6D7C;
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Merriweather', serif;
-}
-
+/* --- Base Styles & Typography --- */
 body {
-    font-family: var(--font-body);
-    line-height: 1.7;
-    color: var(--shunya-black);
-    background-color: var(--manjusha-sand);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    font-size: 16px;
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-h1, h2, h3 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+/* --- Header & Navigation --- */
+.main-header {
+    padding: 30px 0;
 }
 
-h1 { font-size: 3rem; }
-h2 { font-size: 2.2rem; color: var(--prana-red); }
-h3 { font-size: 1.5rem; color: var(--himal-stone); }
-
-p {
-    margin-bottom: 1.5rem;
-}
-
-a {
-    color: var(--akasha-blue);
-    text-decoration: none;
-}
-
-/* Navigation Bar */
-.navbar {
-    background: var(--manjusha-sand);
-    padding: 1.5rem 0;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.navbar .container {
+.main-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar .logo {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--prana-red);
-}
-
-.navbar nav ul {
-    list-style: none;
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    border: 3px solid #000;
+    width: 50px;
+    height: 50px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    border-radius: 50%;
 }
 
-.navbar nav ul li {
-    margin-left: 2rem;
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-.navbar nav ul li a {
-    color: var(--shunya-black);
-    font-family: var(--font-heading);
+.main-nav li {
+    margin-left: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.main-nav a:hover {
+    border-bottom-color: #000;
+}
+
+/* --- Intro Headline --- */
+.intro-headline {
+    padding: 40px 0;
+}
+
+.intro-headline h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.intro-headline .highlight {
+    background-color: #000;
+    color: #fff;
+    padding: 0 10px;
     font-weight: 600;
-    transition: color 0.3s;
 }
 
-.navbar nav ul li a:hover {
-    color: var(--prana-red);
+/* --- Portfolio Grid --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding-bottom: 60px;
 }
 
-.cta-button {
-    background-color: var(--prana-red);
-    color: white !important;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    display: block;
 }
 
-.cta-button:hover {
-    background-color: var(--akasha-blue);
-    color: white !important;
+.grid-item.tall {
+    grid-row: span 2 / span 2;
 }
 
-/* Hero Section */
-.hero {
-    padding: 6rem 0;
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease-out;
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+.grid-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 40px 20px 20px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+.grid-item:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* --- Inner Page Content --- */
+.page-header {
     text-align: center;
-    background-color: #f4f1eb; /* Slightly different from sand */
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
 }
 
-.hero h1 {
-    color: var(--shunya-black);
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-.hero p {
+.page-header p {
     font-size: 1.2rem;
+    color: #777;
     max-width: 700px;
-    margin: 1rem auto 0;
-    color: var(--himal-stone);
+    margin: 0 auto;
 }
 
-/* Content Sections */
-.content-section {
-    padding: 4rem 0;
+.content-body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.content-body h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.content-body p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* --- Contact Page --- */
+.contact-section {
     text-align: center;
+    padding: 60px 0;
 }
 
-.content-section.bg-light {
-    background-color: #f4f1eb;
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
 }
 
-.content-section .container {
-    max-width: 750px;
+.social-links li {
+    margin: 15px 0;
 }
 
-.learn-more {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    display: inline-block;
-    margin-top: 1rem;
-    transition: transform 0.3s;
+.social-links a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+}
+.social-links a:hover {
+    color: #000;
 }
 
-.learn-more:hover {
-    transform: translateX(5px);
-}
 
-/* Footer */
-.footer {
-    background-color: var(--shunya-black);
-    color: var(--manjusha-sand);
-    padding: 3rem 0;
+/* --- Footer --- */
+.main-footer {
     text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+    color: #888;
 }
 
-.footer p {
-    margin-bottom: 0.5rem;
-}
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .intro-headline h1 {
+        font-size: 2.5rem;
+    }
 
-.footer a {
-    color: var(--bhumi-clay);
-    font-weight: 600;
+    .main-header .container {
+        flex-direction: column;
+    }
+    
+    .logo { margin-bottom: 20px; }
+
+    .grid-item.tall {
+        grid-row: span 1 / span 1;
+    }
 }
