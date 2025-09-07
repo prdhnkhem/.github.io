@@ -408,6 +408,66 @@ nav {
     color: var(--shunya-black);
 }
 
+/* Support Page Styles */
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.support-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #ddd;
+}
+
+.support-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--prana-red);
+}
+
+.support-card h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.support-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.support-card ul li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.support-card ul li::before {
+    content: '•'; /* A simple bullet point */
+    position: absolute;
+    left: 0;
+    color: var(--prana-red);
+    font-weight: bold;
+}
+
+.bank-details .small-text {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 1.5rem;
+    color: #666;
+}
+
+.sponsorship-list a.btn-secondary-dark {
+    margin-top: 2rem;
+}
+
 /* -------------------------
    6. Footer
    ------------------------- */
