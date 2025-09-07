@@ -281,8 +281,25 @@ nav {
 
 .philosophy-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
+    /* On mobile, stack them in a single column by default */
+    grid-template-columns: 1fr; 
+}
+
+/* Assigning grid areas for the layout */
+#hu-card { grid-area: hu; }
+#na-card { grid-area: na; }
+#te-card { grid-area: te; }
+
+/* On larger screens (tablets and desktops), create the custom layout */
+@media (min-width: 768px) {
+    .philosophy-grid {
+        /* Define the 2x2 grid layout */
+        grid-template-areas:
+            "hu te"
+            "na na";
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+    }
 }
 
 .philosophy-card {
