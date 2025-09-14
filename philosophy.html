@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>My Philosophy | Khem Raj Pradhan</title>
+    <title>My Philosophy | Khem Pradhan</title>
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="The core philosophy of Khem Pradhan. Understanding HUNATE (Humanity, Nature, Technology), the Hunateculture design system, and the vision of the Hunatian.">
     <meta name="keywords" content="Hunate philosophy, Khem Pradhan philosophy, Hunateculture, regenerative living, ancient wisdom, systems thinking, Vastu, Ayurveda, Permaculture">
     <meta name="author" content="Khem Pradhan">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,22 +24,42 @@
 </head>
 <body>
 
-    <!-- ======================= Header & Navigation (Consistent) ======================= -->
+    <!-- ======================= Header & Navigation ======================= -->
     <header>
         <nav>
             <div class="logo">
                 <a href="index.html">KHEM</a>
             </div>
-            <ul class="nav-links">
+            <!-- Desktop Navigation -->
+            <ul class="nav-links-desktop">
                 <li><a href="story.html">My Story</a></li>
                 <li><a href="philosophy.html">My Philosophy</a></li>
-                <li><a href="work.html">The Work - HUNATE</a></li>
+                <li><a href="work.html">The Work (HUNATE)</a></li>
                 <li><a href="join.html">Work With Me</a></li>
-                <li><a href="support.html">Support the Work</a></li>
                 <li><a href="journal.html">Journal</a></li>
+                <li><a href="support.html" class="btn btn-nav-cta">Support the Work</a></li>
             </ul>
+            <!-- Mobile Navigation Hamburger Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
     </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-close">✕</div>
+        <ul>
+            <li><a href="story.html">My Story</a></li>
+            <li><a href="philosophy.html">My Philosophy</a></li>
+            <li><a href="work.html">The Work (HUNATE)</a></li>
+            <li><a href="join.html">Work With Me</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="support.html">Support the Work</a></li>
+        </ul>
+    </div>
 
     <main>
 
@@ -71,8 +94,10 @@
             </div>
         </section>
 
+        <hr class="section-divider">
+
         <!-- ======================= Hunateculture Section ======================= -->
-        <section class="content-section alternate-bg" id="hunateculture">
+        <section class="content-section" id="hunateculture">
             <div class="container text-container">
                 <h2 class="section-title">Hunateculture: The Design System for a New World</h2>
                 <p>A philosophy is useless if it cannot be lived. Hunateculture is the practical design system I have developed to translate the HUNATE philosophy into the real world. It is a synthesis of the most powerful and timeless sciences for designing a life of balance, health, and purpose.</p>
@@ -93,6 +118,8 @@
             </div>
         </section>
 
+        <hr class="section-divider">
+
         <!-- ======================= The Hunatian Section ======================= -->
         <section class="content-section" id="hunatian">
             <div class="container text-container">
@@ -103,54 +130,69 @@
                 
                 <div class="story-cta">
                     <h3>This philosophy is the foundation for action. Now, see the work it inspires.</h3>
-                    <a href="work.html" class="btn btn-primary">Discover The Work - HUNATE</a>
+                    <a href="work.html" class="btn btn-primary">Discover The Work</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-<!-- ======================= Footer ======================= -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-about">
-                <h3>KHEM RAJ PRADHAN</h3>
-                <p>Founder of the HUNATE Movement. Seeker. Builder. A citizen of Earth.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigate</h4>
-                <ul>
-                    <li><a href="story.html">My Story</a></li>
-                    <li><a href="philosophy.html">My Philosophy</a></li>
-                    <li><a href="work.html">The Work - HUNATE</a></li>
-                    <li><a href="join.html">Work With Me</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4>Connect</h4>
-                <div class="social-icons">
-                    <!-- Line 1 of Social Icons -->
-                    <p>
-                        <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">TikTok</a> |
-                        <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Facebook</a> |
-                        <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </p>
-                    <!-- Line 2 of Social Icons -->
-                    <p>
-                        <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Instagram</a> |
-                        <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-                        <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer">X</a>
-                    </p>
+    <!-- ======================= Footer (Consistent) ======================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>KHEM PRADHAN</h3>
+                    <p>Founder of the HUNATE Movement. Seeker. Builder. A citizen of Earth.</p>
                 </div>
-                <p><strong>Email:</strong> <a href="mailto:email@khemrajpradhan.com.np">email@khemrajpradhan.com.np</a></p>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="story.html">My Story</a></li>
+                        <li><a href="philosophy.html">My Philosophy</a></li>
+                        <li><a href="join.html">Work With Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">TikTok</a>
+                        <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">YouTube</a>
+                        <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer">X</a>
+                    </div>
+                    <p><strong>Email:</strong> <a href="mailto:email@khemrajpradhan.com.np">email@khemrajpradhan.com.np</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Khem Pradhan | This work is an open-source gift, built on a vow of radical transparency.</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Khem Raj Pradhan. This work is an open-source gift to the future.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.add('mobile-nav-active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('mobile-nav-active');
+        });
+        
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('mobile-nav-active');
+            });
+        });
+    </script>
 
 </body>
 </html>
