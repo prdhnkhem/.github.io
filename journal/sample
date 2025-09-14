@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- STEP 1: EDIT THE TITLE FOR EACH NEW POST -->
+    <title>Your Post Title Here | Khem Pradhan's Journal</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png"> <!-- Note the ../ -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="../style.css"> <!-- Note the ../ -->
+</head>
+<body>
+
+    <!-- ======================= Header & Navigation ======================= -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">KHEM</a> <!-- Note the ../ -->
+            </div>
+            <!-- Desktop Navigation -->
+            <ul class="nav-links-desktop">
+                <li><a href="../story.html">My Story</a></li>
+                <li><a href="../philosophy.html">My Philosophy</a></li>
+                <li><a href="../work.html">The Work (HUNATE)</a></li>
+                <li><a href="../join.html">Work With Me</a></li>
+                <li><a href="../journal.html">Journal</a></li>
+                <li><a href="../support.html" class="btn btn-nav-cta">Support the Work</a></li>
+            </ul>
+            <!-- Mobile Navigation Hamburger Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-close">✕</div>
+        <ul>
+            <li><a href="../story.html">My Story</a></li>
+            <li><a href="../philosophy.html">My Philosophy</a></li>
+            <li><a href="../work.html">The Work (HUNATE)</a></li>
+            <li><a href="../join.html">Work With Me</a></li>
+            <li><a href="../journal.html">Journal</a></li>
+            <li><a href="../support.html">Support the Work</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- ======================= Your Post Content Goes Here ======================= -->
+        <section class="content-section">
+            <div class="container text-container">
+                
+                <!-- STEP 2: EDIT THE CONTENT BELOW -->
+                
+                <h1 class="page-title">Your Post Title Here</h1>
+                <p class="page-subtitle">Category | Month Day, Year</p>
+
+                <div class="journal-post-content">
+                    <p>This is where the first paragraph of your journal entry goes. You can write as much as you want.</p>
+                    
+                    <div class="callout">
+                        <p>"You can add a powerful quote or a key insight here using the callout style."</p>
+                    </div>
+
+                    <p>This is where the rest of your content goes. You can add as many paragraphs as you need to fully express your thoughts and tell your story.</p>
+                </div>
+
+                <!-- A link to go back to the main journal page -->
+                <a href="../journal.html" class="btn btn-secondary-dark" style="margin-top: 3rem;">&larr; Back to Journal</a>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= Footer (Consistent) ======================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>KHEM PRADHAN</h3>
+                    <p>Founder of the HUNATE Movement. Seeker. Builder. A citizen of Earth.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="../story.html">My Story</a></li>
+                        <li><a href="../philosophy.html">My Philosophy</a></li>
+                        <li><a href="../join.html">Work With Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">TikTok</a>
+                        <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">YouTube</a>
+                        <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer">X</a>
+                    </div>
+                    <p><strong>Email:</strong> <a href="mailto:email@khemrajpradhan.com.np">email@khemrajpradhan.com.np</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Khem Pradhan | This work is an open-source gift, built on a vow of radical transparency.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu (Consistent) -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.add('mobile-nav-active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('mobile-nav-active');
+        });
+        
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('mobile-nav-active');
+            });
+        });
+    </script>
+
+</body>
+</html>
