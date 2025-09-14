@@ -1,25 +1,17 @@
 /* ==========================================================================
-   KHEM PRADHAN | Personal Visionary Platform CSS (Version 2.1)
+   KHEM PRADHAN | Personal Visionary Platform CSS (Version 3.1)
    ========================================================================== */
 
 /* -------------------------
    1. Root Variables & Global Styles
    ------------------------- */
-body {
-    /* ... existing styles ... */
-    overflow-wrap: break-word; /* Prevents text overflow */
-    word-wrap: break-word; /* Legacy support */
-}
-
 :root {
     /* Color Palette */
     --prana-red: #A42A28;
     --shunya-black: #1E1E1E;
     --manjusha-sand: #EAE7DC;
     --himal-stone: #8E8D8A;
-    --akasha-blue: #4A6D7C;
     --white: #FFFFFF;
-    --light-gray: #f4f4f4;
     --text-color: #333333;
 
     /* Typography */
@@ -48,6 +40,8 @@ body {
     line-height: 1.8;
     font-size: 17px;
     -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .container {
@@ -65,7 +59,7 @@ body {
    2. Header & Navigation
    ------------------------- */
 header {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(234, 231, 220, 0.85); /* Semi-transparent Sand */
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #ddd;
     position: sticky;
@@ -91,13 +85,14 @@ nav {
     letter-spacing: 1px;
 }
 
-.nav-links {
+.nav-links-desktop {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 2.5rem;
 }
 
-.nav-links a {
+.nav-links-desktop a {
     text-decoration: none;
     color: var(--shunya-black);
     font-family: var(--font-heading);
@@ -107,7 +102,7 @@ nav {
     padding-bottom: 5px;
 }
 
-.nav-links a::after {
+.nav-links-desktop a:not(.btn-nav-cta)::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -118,17 +113,90 @@ nav {
     transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links-desktop a:not(.btn-nav-cta):hover::after {
     width: 100%;
 }
 
+.btn-nav-cta {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--prana-red);
+    color: var(--white);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-nav-cta:hover {
+    background-color: #8C2321;
+    transform: translateY(-2px);
+}
+
 /* -------------------------
-   3. Hero Section (Personal)
+   3. Mobile Navigation
+   ------------------------- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: var(--shunya-black);
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--shunya-black);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.4s ease-in-out;
+}
+
+.mobile-nav-active {
+    left: 0;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav ul li {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.mobile-nav ul a {
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.mobile-nav-close {
+    position: absolute;
+    top: 2rem;
+    right: var(--container-padding);
+    color: var(--white);
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+/* -------------------------
+   4. Hero Section (Personal)
    ------------------------- */
 .hero-personal {
     background-color: var(--white);
     padding: var(--section-padding);
-    min-height: 80vh;
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
 }
@@ -165,7 +233,7 @@ nav {
 }
 
 /* -------------------------
-   4. Reusable Components
+   5. Reusable Components
    ------------------------- */
 .btn {
     display: inline-block;
@@ -208,10 +276,6 @@ nav {
     padding: var(--section-padding);
 }
 
-.alternate-bg {
-    background-color: var(--white);
-}
-
 .section-title {
     font-family: var(--font-heading);
     font-size: 2.8rem;
@@ -229,12 +293,19 @@ nav {
     color: var(--shunya-black);
 }
 
-.callout p {
-    margin: 0;
+.callout p { margin: 0; }
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* -------------------------
-   5. Page-Specific Styles
+   6. Page-Specific Styles
    ------------------------- */
 
 .page-header {
@@ -274,9 +345,8 @@ nav {
     text-align: center;
     margin-top: 4rem;
     padding: 3rem;
-    background-color: var(--manjusha-sand);
-    border-radius: 8px;
     border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
 .story-cta h3 {
@@ -287,33 +357,20 @@ nav {
 
 .philosophy-grid {
     display: grid;
-    gap: 2.5rem;
-    /* On mobile, stack them in a single column by default */
-    grid-template-columns: 1fr; 
+    gap: 2rem;
+    grid-template-columns: 1fr;
 }
 
-/* Assigning grid areas for the layout */
 #hu-card { grid-area: hu; }
 #na-card { grid-area: na; }
 #te-card { grid-area: te; }
-
-/* On larger screens (tablets and desktops), create the custom layout */
-@media (min-width: 768px) {
-    .philosophy-grid {
-        /* Define the 2x2 grid layout */
-        grid-template-areas:
-            "hu te"
-            "na na";
-        grid-template-columns: 1fr 1fr; /* Two equal columns */
-    }
-}
 
 .philosophy-card {
     padding: 2rem;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: var(--white); /* Explicitly set a background */
-    min-width: 0; /* A key fix for flex/grid items */
+    background-color: var(--white);
+    min-width: 0;
 }
 
 .philosophy-card h3 {
@@ -321,10 +378,6 @@ nav {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--prana-red);
-}
-
-.work-section {
-    padding-bottom: 4rem;
 }
 
 .work-section h3 {
@@ -335,41 +388,23 @@ nav {
     border-bottom: 2px solid var(--prana-red);
 }
 
-.hunate-form {
-    max-width: 700px;
-    margin: 3rem auto 0;
-    background: var(--white);
-    padding: 3rem;
+.collaborate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.collaborate-card {
+    padding: 2rem;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
+.collaborate-card h3 {
     font-family: var(--font-heading);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    background-color: #f9f9f9;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .blog-grid {
@@ -399,9 +434,7 @@ nav {
     height: 100%;
 }
 
-.blog-card-content {
-    padding: 1.5rem;
-}
+.blog-card-content { padding: 1.5rem; }
 
 .blog-card-category {
     font-family: var(--font-heading);
@@ -433,68 +466,8 @@ nav {
     color: var(--shunya-black);
 }
 
-/* Support Page Styles */
-.support-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2.5rem;
-    margin-top: 3rem;
-}
-
-.support-card {
-    background-color: var(--white);
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    border: 1px solid #ddd;
-}
-
-.support-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--prana-red);
-}
-
-.support-card h4 {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.support-card ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.support-card ul li {
-    margin-bottom: 0.75rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.support-card ul li::before {
-    content: '•'; /* A simple bullet point */
-    position: absolute;
-    left: 0;
-    color: var(--prana-red);
-    font-weight: bold;
-}
-
-.bank-details .small-text {
-    font-size: 0.9rem;
-    font-style: italic;
-    margin-top: 1.5rem;
-    color: #666;
-}
-
-.sponsorship-list a.btn-secondary-dark {
-    margin-top: 2rem;
-}
-
 /* -------------------------
-   6. Footer
+   7. Footer
    ------------------------- */
 footer {
     background-color: var(--shunya-black);
@@ -515,13 +488,8 @@ footer h3, footer h4 {
     margin-bottom: 1rem;
 }
 
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links ul li {
-    margin-bottom: 0.5rem;
-}
+.footer-links ul { list-style: none; }
+.footer-links ul li { margin-bottom: 0.5rem; }
 
 .footer-links a, .footer-social a {
     text-decoration: none;
@@ -535,18 +503,10 @@ footer h3, footer h4 {
 
 .social-icons {
     margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    gap: 1rem;
 }
-
-/* *** NEW CSS FOR FOOTER FIX *** */
-.social-icons p {
-    margin: 0; /* Removes default paragraph spacing */
-    line-height: 1.5; /* Improves line spacing */
-}
-
-.social-icons p:first-child {
-    margin-bottom: 0.5rem; /* Adds a small gap between the two lines */
-}
-/* *** END NEW CSS *** */
 
 .footer-bottom {
     text-align: center;
@@ -557,8 +517,17 @@ footer h3, footer h4 {
 }
 
 /* -------------------------
-   7. Responsive Design
+   8. Responsive Design
    ------------------------- */
+@media (min-width: 768px) {
+    .philosophy-grid {
+        grid-template-areas:
+            "hu te"
+            "na na";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 992px) {
     .hero-personal-layout {
         grid-template-columns: 1fr;
@@ -570,39 +539,16 @@ footer h3, footer h4 {
         margin: 0 auto 3rem;
     }
 
-    .hero-personal-text .headline-personal {
-        font-size: 2.8rem;
-    }
-
-    .hero-personal-text .subheadline-personal {
-        margin-left: auto;
-        margin-right: auto;
-    }
+    .hero-personal-text .headline-personal { font-size: 2.8rem; }
+    .hero-personal-text .subheadline-personal { margin-left: auto; margin-right: auto; }
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .section-title {
-        font-size: 2.2rem;
-    }
-
-    .page-title {
-        font-size: 2.5rem;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .social-icons {
-        display: inline-block; /* Allows centered text to work properly */
-    }
+    body { font-size: 16px; }
+    .nav-links-desktop { display: none; }
+    .hamburger { display: block; }
+    .section-title { font-size: 2.2rem; }
+    .page-title { font-size: 2.5rem; }
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+    .social-icons { justify-content: center; }
 }
