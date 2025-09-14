@@ -7,9 +7,12 @@
     <title>Khem Pradhan | A Vow to Redesign Life</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="I am Khem Raj Pradhan, a seeker, a builder, and the founder of the HUNATE Movement. This is my story, my philosophy, and my work to build a regenerative future.">
-    <meta name="keywords" content="Khem Raj Pradhan, HUNATE, The Joon Project, Visionary, Nepal, Spiritual Journey, Failing Social System, Regenerative Living">
-    <meta name="author" content="Khem Raj Pradhan">
+    <meta name="description" content="I am Khem Pradhan, a seeker, a builder, and the founder of the HUNATE Movement. This is my story, my philosophy, and my work to build a regenerative future.">
+    <meta name="keywords" content="Khem Pradhan, HUNATE, The Joon Project, Visionary, Nepal, Spiritual Journey, Failing Social System, Regenerative Living">
+    <meta name="author" content="Khem Pradhan">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,16 +30,38 @@
             <div class="logo">
                 <a href="index.html">KHEM</a>
             </div>
-            <ul class="nav-links">
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-links-desktop">
                 <li><a href="story.html">My Story</a></li>
                 <li><a href="philosophy.html">My Philosophy</a></li>
-                <li><a href="work.html">The Work - HUNATE</a></li>
+                <li><a href="work.html">The Work (HUNATE)</a></li>
                 <li><a href="join.html">Work With Me</a></li>
-                <li><a href="support.html">Support the Work</a></li>
                 <li><a href="journal.html">Journal</a></li>
+                <li><a href="support.html" class="btn btn-nav-cta">Support the Work</a></li>
             </ul>
+
+            <!-- Mobile Navigation Hamburger Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
     </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-close">✕</div>
+        <ul>
+            <li><a href="story.html">My Story</a></li>
+            <li><a href="philosophy.html">My Philosophy</a></li>
+            <li><a href="work.html">The Work (HUNATE)</a></li>
+            <li><a href="join.html">Work With Me</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="support.html">Support the Work</a></li>
+        </ul>
+    </div>
 
     <main>
 
@@ -44,8 +69,8 @@
         <section class="hero-personal">
             <div class="container hero-personal-layout">
                 <div class="hero-personal-text">
-                    <h1 class="headline-personal">My Life is a Story of Breaking Free from a System that is Failing US All.</h1>
-                    <p class="subheadline-personal">I am Khem Raj Pradhan. I am a seeker born in the Hills, who walked through the fire of addiction, a builder who learned from the soil, and a visionary who believes we must redesign our world from the inside out. This is my vow, and the work it has inspired.</p>
+                    <h1 class="headline-personal">My life is a story of breaking free from a system that is failing us all.</h1>
+                    <p class="subheadline-personal">I am Khem Pradhan. I am a seeker born in the hills, who walked through the fire of addiction, a builder who learned from the soil, and a visionary who believes we must redesign our world from the inside out. This is my vow, and the work it has inspired.</p>
                     <a href="story.html" class="btn btn-primary">Read My Story</a>
                 </div>
                 <div class="hero-personal-image">
@@ -54,20 +79,24 @@
             </div>
         </section>
 
-        <!-- ======================= The Core Question Section ======================= -->
+        <hr class="section-divider">
+
+        <!-- ======================= The Core Philosophy Section ======================= -->
         <section class="content-section" id="philosophy-intro">
             <div class="container text-container">
                 <h2 class="section-title">My Core Philosophy</h2>
                 <div class="callout">
                     <p>"I look at our world and I see a deep imbalance. We are taught to chase profit over purpose, comfort over connection, and knowledge over wisdom. This is not an accident; it is the design of a failing system. My work is to offer a new design."</p>
                 </div>
-                <p>I believe that true health and freedom are our birthright, but they have been stolen by systems that profit from our dependency. True education doesn't happen in a classroom; it happens in nature, in community, and in the quiet exploration of our own souls. I believe we must unlearn the lies we've been taught to remember the ancient truths that live within us: that we are inseparable from nature, and that our greatest purpose is to leave the world better than we found it.</p>
+                <p>I believe that true health and freedom are our birthright, but they have been stolen by systems that profit from our dependency. True education doesn't happen in a classroom; it happens in nature, in community, and in the quiet exploration of our own soul. I believe we must unlearn the lies we've been taught to remember the ancient truths that live within us: that we are inseparable from nature, and that our greatest purpose is to leave the world better than we found it.</p>
                 <a href="philosophy.html" class="btn btn-secondary-dark">Explore My Philosophy</a>
             </div>
         </section>
         
+        <hr class="section-divider">
+
         <!-- ======================= The Work (HUNATE) Section ======================= -->
-        <section class="content-section alternate-bg" id="work-intro">
+        <section class="content-section" id="work-intro">
             <div class="container text-container">
                 <h2 class="section-title">The Work: HUNATE</h2>
                 <p>Philosophy without action is just a dream. To make my vision real, I created the **HUNATE Movement**. It is not an organization; it is the tangible work of redesigning life. It is my answer to the failing system.</p>
@@ -75,6 +104,8 @@
                 <a href="work.html" class="btn btn-primary">Discover the Work</a>
             </div>
         </section>
+
+        <hr class="section-divider">
 
         <!-- ======================= The Invitation Section ======================= -->
         <section class="content-section" id="invitation">
@@ -87,46 +118,63 @@
 
     </main>
 
-<!-- ======================= Footer ======================= -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-about">
-                <h3>KHEM RAJ PRADHAN</h3>
-                <p>Founder of the HUNATE Movement. Seeker. Builder. A citizen of Earth.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigate</h4>
-                <ul>
-                    <li><a href="story.html">My Story</a></li>
-                    <li><a href="philosophy.html">My Philosophy</a></li>
-                    <li><a href="work.html">The Work - HUNATE</a></li>
-                    <li><a href="join.html">Work With Me</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4>Connect</h4>
-                <div class="social-icons">
-                    <!-- Line 1 of Social Icons -->
-                    <p>
-                        <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">TikTok</a> |
-                        <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Facebook</a> |
-                        <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </p>
-                    <!-- Line 2 of Social Icons -->
-                    <p>
-                        <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Instagram</a> |
-                        <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-                        <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer">X</a>
-                    </p>
+    <!-- ======================= Footer ======================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>KHEM PRADHAN</h3>
+                    <p>Founder of the HUNATE Movement. Seeker. Builder. A citizen of Earth.</p>
                 </div>
-                <p><strong>Email:</strong> <a href="mailto:email@khemrajpradhan.com.np">email@khemrajpradhan.com.np</a></p>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="story.html">My Story</a></li>
+                        <li><a href="philosophy.html">My Philosophy</a></li>
+                        <li><a href="join.html">Work With Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">TikTok</a>
+                        <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">YouTube</a>
+                        <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer">X</a>
+                    </div>
+                    <p><strong>Email:</strong> <a href="mailto:email@khemrajpradhan.com.np">email@khemrajpradhan.com.np</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Khem Pradhan | This work is an open-source gift, built on a vow of radical transparency.</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Khem Raj Pradhan. This work is an open-source gift to the future.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.add('mobile-nav-active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('mobile-nav-active');
+        });
+
+        // Optional: Close menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('mobile-nav-active');
+            });
+        });
+    </script>
+
 </body>
 </html>
