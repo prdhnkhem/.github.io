@@ -11,6 +11,9 @@
     <meta name="keywords" content="support Khem Pradhan, donate Hunate, Hunate financials, citizen-led movement, radical transparency">
     <meta name="author" content="Khem Pradhan">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,22 +24,42 @@
 </head>
 <body>
 
-    <!-- ======================= Header & Navigation (Consistent) ======================= -->
+    <!-- ======================= Header & Navigation ======================= -->
     <header>
         <nav>
             <div class="logo">
                 <a href="index.html">KHEM</a>
             </div>
-            <ul class="nav-links">
+            <!-- Desktop Navigation -->
+            <ul class="nav-links-desktop">
                 <li><a href="story.html">My Story</a></li>
                 <li><a href="philosophy.html">My Philosophy</a></li>
-                <li><a href="work.html">The Work - HUNATE</a></li>
+                <li><a href="work.html">The Work (HUNATE)</a></li>
                 <li><a href="join.html">Work With Me</a></li>
-                <li><a href="support.html">Support the Work</a></li>
                 <li><a href="journal.html">Journal</a></li>
+                <li><a href="support.html" class="btn btn-nav-cta">Support the Work</a></li>
             </ul>
+            <!-- Mobile Navigation Hamburger Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
     </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-close">✕</div>
+        <ul>
+            <li><a href="story.html">My Story</a></li>
+            <li><a href="philosophy.html">My Philosophy</a></li>
+            <li><a href="work.html">The Work (HUNATE)</a></li>
+            <li><a href="join.html">Work With Me</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="support.html">Support the Work</a></li>
+        </ul>
+    </div>
 
     <main>
 
@@ -52,35 +75,32 @@
         <section class="content-section" id="financials">
             <div class="container text-container">
                 <h2 class="section-title">My Vow of Radical Transparency</h2>
-                <p>I have chosen to operate this movement as a citizen, not as a registered NGO. I believe the systems of regulation and bureaucracy often create more problems than they solve. My accountability is not to a government office; it is to you. I build trust not with paperwork, but with undeniable proof.</p>
+                <p>I have chosen to operate this movement as a citizen, not as a registered NGO. My accountability is not to a government office; it is to you—my community. I build trust not with paperwork, but with undeniable proof. Every rupee received and every rupee spent on this work is documented here, live and in public, for the world to see.</p>
                 <div class="callout">
-                    <p>Every contribution I receive and every rupee I spend on this work is documented in a public ledger, updated every 24 hours. My finances, like my philosophy, are an open book.</p>
+                    <p>This is my personal bank account, used with full transparency for this mission. Every transaction is logged and made public within 24 hours.</p>
                 </div>
                 
-                <div class="ledger-container">
-                    <h3>Live Financial Ledger</h3>
-                    <p>This is a real-time record of all financial contributions and expenditures for the HUNATE Movement.</p>
-                    <div class="ledger-embed">
-                        <!-- INSTRUCTION: Replace the 'src' attribute below with the embed link from your public Google Sheet -->
-                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ.../pubhtml?widget=true&amp;headers=false" frameborder="0"></iframe>
-                    </div>
+                <div class="ledger-container" style="text-align: center; margin-top: 2rem;">
+                     <h3>Live Financial Ledger</h3>
+                    <!-- INSTRUCTION: Replace the 'src' attribute below with the embed link from your public Google Sheet -->
+                    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ.../pubhtml?widget=true&amp;headers=false" frameborder="0" style="width: 100%; height: 400px; border: 1px solid #ddd; border-radius: 8px;"></iframe>
                 </div>
             </div>
         </section>
 
+        <hr class="section-divider">
+
         <!-- ======================= Ways to Support Section ======================= -->
-        <section class="content-section alternate-bg" id="ways-to-support">
+        <section class="content-section" id="ways-to-support">
             <div class="container">
                 <h2 class="section-title">How You Can Contribute</h2>
                 <div class="support-grid">
-        
                     <!-- Card 1: Financial Support -->
                     <div class="support-card">
                         <h3>Financial Support (Donate)</h3>
-                        <p>Your financial support directly fuels the on-the-ground work. It covers the costs of travel for my engineers, the purchase of seeds for a new family farm, or the tools needed for a construction workshop. This is a direct, citizen-to-citizen investment in our shared future.</p>
+                        <p>Your financial contribution directly fuels the on-the-ground work. It covers the costs of travel for my engineers, the purchase of seeds for a new family farm, or the tools needed for a construction workshop.</p>
                         <div class="bank-details">
                             <h4>Direct Bank Transfer</h4>
-                            <p>To contribute, you can transfer directly to my personal account, which I use with full transparency for this mission.</p>
                             <ul>
                                 <li><strong>Account Name:</strong> Khem Raj Pradhan</li>
                                 <li><strong>Bank Name:</strong> Nabil Bank</li>
@@ -88,10 +108,11 @@
                                 <li><strong>Branch:</strong> Damak</li>
                                 <li><strong>SWIFT Code:</strong> NARBNPKA</li>
                             </ul>
-                            <p class="small-text">Please include "For HUNATE" in the transaction remarks so I can log it correctly.</p>
+                            <p class="small-text">Please include "For HUNATE" in the transaction remarks.</p>
                         </div>
+                         <a href="https://forms.gle/hnXJoUNrXFzDEUFH8" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-top: 1.5rem;">Register Your Donation</a>
                     </div>
-        
+
                     <!-- Card 2: In-Kind Support -->
                     <div class="support-card">
                         <h3>In-Kind Support (Sponsor)</h3>
@@ -100,62 +121,76 @@
                             <h4>Current Needs for the Work:</h4>
                             <ul>
                                 <li><strong>For the Soil:</strong> Native seeds, fruit tree saplings, quality farming tools.</li>
-                                <li><strong>For Building:</strong> Natural materials like bamboo, stone, and wood; construction tools.</li>
-                                <li><strong>For Learning:</strong> Laptops and cameras for my engineers; books and supplies for the children in our partner orphanages.</li>
-                                <li><strong>For Energy:</strong> Solar panels, batteries, and components for biogas systems.</li>
+                                <li><strong>For Building:</strong> Natural materials like bamboo, stone, and wood.</li>
+                                <li><strong>For Learning:</strong> Laptops, cameras, and educational supplies.</li>
+                                <li><strong>For Energy:</strong> Solar panels, batteries, and biogas components.</li>
                             </ul>
-                            <p>If you or your organization can help with these, please send me a message.</p>
-                            <a href="join.html#application-form" class="btn btn-secondary-dark">Offer Sponsorship</a>
+                            <p>If you can help with these, please fill out our sponsorship form to begin the conversation.</p>
+                            <a href="https://forms.gle/hnXJoUNrXFzDEUFH8" class="btn btn-secondary-dark" target="_blank" rel="noopener noreferrer">Offer Sponsorship</a>
                         </div>
                     </div>
-        
                 </div>
             </div>
         </section>
-        
+
     </main>
 
-<!-- ======================= Footer ======================= -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-about">
-                <h3>KHEM RAJ PRADHAN</h3>
-                <p>Founder of the HUNATE Movement. Seeker. Builder. A citizen of Earth.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigate</h4>
-                <ul>
-                    <li><a href="story.html">My Story</a></li>
-                    <li><a href="philosophy.html">My Philosophy</a></li>
-                    <li><a href="work.html">The Work - HUNATE</a></li>
-                    <li><a href="join.html">Work With Me</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4>Connect</h4>
-                <div class="social-icons">
-                    <!-- Line 1 of Social Icons -->
-                    <p>
-                        <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">TikTok</a> |
-                        <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Facebook</a> |
-                        <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </p>
-                    <!-- Line 2 of Social Icons -->
-                    <p>
-                        <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Instagram</a> |
-                        <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-                        <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer">X</a>
-                    </p>
+    <!-- ======================= Footer (Consistent) ======================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>KHEM PRADHAN</h3>
+                    <p>Founder of the HUNATE Movement. Seeker. Builder. A citizen of Earth.</p>
                 </div>
-                <p><strong>Email:</strong> <a href="mailto:email@khemrajpradhan.com.np">email@khemrajpradhan.com.np</a></p>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="story.html">My Story</a></li>
+                        <li><a href="philosophy.html">My Philosophy</a></li>
+                        <li><a href="join.html">Work With Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">TikTok</a>
+                        <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">YouTube</a>
+                        <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer">X</a>
+                    </div>
+                    <p><strong>Email:</strong> <a href="mailto:email@khemrajpradhan.com.np">email@khemrajpradhan.com.np</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Khem Pradhan | This work is an open-source gift, built on a vow of radical transparency.</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Khem Raj Pradhan. This work is an open-source gift to the future.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.add('mobile-nav-active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('mobile-nav-active');
+        });
+        
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('mobile-nav-active');
+            });
+        });
+    </script>
 
 </body>
 </html>
