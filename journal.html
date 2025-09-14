@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Journal | Khem Raj Pradhan</title>
+    <title>Journal | Khem Pradhan</title>
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="The personal journal of Khem Pradhan, founder of the HUNATE Movement. Read my unfiltered reflections on life, the failing system, and the journey of building a regenerative future.">
     <meta name="keywords" content="Khem Pradhan journal, Hunate blog, spiritual reflections, social commentary, Nepal">
     <meta name="author" content="Khem Pradhan">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,22 +24,42 @@
 </head>
 <body>
 
-    <!-- ======================= Header & Navigation (Consistent) ======================= -->
+    <!-- ======================= Header & Navigation ======================= -->
     <header>
         <nav>
             <div class="logo">
                 <a href="index.html">KHEM</a>
             </div>
-            <ul class="nav-links">
+            <!-- Desktop Navigation -->
+            <ul class="nav-links-desktop">
                 <li><a href="story.html">My Story</a></li>
                 <li><a href="philosophy.html">My Philosophy</a></li>
-                <li><a href="work.html">The Work - HUNATE</a></li>
+                <li><a href="work.html">The Work (HUNATE)</a></li>
                 <li><a href="join.html">Work With Me</a></li>
-                <li><a href="support.html">Support the Work</a></li>
                 <li><a href="journal.html">Journal</a></li>
+                <li><a href="support.html" class="btn btn-nav-cta">Support the Work</a></li>
             </ul>
+            <!-- Mobile Navigation Hamburger Icon -->
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
     </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-close">✕</div>
+        <ul>
+            <li><a href="story.html">My Story</a></li>
+            <li><a href="philosophy.html">My Philosophy</a></li>
+            <li><a href="work.html">The Work (HUNATE)</a></li>
+            <li><a href="join.html">Work With Me</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="support.html">Support the Work</a></li>
+        </ul>
+    </div>
 
     <main>
 
@@ -48,26 +71,27 @@
             </div>
         </section>
 
-        <!-- ======================= Updates/Blog Grid Section ======================= -->
+        <!-- ======================= Blog Grid Section ======================= -->
         <section class="content-section" id="updates-grid">
             <div class="container">
                 <div class="blog-grid">
 
-                    <!-- Journal Entry Card 1 -->
+                    <!-- Sample Blog Post Card 1 -->
                     <article class="blog-card">
+                        <!-- IMPORTANT: Change the href to the actual file path of your post -->
                         <a href="journal/boredom.html" class="blog-card-link">
                             <div class="blog-card-content">
                                 <span class="blog-card-category">Reflection | Sep 05, 2025</span>
                                 <h3 class="blog-card-title">We Have Forgotten How to Be Bored</h3>
-                                <p class="blog-card-excerpt">In the endless scroll, we have lost the sacred space of stillness. Boredom is not emptiness; it is the fertile ground where creativity and self-reflection are born. I see our addiction to distraction as one of the greatest diseases of our time, and the cure is simply to be present.</p>
+                                <p class="blog-card-excerpt">In the endless scroll, we have lost the sacred space of stillness. Boredom is not emptiness; it is the fertile ground where creativity and self-reflection are born. I see our addiction to distraction as one of the greatest diseases of our time.</p>
                                 <span class="blog-card-readmore">Read Full Entry &rarr;</span>
                             </div>
                         </a>
                     </article>
 
-                    <!-- Journal Entry Card 2 -->
+                    <!-- Sample Blog Post Card 2 -->
                     <article class="blog-card">
-                        <a href="#" class="blog-card-link">
+                        <a href="journal/farmer-wisdom.html" class="blog-card-link">
                             <div class="blog-card-content">
                                 <span class="blog-card-category">Field Note | Aug 28, 2025</span>
                                 <h3 class="blog-card-title">The Old Farmer Who Taught Me About Time</h3>
@@ -77,74 +101,86 @@
                         </a>
                     </article>
 
-                    <!-- Journal Entry Card 3 -->
+                    <!-- Sample Blog Post Card 3 -->
                     <article class="blog-card">
-                        <a href="#" class="blog-card-link">
+                        <a href="journal/handbook-complete.html" class="blog-card-link">
                             <div class="blog-card-content">
                                 <span class="blog-card-category">Update | Aug 15, 2025</span>
                                 <h3 class="blog-card-title">The First Draft of the Hunateculture Handbook is Complete</h3>
-                                <p class="blog-card-excerpt">After months of writing and synthesis, the foundational guide for our work is ready. It feels less like a book I wrote and more like a story I remembered. Now, the real work begins: taking these words and turning them into living, breathing realities on the ground.</p>
+                                <p class="blog-card-excerpt">After months of writing and synthesis, the foundational guide for our work is ready. It feels less like a book I wrote and more like a story I remembered. Now, the real work begins: taking these words and turning them into living realities.</p>
                                 <span class="blog-card-readmore">Read Full Entry &rarr;</span>
                             </div>
                         </a>
                     </article>
-                    
-                    <!-- Add more <article class="blog-card"> elements for new journal entries -->
 
                 </div>
 
                 <!-- Pagination (Optional) -->
-                <div class="pagination">
-                    <a href="#" class="page-number current">1</a>
-                    <a href="#" class="page-number">2</a>
-                    <a href="#" class="page-next">&raquo;</a>
+                <div class="pagination" style="text-align: center; margin-top: 4rem;">
+                    <!-- You can add more page numbers here later -->
+                    <span style="padding: 10px 15px; border: 1px solid #ddd; background: var(--prana-red); color: var(--white);">1</span>
                 </div>
             </div>
         </section>
 
     </main>
 
-<!-- ======================= Footer ======================= -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-about">
-                <h3>KHEM RAJ PRADHAN</h3>
-                <p>Founder of the HUNATE Movement. Seeker. Builder. A citizen of Earth.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigate</h4>
-                <ul>
-                    <li><a href="story.html">My Story</a></li>
-                    <li><a href="philosophy.html">My Philosophy</a></li>
-                    <li><a href="work.html">The Work - HUNATE</a></li>
-                    <li><a href="join.html">Work With Me</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4>Connect</h4>
-                <div class="social-icons">
-                    <!-- Line 1 of Social Icons -->
-                    <p>
-                        <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">TikTok</a> |
-                        <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Facebook</a> |
-                        <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </p>
-                    <!-- Line 2 of Social Icons -->
-                    <p>
-                        <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Instagram</a> |
-                        <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-                        <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer">X</a>
-                    </p>
+    <!-- ======================= Footer (Consistent) ======================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>KHEM PRADHAN</h3>
+                    <p>Founder of the HUNATE Movement. Seeker. Builder. A citizen of Earth.</p>
                 </div>
-                <p><strong>Email:</strong> <a href="mailto:email@khemrajpradhan.com.np">email@khemrajpradhan.com.np</a></p>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="story.html">My Story</a></li>
+                        <li><a href="philosophy.html">My Philosophy</a></li>
+                        <li><a href="join.html">Work With Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">TikTok</a>
+                        <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer">YouTube</a>
+                        <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer">X</a>
+                    </div>
+                    <p><strong>Email:</strong> <a href="mailto:email@khemrajpradhan.com.np">email@khemrajpradhan.com.np</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Khem Pradhan | This work is an open-source gift, built on a vow of radical transparency.</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Khem Raj Pradhan. This work is an open-source gift to the future.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.add('mobile-nav-active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('mobile-nav-active');
+        });
+        
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('mobile-nav-active');
+            });
+        });
+    </script>
 
 </body>
 </html>
