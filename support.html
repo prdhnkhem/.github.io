@@ -195,9 +195,29 @@
             </div>
         </div>
     </footer>
-
+    
     <script>
-        // JS for mobile menu
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.add('mobile-nav-active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('mobile-nav-active');
+        });
+
+        // Optional: Close menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('mobile-nav-active');
+            });
+        });
     </script>
 </body>
 </html>
