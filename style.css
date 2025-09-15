@@ -1,0 +1,124 @@
+/* ==========================================================================
+   KHEM RAJ PRADHAN | The Modern & Direct Manifesto CSS (Version 6.0)
+   ========================================================================== */
+
+/* -------------------------
+   1. Root Variables & Global Styles
+   ------------------------- */
+:root {
+    --prana-red: #A42A28;
+    --shunya-black: #1A1A1A;
+    --manjusha-sand: #EAE7DC;
+    --himal-stone: #8E8D8A;
+    --white: #FFFFFF;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Source Sans Pro', sans-serif;
+    --container-padding: 5%;
+    --section-padding: 5rem 0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-body);
+    background-color: var(--shunya-black);
+    color: var(--manjusha-sand);
+    line-height: 1.8;
+    font-size: 19px;
+    -webkit-font-smoothing: antialiased;
+}
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+.text-container { max-width: 800px; margin: 0 auto; }
+
+/* -------------------------
+   2. Header & Navigation
+   ------------------------- */
+header {
+    background-color: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+nav { display: flex; justify-content: space-between; align-items: center; padding: 0 var(--container-padding); height: 80px; }
+.logo a { font-family: var(--font-heading); font-weight: 700; font-size: 1.8rem; text-decoration: none; color: var(--white); }
+.nav-links-desktop { list-style: none; display: flex; align-items: center; gap: 2.5rem; }
+.nav-links-desktop a { text-decoration: none; color: var(--manjusha-sand); font-family: var(--font-heading); font-weight: 600; font-size: 1rem; transition: color 0.3s ease; }
+.nav-links-desktop a:hover { color: var(--prana-red); }
+
+/* -------------------------
+   3. Mobile Navigation
+   ------------------------- */
+.hamburger { display: none; cursor: pointer; z-index: 2001; }
+.hamburger .line { width: 30px; height: 3px; background-color: var(--manjusha-sand); margin: 6px 0; transition: all 0.3s ease; }
+.mobile-nav { position: fixed; top: 0; left: 100%; width: 100%; height: 100vh; background-color: var(--shunya-black); z-index: 2000; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: left 0.4s cubic-bezier(0.77, 0, 0.175, 1); }
+.mobile-nav-active { left: 0; }
+.mobile-nav ul { list-style: none; }
+.mobile-nav ul li { margin-bottom: 2.5rem; text-align: center; }
+.mobile-nav ul a { color: var(--white); font-family: var(--font-heading); font-size: 2rem; text-decoration: none; }
+.mobile-nav-close { position: absolute; top: 1.5rem; right: var(--container-padding); color: var(--white); font-size: 2.8rem; cursor: pointer; line-height: 1; }
+
+/* -------------------------
+   4. Reusable Components & Typography
+   ------------------------- */
+h1, h2, h3, h4, h5 { font-family: var(--font-heading); color: var(--white); font-style: normal; }
+h1 { font-size: 3.5rem; font-weight: 700; line-height: 1.2; }
+h2 { font-size: 3rem; text-align: center; margin-bottom: 2rem; }
+p { margin-bottom: 1.5rem; }
+a { color: var(--prana-red); text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul, ol { padding-left: 20px; margin-bottom: 1.5rem; }
+.content-section { padding: var(--section-padding); }
+.section-intro { text-align: center; font-size: 1.2rem; max-width: 700px; margin: -1rem auto 4rem auto; color: var(--himal-stone); }
+.section-divider { border: 0; height: 1px; background-color: #333; width: 50%; max-width: 100px; margin: 0 auto; }
+.btn { display: inline-block; padding: 1rem 2.5rem; font-family: var(--font-heading); font-weight: 700; text-decoration: none; border-radius: 5px; transition: all 0.3s ease; border: 2px solid var(--prana-red); cursor: pointer; font-size: 1.1rem; letter-spacing: 1px; }
+.btn-primary { background-color: var(--prana-red); color: var(--white); }
+.btn-primary:hover { background-color: transparent; color: var(--prana-red); text-decoration: none; }
+.callout { border-left: 4px solid var(--prana-red); padding: 1.5rem 2rem; margin: 2.5rem 0; background-color: #2a2a2a; border-radius: 0 8px 8px 0; }
+.callout p { margin-bottom: 0; font-size: 1.2rem; }
+
+/* -------------------------
+   5. Page Specific Styles
+   ------------------------- */
+.page-header { padding: 5rem var(--container-padding); text-align: center; border-bottom: 1px solid #333; }
+.page-title { margin-bottom: 1rem; }
+.page-subtitle { color: var(--himal-stone); font-size: 1.3rem; max-width: 700px; margin: 0 auto; }
+.hero-direct { height: calc(100vh - 80px); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 var(--container-padding); }
+.hero-direct h1 { margin-bottom: 0.5rem; }
+.hero-direct .subheadline { font-size: 1.8rem; max-width: 700px; color: var(--manjusha-sand); margin-bottom: 2.5rem; }
+.problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: left; }
+.problem-card { padding: 2rem; background-color: #2a2a2a; border-radius: 8px; border: 1px solid #444; }
+.problem-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--white); }
+.problem-card p { color: var(--manjusha-sand); }
+
+/* -------------------------
+   6. Footer (Rebuilt)
+   ------------------------- */
+footer { padding: 5rem var(--container-padding) 2rem; border-top: 1px solid #333; }
+.footer-content { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
+footer h3, footer h4 { font-family: var(--font-heading); color: var(--white); margin-bottom: 1.5rem; }
+.footer-links ul { list-style: none; padding: 0; }
+.footer-links ul li { margin-bottom: 0.8rem; }
+.footer-social-list { list-style: none; padding: 0; }
+.footer-social-list li { margin-bottom: 0.8rem; }
+.footer-bottom { text-align: center; padding-top: 3rem; border-top: 1px solid #444; font-size: 1rem; color: var(--himal-stone); }
+
+/* -------------------------
+   7. Responsive Design
+   ------------------------- */
+@media (max-width: 992px) {
+    .footer-content { grid-template-columns: 1fr 1fr; }
+    .footer-about { grid-column: 1 / -1; text-align: center; }
+}
+@media (max-width: 768px) {
+    body { font-size: 18px; }
+    .nav-links-desktop { display: none; }
+    .hamburger { display: block; }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.5rem; }
+    .hero-direct .subheadline { font-size: 1.5rem; }
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+    .footer-links ul, .footer-social-list { align-items: center; }
+}
