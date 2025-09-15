@@ -588,6 +588,73 @@ footer h3, footer h4 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+/* ==========================================================================
+   10. Support Page Specific Styles
+   ========================================================================== */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.process-step {
+    text-align: center;
+    padding: 2rem;
+}
+
+.process-number {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--prana-red);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.process-step h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.priorities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.priority-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.priority-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.priority-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.priority-card ul li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.priority-card ul li::before {
+    content: '🌱';
+    position: absolute;
+    left: 0;
+    color: var(--prana-red);
+}
 
 .link-hub-button:hover {
     transform: translateY(-3px) scale(1.02);
