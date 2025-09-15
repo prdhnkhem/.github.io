@@ -1,212 +1,293 @@
 /* ==========================================================================
-   KHEM PRADHAN | Personal Visionary Platform CSS (Version 3.2)
+   KHEM PRADHAN | Visionary Platform CSS (Version 4.0 - "Blueprint" Theme)
    ========================================================================== */
 
 /* -------------------------
    1. Root Variables & Global Styles
    ------------------------- */
 :root {
+    /* Color Palette */
     --prana-red: #A42A28;
-    --shunya-black: #1E1E1E;
-    --manjusha-sand: #EAE7DC;
-    --himal-stone: #8E8D8A;
+    --shunya-black: #1E1E1E; /* Primary Background */
+    --manjusha-sand: #EAE7DC; /* Primary Text */
+    --himal-stone: #8E8D8A;   /* Subdued Text / Borders */
     --white: #FFFFFF;
-    --text-color: #333333;
+
+    /* Typography */
     --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Merriweather', serif;
+    --font-body: 'Lato', sans-serif; /* Switched to a modern Sans-Serif */
+
+    /* Spacing */
     --container-padding: 5%;
-    --section-padding: 5rem 0;
+    --section-padding: 6rem 0;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-body);
-    background-color: var(--manjusha-sand);
-    color: var(--text-color);
+    background-color: var(--shunya-black);
+    color: var(--manjusha-sand);
     line-height: 1.8;
-    font-size: 17px;
+    font-size: 18px;
     -webkit-font-smoothing: antialiased;
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
-.container { width: 90%; max-width: 1100px; margin: 0 auto; }
-.text-container { max-width: 800px; margin: 0 auto; }
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.text-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
 /* -------------------------
    2. Header & Navigation
    ------------------------- */
 header {
-    background-color: rgba(234, 231, 220, 0.85);
+    background-color: rgba(30, 30, 30, 0.8); /* Darker, semi-transparent */
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
-}
-nav { display: flex; justify-content: space-between; align-items: center; padding: 0 var(--container-padding); height: 80px; }
-.logo a { font-family: var(--font-heading); font-weight: 700; font-size: 1.8rem; text-decoration: none; color: var(--shunya-black); letter-spacing: 1px; }
-.nav-links-desktop { list-style: none; display: flex; align-items: center; gap: 2.5rem; }
-.nav-links-desktop a { text-decoration: none; color: var(--shunya-black); font-family: var(--font-heading); font-weight: 600; font-size: 1rem; position: relative; padding-bottom: 5px; }
-.nav-links-desktop a:not(.btn-nav-cta)::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: var(--prana-red); transition: width 0.3s ease; }
-.nav-links-desktop a:not(.btn-nav-cta):hover::after { width: 100%; }
-.btn-nav-cta { padding: 0.6rem 1.2rem; background-color: var(--prana-red); color: var(--white); border-radius: 5px; transition: all 0.3s ease; }
-.btn-nav-cta:hover { background-color: #8C2321; transform: translateY(-2px); }
-
-/* -------------------------
-   3. Mobile Navigation
-   ------------------------- */
-.hamburger { display: none; cursor: pointer; }
-.hamburger .line { width: 30px; height: 3px; background-color: var(--shunya-black); margin: 6px 0; transition: all 0.3s ease; }
-.mobile-nav { position: fixed; top: 0; left: 100%; width: 100%; height: 100vh; background-color: var(--shunya-black); z-index: 2000; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: left 0.4s ease-in-out; }
-.mobile-nav-active { left: 0; }
-.mobile-nav ul { list-style: none; }
-.mobile-nav ul li { margin-bottom: 2rem; text-align: center; }
-.mobile-nav ul a { color: var(--white); font-family: var(--font-heading); font-size: 1.8rem; text-decoration: none; }
-.mobile-nav-close { position: absolute; top: 2rem; right: var(--container-padding); color: var(--white); font-size: 2.5rem; cursor: pointer; }
-
-/* -------------------------
-   4. Hero Section (Personal)
-   ------------------------- */
-.hero-personal { background-color: var(--white); padding: var(--section-padding); min-height: calc(100vh - 80px); display: flex; align-items: center; }
-.hero-personal-layout { display: grid; grid-template-columns: 2fr 1fr; align-items: center; gap: 4rem; }
-.hero-personal-text .headline-personal { font-family: var(--font-heading); font-size: 3.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 2rem; color: var(--shunya-black); }
-.hero-personal-text .subheadline-personal { font-size: 1.2rem; max-width: 600px; margin-bottom: 2.5rem; }
-.hero-personal-image img { width: 100%; max-width: 300px; height: auto; border-radius: 50%; border: 8px solid var(--white); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); }
-
-/* -------------------------
-   5. Reusable Components
-   ------------------------- */
-.btn { display: inline-block; padding: 0.9rem 2.2rem; font-family: var(--font-heading); font-weight: 700; text-decoration: none; border-radius: 5px; transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer; font-size: 1rem; }
-.btn-primary { background-color: var(--prana-red); color: var(--white); border-color: var(--prana-red); }
-.btn-primary:hover { background-color: #8C2321; border-color: #8C2321; transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-.btn-secondary-dark { background-color: transparent; color: var(--shunya-black); border-color: var(--shunya-black); }
-.btn-secondary-dark:hover { background-color: var(--shunya-black); color: var(--white); }
-.content-section { padding: var(--section-padding); }
-.section-title { font-family: var(--font-heading); font-size: 2.8rem; font-weight: 700; text-align: center; margin-bottom: 3rem; }
-.callout { border-left: 4px solid var(--prana-red); padding-left: 2rem; margin: 2.5rem 0; font-style: italic; font-size: 1.3rem; color: var(--shunya-black); }
-.callout p { margin: 0; }
-.section-divider { border: 0; height: 1px; background-color: #ddd; width: 80%; max-width: 1000px; margin: 0 auto; }
-
-/* -------------------------
-   6. Page-Specific Styles
-   ------------------------- */
-.page-header { background-color: var(--shunya-black); color: var(--white); padding: 4rem var(--container-padding); text-align: center; }
-.page-title { font-family: var(--font-heading); font-size: 3rem; margin-bottom: 1rem; }
-.page-subtitle { font-size: 1.2rem; color: var(--manjusha-sand); max-width: 600px; margin: 0 auto; }
-.story-container p, .work-section ul li { margin-bottom: 1.5rem; }
-.story-phase-subtitle { font-family: var(--font-heading); font-size: 1.5rem; color: var(--himal-stone); text-align: center; margin-top: -2rem; margin-bottom: 3rem; }
-.story-cta { text-align: center; margin-top: 4rem; padding: 3rem; border: 1px solid #ddd; border-radius: 8px; }
-.story-cta h3 { font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem; }
-.philosophy-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
-#hu-card { grid-area: hu; } #na-card { grid-area: na; } #te-card { grid-area: te; }
-.philosophy-card { padding: 2rem; border: 1px solid #ddd; border-radius: 8px; background-color: var(--white); min-width: 0; }
-.philosophy-card h3 { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; color: var(--prana-red); }
-.work-section h3 { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--prana-red); }
-.collaborate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
-.collaborate-card { padding: 2rem; border: 1px solid #ddd; border-radius: 8px; }
-.collaborate-card h3 { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; }
-.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
-.blog-card { background-color: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.07); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid #eee; }
-.blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-.blog-card-link { text-decoration: none; color: inherit; display: block; height: 100%; }
-.blog-card-content { padding: 1.5rem; }
-.blog-card-category { font-family: var(--font-heading); font-size: 0.8rem; font-weight: 600; color: var(--prana-red); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; display: block; }
-.blog-card-title { font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.8rem; line-height: 1.3; }
-.blog-card-excerpt { font-size: 0.95rem; margin-bottom: 1.5rem; color: #555; }
-.blog-card-readmore { font-family: var(--font-heading); font-weight: 600; color: var(--shunya-black); }
-
-/* -------------------------
-   7. Footer
-   ------------------------- */
-footer { background-color: var(--shunya-black); color: var(--manjusha-sand); padding: 4rem var(--container-padding) 2rem; }
-.footer-content { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
-footer h3, footer h4 { font-family: var(--font-heading); color: var(--white); margin-bottom: 1rem; }
-.footer-links ul { list-style: none; }
-.footer-links ul li { margin-bottom: 0.5rem; }
-.footer-links a, .footer-social a { text-decoration: none; color: var(--manjusha-sand); transition: color 0.3s ease; }
-.footer-links a:hover, .footer-social a:hover { color: var(--prana-red); }
-.social-icons { margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 1rem; }
-.footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid var(--himal-stone); font-size: 0.9rem; color: var(--himal-stone); }
-
-/* -------------------------
-   8. Responsive Design
-   ------------------------- */
-@media (min-width: 768px) { .philosophy-grid { grid-template-areas: "hu te" "na na"; grid-template-columns: 1fr 1fr; } }
-@media (max-width: 992px) { .hero-personal-layout { grid-template-columns: 1fr; text-align: center; } .hero-personal-image { grid-row: 1; margin: 0 auto 3rem; } .hero-personal-text .headline-personal { font-size: 2.8rem; } .hero-personal-text .subheadline-personal { margin-left: auto; margin-right: auto; } }
-@media (max-width: 768px) { body { font-size: 16px; } .nav-links-desktop { display: none; } .hamburger { display: block; } .section-title { font-size: 2.2rem; } .page-title { font-size: 2.5rem; } .footer-content { grid-template-columns: 1fr; text-align: center; } .social-icons { justify-content: center; } }
-
-/* -------------------------
-   9. Support Page Specific Styles
-   ------------------------- */
-.process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; border-bottom: 1px solid #ddd; padding-bottom: 3rem; }
-.process-step { text-align: center; padding: 1rem; }
-.process-number { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; color: var(--prana-red); margin-bottom: 1rem; line-height: 1; }
-.process-step h3 { font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.5rem; }
-.support-layout { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-top: 3rem; }
-@media (min-width: 992px) { .support-layout { grid-template-columns: 1fr 1fr; } }
-.support-column h3 { font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--prana-red); }
-.bank-details-box { background-color: var(--white); padding: 2rem; border-radius: 8px; border: 1px solid #ddd; margin: 2rem 0; }
-.bank-details-box h4 { font-family: var(--font-heading); margin-bottom: 1rem; }
-.bank-details-box ul { list-style: none; padding-left: 0; }
-.bank-details-box ul li { margin-bottom: 0.5rem; }
-.impact-list, .sponsorship-list { margin-top: 2rem; }
-.impact-list h4, .sponsorship-list h4 { font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 1rem; }
-.impact-list ul, .sponsorship-list ul { list-style: none; padding-left: 0; }
-.impact-list ul li, .sponsorship-list ul li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
-.impact-list ul li::before, .sponsorship-list ul li::before { content: '🌱'; position: absolute; left: 0; color: var(--prana-red); }
-/* ==========================================================================
-   11. Journal Page - Quick Links Hub Styles (Corrected)
-   ========================================================================== */
-
-.links-grid {
-    display: grid;
-    gap: 2rem;
-    /* On mobile, stack columns by default */
-    grid-template-columns: 1fr;
-    margin-top: 3rem;
+    border-bottom: 1px solid #333; /* Subtle border */
 }
 
-/* On screens wider than 768px, use a two-column layout */
-@media (min-width: 768px) {
-    .links-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--container-padding);
+    height: 80px;
 }
 
-.links-column h3, .documents-section h3 {
+.logo a {
     font-family: var(--font-heading);
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--himal-stone);
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.documents-section {
-    margin-top: 3rem;
-}
-
-.link-hub-button {
-    display: block;
-    background-color: var(--white);
-    color: var(--shunya-black);
-    padding: 1rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.8rem;
     text-decoration: none;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.nav-links-desktop {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-links-desktop a {
+    text-decoration: none;
+    color: var(--manjusha-sand);
     font-family: var(--font-heading);
     font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links-desktop a:hover {
+    color: var(--prana-red);
+}
+
+.btn-nav-cta {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--prana-red);
+    color: var(--prana-red);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-nav-cta:hover {
+    background-color: var(--prana-red);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Mobile Nav Styles will be added in a future step if needed */
+.hamburger { display: none; }
+.mobile-nav { display: none; }
+
+/* -------------------------
+   3. Reusable Components
+   ------------------------- */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--prana-red);
+    cursor: pointer;
     font-size: 1.1rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: var(--prana-red);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--prana-red);
+}
+
+.content-section {
+    padding: var(--section-padding);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+    color: var(--himal-stone);
+}
+
+/* -------------------------
+   4. Homepage Styles
+   ------------------------- */
+.hero-manifesto {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--container-padding);
+}
+
+.hero-manifesto h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.hero-manifesto p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    color: var(--manjusha-sand);
+    margin-bottom: 2.5rem;
+}
+
+.vow-section {
+    text-align: center;
+    padding: 4rem var(--container-padding);
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     text-align: center;
 }
 
-.link-hub-button:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+.problem-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.problem-card p {
+    color: var(--himal-stone);
+}
+
+/* -------------------------
+   5. Footer
+   ------------------------- */
+footer {
+    padding: 4rem var(--container-padding) 2rem;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+footer h3, footer h4 {
+    font-family: var(--font-heading);
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: var(--manjusha-sand);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--prana-red);
+}
+
+.footer-links ul { list-style: none; }
+.footer-links ul li { margin-bottom: 0.5rem; }
+
+.social-icons {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    color: var(--himal-stone);
+}
+
+/* -------------------------
+   6. Responsive Design
+   ------------------------- */
+@media (max-width: 768px) {
+    .nav-links-desktop { display: none; }
+    /* Mobile nav styles will be added if we implement it */
+
+    .hero-manifesto h1 { font-size: 2.5rem; }
+    .vow-section { font-size: 1.5rem; }
+    .section-title { font-size: 2.5rem; }
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+    .social-icons { justify-content: center; }
 }
