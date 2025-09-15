@@ -156,3 +156,57 @@ footer h3, footer h4 { font-family: var(--font-heading); color: var(--white); ma
 .impact-list ul, .sponsorship-list ul { list-style: none; padding-left: 0; }
 .impact-list ul li, .sponsorship-list ul li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
 .impact-list ul li::before, .sponsorship-list ul li::before { content: '🌱'; position: absolute; left: 0; color: var(--prana-red); }
+/* ==========================================================================
+   11. Journal Page - Quick Links Hub Styles (Corrected)
+   ========================================================================== */
+
+.links-grid {
+    display: grid;
+    gap: 2rem;
+    /* On mobile, stack columns by default */
+    grid-template-columns: 1fr;
+    margin-top: 3rem;
+}
+
+/* On screens wider than 768px, use a two-column layout */
+@media (min-width: 768px) {
+    .links-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.links-column h3, .documents-section h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--himal-stone);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.documents-section {
+    margin-top: 3rem;
+}
+
+.link-hub-button {
+    display: block;
+    background-color: var(--white);
+    color: var(--shunya-black);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.link-hub-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
