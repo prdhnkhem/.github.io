@@ -1,4 +1,4 @@
-/* --- Hunate Brand Guide: style.css v3.2 --- */
+/* --- Hunate Brand Guide: style.css v3.3 --- */
 
 /* 1. Variables & Global Styles */
 :root {
@@ -18,6 +18,7 @@ body {
     margin: 0;
     font-size: 17px;
     line-height: 1.8;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -33,11 +34,11 @@ h1, h2, h3, h4 {
 }
 
 h2 { font-size: 2.5em; }
-h3 { font-size: 1.6em; }
+h3 { font-size: 1.8em; }
 
 p {
     margin-bottom: 20px;
-    max-width: 65ch; /* Improves readability for long text blocks */
+    max-width: 65ch; /* Improves readability */
 }
 
 a {
@@ -163,6 +164,10 @@ footer {
     color: var(--himal-stone);
 }
 
+.footer-bottom p {
+    max-width: none;
+}
+
 /* 3. Page Specific Sections */
 .hero {
     background-size: cover;
@@ -211,7 +216,7 @@ footer {
 }
 
 .content-body {
-    max-width: 720px; /* Optimal for reading */
+    max-width: 720px;
     text-align: left;
     margin: 60px auto;
 }
@@ -232,7 +237,36 @@ footer {
     background-color: white;
 }
 
-/* 4. Page Enhancements */
+/* 4. V3.3 Page Enhancements */
+.imbalance-nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 60px auto;
+    max-width: 800px;
+    text-align: center;
+}
+.imbalance-card {
+    padding: 20px;
+    border: 1px solid var(--himal-stone);
+    border-radius: 8px;
+    flex: 1;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.imbalance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.imbalance-card h3 {
+    margin-top: 0;
+    color: var(--prana-red);
+}
+.imbalance-card a {
+    color: var(--shunya-black);
+    text-decoration: none;
+}
+
 .youtube-cta {
     background-color: white;
     border: 1px solid #ddd;
@@ -251,6 +285,26 @@ footer {
     border-left: 3px solid var(--akasha-blue);
     padding-left: 20px;
     margin: 40px 20px;
+}
+
+.reflective-questions {
+    background-color: white;
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.reflective-questions h4 {
+    margin-top: 0;
+    font-family: var(--font-heading);
+}
+.reflective-questions ul {
+    padding-left: 20px;
+    margin: 0;
+}
+.reflective-questions li {
+    margin-bottom: 10px;
+    font-style: italic;
 }
 
 .card-grid {
@@ -295,7 +349,7 @@ footer {
     border: 1px solid #ccc;
 }
 
-/* 5. Mobile Responsiveness */
+/* 5. V3.0 Mobile Responsiveness */
 @media (max-width: 768px) {
     body { font-size: 16px; }
     header { flex-direction: column; }
@@ -306,9 +360,5 @@ footer {
     .footer-grid { text-align: center; }
     .footer-column h4 { display: block; }
     .support-grid { grid-template-columns: 1fr; }
-}
-
-/* V3.2 FOOTER CENTERING FIX */
-.footer-bottom p {
-    max-width: none; /* This is the fix. It removes the width limit just for this paragraph. */
+    .imbalance-nav { flex-direction: column; }
 }
