@@ -1,3 +1,148 @@
+/* -------------------------------------------------------------------------- */
+/*           START: HUNATE Brand Identity & Enhancements (v1.1)               */
+/* -------------------------------------------------------------------------- */
+
+/* 1. Brand Colors & Fonts as CSS Variables
+   --------------------------------------------*/
+:root {
+    --prana-red: #A42A28;
+    --shunya-black: #1E1E1E;
+    --manjusha-sand: #EAE7DC;
+    --himal-stone: #8E8D8A;
+    --akasha-blue: #4A6D7C;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Merriweather', serif;
+}
+
+/* 2. Global Style Application
+   --------------------------------------------*/
+body {
+    font-family: var(--font-body);
+    color: var(--shunya-black);
+    background-color: var(--manjusha-sand);
+}
+
+h1, h2, h3, h4, .logo a, .btn {
+    font-family: var(--font-heading);
+}
+
+a {
+    color: var(--akasha-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--prana-red);
+}
+
+/* 3. Navigation & Header
+   --------------------------------------------*/
+header {
+    background-color: rgba(234, 231, 220, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a { font-weight: 700; color: var(--shunya-black); }
+.nav-links-desktop a { color: var(--shunya-black); font-weight: 600; font-family: var(--font-heading); }
+
+.nav-cta {
+    background-color: var(--prana-red);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.nav-cta:hover { background-color: #8b2321; color: white !important; }
+
+/* Language Switcher Style */
+.lang-switch {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9em;
+    margin-left: 20px;
+}
+.lang-switch a {
+    color: var(--himal-stone);
+    padding: 5px 8px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+.lang-switch a.active {
+    color: var(--shunya-black);
+    font-weight: bold;
+    cursor: default;
+}
+.lang-switch a:not(.active):hover {
+    background-color: #e0d9c9;
+}
+
+/* 4. Hero Section
+   --------------------------------------------*/
+.hero-direct h1 { font-size: 3rem; }
+.hero-direct .subheadline { font-size: 1.25rem; max-width: 650px; margin: 1rem auto 2rem; }
+
+/* 5. "From the Journal" Section
+   --------------------------------------------*/
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.journal-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.journal-card h4 { margin-top: 0; }
+.journal-card p { flex-grow: 1; }
+.journal-card .card-link { font-family: var(--font-heading); font-weight: 600; color: var(--prana-red); }
+
+/* 6. Footer Redesign
+   --------------------------------------------*/
+footer {
+    background-color: var(--shunya-black);
+    color: var(--manjusha-sand);
+    padding: 3rem 0 1.5rem; /* Adjusted padding */
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+.footer-about { flex-basis: 40%; }
+.footer-links { flex-basis: 40%; }
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--himal-stone);
+    padding-top: 1.5rem;
+    font-size: 0.9em;
+}
+.footer-social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Makes social links horizontal */
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Space between social links */
+    justify-content: center; /* Center them in the bottom bar */
+}
+footer a { color: var(--himal-stone); }
+footer a:hover { color: white; }
+
+/* -------------------------------------------------------------------------- */
+/*                             END OF ADDITIONS                             */
+/* -------------------------------------------------------------------------- */
+
 /* ==========================================================================
    KHEM RAJ PRADHAN | The Modern Manifesto CSS (Version 7.0 - Final)
    ========================================================================== */
