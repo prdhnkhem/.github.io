@@ -1,4 +1,4 @@
-/* --- Hunate Brand Guide: style.css v3.6 --- */
+/* --- Hunate Brand Guide: style.css v4.0 --- */
 
 /* 1. Variables & Global Styles */
 :root {
@@ -11,6 +11,8 @@
     --font-body: 'Merriweather', serif;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
     font-family: var(--font-body);
     color: var(--shunya-black);
@@ -18,7 +20,6 @@ body {
     margin: 0;
     font-size: 17px;
     line-height: 1.8;
-    scroll-behavior: smooth;
 }
 
 .container {
@@ -27,33 +28,64 @@ body {
     padding: 20px;
 }
 
-h1, h2, h3, h4 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    line-height: 1.3;
-}
-
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height: 1.3; }
 h2 { font-size: 2.5em; }
 h3 { font-size: 1.8em; }
 
 p {
     margin-bottom: 20px;
-    max-width: 65ch; /* Improves readability */
+    max-width: 65ch;
+    letter-spacing: 0.2px; /* V4.0 Readability Tweak */
 }
 
-a { color: var(--akasha-blue); text-decoration: none; transition: opacity 0.3s ease; }
+a { color: var(--akasha-blue); text-decoration: none; transition: all 0.3s ease; }
 a:hover { opacity: 0.8; }
 
-.button { display: inline-block; background-color: var(--akasha-blue); color: white !important; padding: 12px 25px; font-family: var(--font-heading); font-weight: 700; border-radius: 5px; text-align: center; border: 2px solid var(--akasha-blue); }
+.button {
+    display: inline-block;
+    background-color: var(--akasha-blue);
+    color: white !important;
+    padding: 12px 25px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid var(--akasha-blue);
+}
+.button:hover {
+    background-color: #3a5a6b; /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 .button-secondary { background-color: transparent; color: var(--shunya-black) !important; border-color: var(--shunya-black); }
+.button-secondary:hover { background-color: var(--shunya-black); color: white !important; }
 
 hr { border: 0; height: 1px; background: var(--himal-stone); opacity: 0.3; margin: 80px auto; max-width: 200px; }
 
-/* 2. Header & Footer Structure */
-header { background-color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 100; }
+/* 2. Header & V4.0 Mobile Navigation */
+header {
+    background-color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 header .logo { font-family: var(--font-heading); font-weight: 700; font-size: 1.5em; color: var(--prana-red); }
-header nav a { margin-left: 20px; font-family: var(--font-heading); font-weight: 600; font-size: 0.9em; color: var(--shunya-black); }
+.desktop-nav { display: block; }
+.desktop-nav a { margin-left: 20px; font-family: var(--font-heading); font-weight: 600; font-size: 0.9em; color: var(--shunya-black); }
 
+.hamburger { display: none; cursor: pointer; }
+.hamburger div { width: 25px; height: 3px; background-color: var(--shunya-black); margin: 5px 0; transition: 0.4s; }
+
+.mobile-nav { display: none; flex-direction: column; background-color: white; position: absolute; top: 75px; left: 0; width: 100%; box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+.mobile-nav a { padding: 15px; text-align: center; border-bottom: 1px solid #eee; font-family: var(--font-heading); color: var(--shunya-black); }
+.mobile-nav.active { display: flex; }
+
+/* 3. V4.0 Footer */
 footer { background-color: var(--shunya-black); color: var(--manjusha-sand); padding: 60px 20px 30px 20px; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1100px; margin: 0 auto 40px auto; text-align: left; }
 .footer-column h4 { font-family: var(--font-heading); color: white; margin-bottom: 20px; border-bottom: 1px solid var(--prana-red); padding-bottom: 10px; display: inline-block; }
@@ -65,7 +97,7 @@ footer { background-color: var(--shunya-black); color: var(--manjusha-sand); pad
 .footer-bottom { border-top: 1px solid var(--himal-stone); padding-top: 30px; margin-top: 40px; text-align: center; font-size: 0.9em; color: var(--himal-stone); }
 .footer-bottom p { max-width: none; }
 
-/* 3. Page Structures */
+/* 4. V4.0 Page Structures & Components */
 .hero { background-size: cover; background-position: center; color: white; text-align: center; padding: 120px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 70vh; background-color: var(--shunya-black); }
 .hero h1 { font-size: 3.2em; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
 .hero p { font-size: 1.2em; max-width: 600px; margin: 20px auto 30px auto; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
@@ -74,50 +106,27 @@ footer { background-color: var(--shunya-black); color: var(--manjusha-sand); pad
 .page-header h1 { font-size: 3em; margin-bottom: 15px; }
 .page-header p.subtitle { font-style: italic; font-size: 1.15em; max-width: 700px; margin: 0 auto; color: var(--himal-stone); }
 
-.content-body { max-width: 720px; text-align: left; margin: 60px auto; }
+.content-body { max-width: 720px; text-align: left; margin: 60px auto; padding: 0 20px; /* V4.0 Mobile Fix */ }
 .text-center { text-align: center; }
 .text-center p { margin-left: auto; margin-right: auto; }
 .text-center .max-width-override { max-width: none; }
 
-/* 4. V3.6 Component Styles */
 .three-col-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
 .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+.icon-feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px 80px; margin: 60px 0; }
 
-/* Style for Centered Icon Sections (V3.6) */
-.feature-section {
-    text-align: center;
-    max-width: 750px;
-    margin: 0 auto;
-}
-.feature-section .icon {
-    font-size: 3em;
-    color: var(--prana-red);
-    margin-bottom: 20px;
-    display: block;
-}
-.feature-section h3 {
-    font-size: 2.2em;
-    margin-bottom: 15px;
-}
-.feature-section p {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-}
-.feature-section ul {
-    text-align: left;
-    display: inline-block; /* Centers the list block */
-}
-.feature-section .button {
-    margin-top: 20px;
-}
+.icon-feature { text-align: center; }
+.icon-feature .icon { font-size: 2.5em; color: var(--prana-red); margin-bottom: 20px; display: block; }
+.icon-feature h4 { margin-bottom: 15px; font-size: 1.4em; }
+.icon-feature p { font-size: 1em; margin: 0 auto; color: var(--shunya-black); opacity: 0.9; }
 
-.youtube-cta { background-color: white; border: 1px solid #ddd; border-left: 5px solid var(--prana-red); padding: 25px; margin: 40px 0; text-align: center; border-radius: 5px; }
+.youtube-cta { background-color: #fff; border: 1px solid #ddd; border-left: 5px solid var(--prana-red); padding: 25px; margin: 40px 0; text-align: center; border-radius: 5px; }
 .youtube-cta p { font-size: 1.1em; margin: 0 auto 15px auto; }
 
 .pull-quote { font-size: 1.3em; font-style: italic; color: var(--prana-red); border-left: 3px solid var(--akasha-blue); padding-left: 20px; margin: 40px auto; }
 
-.card { background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: left; display: flex; flex-direction: column; }
+.card { background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: left; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.12); }
 .card h3, .card h4 { color: var(--prana-red); margin-top: 0; }
 .card p, .card ul { flex-grow: 1; }
 .card ul { padding-left: 20px; margin: 0; }
@@ -130,15 +139,15 @@ footer { background-color: var(--shunya-black); color: var(--manjusha-sand); pad
 .responsive-iframe-container { position: relative; overflow: hidden; padding-top: 100%; margin-top: 30px; }
 .responsive-iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #ccc; }
 
-/* 5. Mobile Responsiveness */
+/* 5. V4.0 Mobile Responsiveness */
 @media (max-width: 768px) {
     body { font-size: 16px; }
-    header { flex-direction: column; }
-    header nav { margin-top: 15px; width: 100%; text-align: center; }
-    header nav a { margin: 0 8px; font-size: 0.8em; }
+    header { flex-direction: row; } /* Keep logo and hamburger on same line */
+    .desktop-nav { display: none; }
+    .hamburger { display: block; }
     .hero h1 { font-size: 2.2em; }
     h2 { font-size: 2em; }
     .footer-grid { text-align: center; }
     .footer-column h4 { display: block; }
-    .three-col-grid, .two-col-grid { grid-template-columns: 1fr; }
+    .three-col-grid, .two-col-grid, .icon-feature-grid { grid-template-columns: 1fr; }
 }
