@@ -1,4 +1,4 @@
-/* --- Hunate Brand Guide: style.css v3.5 --- */
+/* --- Hunate Brand Guide: style.css v3.6 --- */
 
 /* 1. Variables & Global Styles */
 :root {
@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    max-width: 1100px; /* Wider for more professional layouts */
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -38,7 +38,7 @@ h3 { font-size: 1.8em; }
 
 p {
     margin-bottom: 20px;
-    max-width: 65ch;
+    max-width: 65ch; /* Improves readability */
 }
 
 a { color: var(--akasha-blue); text-decoration: none; transition: opacity 0.3s ease; }
@@ -79,36 +79,38 @@ footer { background-color: var(--shunya-black); color: var(--manjusha-sand); pad
 .text-center p { margin-left: auto; margin-right: auto; }
 .text-center .max-width-override { max-width: none; }
 
-/* 4. V3.5 Component Styles */
+/* 4. V3.6 Component Styles */
 .three-col-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
 .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
 
-.icon-feature-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px 80px; /* Row gap and column gap */
-    margin: 60px 0;
-}
-.icon-feature {
+/* Style for Centered Icon Sections (V3.6) */
+.feature-section {
     text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
 }
-.icon-feature .icon {
-    font-size: 2.5em;
+.feature-section .icon {
+    font-size: 3em;
     color: var(--prana-red);
     margin-bottom: 20px;
     display: block;
 }
-.icon-feature h4 {
+.feature-section h3 {
+    font-size: 2.2em;
     margin-bottom: 15px;
-    font-size: 1.4em;
 }
-.icon-feature p {
-    font-size: 1em;
-    margin: 0 auto;
-    color: var(--shunya-black);
-    opacity: 0.9;
+.feature-section p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
-
+.feature-section ul {
+    text-align: left;
+    display: inline-block; /* Centers the list block */
+}
+.feature-section .button {
+    margin-top: 20px;
+}
 
 .youtube-cta { background-color: white; border: 1px solid #ddd; border-left: 5px solid var(--prana-red); padding: 25px; margin: 40px 0; text-align: center; border-radius: 5px; }
 .youtube-cta p { font-size: 1.1em; margin: 0 auto 15px auto; }
@@ -138,5 +140,5 @@ footer { background-color: var(--shunya-black); color: var(--manjusha-sand); pad
     h2 { font-size: 2em; }
     .footer-grid { text-align: center; }
     .footer-column h4 { display: block; }
-    .three-col-grid, .two-col-grid, .icon-feature-grid { grid-template-columns: 1fr; }
+    .three-col-grid, .two-col-grid { grid-template-columns: 1fr; }
 }
