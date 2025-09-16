@@ -1,4 +1,4 @@
-// Hunate Movement: script.js v1.0
+// Hunate Movement: script.js v2.0
 
 document.addEventListener('DOMContentLoaded', function() {
     const langSwitcher = document.getElementById('lang-switcher');
@@ -7,24 +7,18 @@ document.addEventListener('DOMContentLoaded', function() {
         langSwitcher.addEventListener('click', function(e) {
             e.preventDefault();
             
-            const currentPath = window.location.pathname;
-            const isNepali = currentPath.includes('-ne.html');
+            const currentPath = window.location.pathname.split('/').pop(); // Gets the filename e.g., "index.html"
             let newPath;
 
-            // Handle the root homepage cases first
-            if (currentPath.endsWith('/') || currentPath.endsWith('/index.html')) {
-                newPath = '/index-ne.html';
-            } else if (currentPath.endsWith('/index-ne.html')) {
-                newPath = '/index.html';
-            } else if (isNepali) {
-                // If it's any other Nepali page, switch to English
+            if (currentPath.includes('-ne.html')) {
+                // It's a Nepali page, switch to English
                 newPath = currentPath.replace('-ne.html', '.html');
             } else {
-                // If it's any other English page, switch to Nepali
+                // It's an English page, switch to Nepali
                 newPath = currentPath.replace('.html', '-ne.html');
             }
             
             window.location.href = newPath;
         });
     }
-})
+});
