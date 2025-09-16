@@ -1,4 +1,4 @@
-/* --- Hunate Brand Guide: style.css v3.4 --- */
+/* --- Hunate Brand Guide: style.css v3.5 --- */
 
 /* 1. Variables & Global Styles */
 :root {
@@ -38,7 +38,7 @@ h3 { font-size: 1.6em; }
 
 p {
     margin-bottom: 20px;
-    max-width: 65ch;
+    max-width: 65ch; /* Improves readability */
 }
 
 a {
@@ -122,33 +122,30 @@ footer { background-color: var(--shunya-black); color: var(--manjusha-sand); pad
 .bg-white { background-color: white; }
 .text-center { text-align: center; }
 .text-center p { margin-left: auto; margin-right: auto; }
+.text-center .max-width-override { max-width: none; }
 
-/* 4. V3.4 Page Enhancements & Layouts */
-.three-col-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 40px;
-}
+
+/* 4. V3.5 Page Enhancements & Layouts */
+.three-col-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+.two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
 .process-step { text-align: center; }
 .process-step .icon { font-size: 2.5em; color: var(--prana-red); margin-bottom: 10px; }
-.process-step h4 { margin-bottom: 5px; }
+.process-step h4 { margin-bottom: 5px; font-size: 1.2em; }
 
 .youtube-cta { background-color: white; border: 1px solid #ddd; border-left: 5px solid var(--prana-red); padding: 25px; margin: 40px 0; text-align: center; border-radius: 5px; }
 .youtube-cta p { font-size: 1.1em; margin: 0 auto 15px auto; }
 
 .pull-quote { font-size: 1.3em; font-style: italic; color: var(--prana-red); border-left: 3px solid var(--akasha-blue); padding-left: 20px; margin: 40px auto; }
 
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; justify-content: center; }
 .card { background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: left; display: flex; flex-direction: column; }
 .card h3, .card h4 { color: var(--prana-red); margin-top: 0; }
 .card p, .card ul { flex-grow: 1; }
 .card ul { padding-left: 20px; margin: 0; }
 .card li { margin-bottom: 8px; }
 
-.qr-container { display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.qr-container { display: flex; gap: 40px; justify-content: center; align-items: flex-start; flex-wrap: wrap; }
 .qr-box { text-align: center; }
-.qr-box img { max-width: 200px; display: block; margin: 10px auto; }
+.qr-box img { max-width: 220px; display: block; margin: 10px auto; }
 
 .responsive-iframe-container { position: relative; overflow: hidden; padding-top: 100%; margin-top: 30px; }
 .responsive-iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #ccc; }
@@ -163,5 +160,5 @@ footer { background-color: var(--shunya-black); color: var(--manjusha-sand); pad
     h2 { font-size: 2em; }
     .footer-grid { text-align: center; }
     .footer-column h4 { display: block; }
-    .three-col-grid { grid-template-columns: 1fr; }
+    .three-col-grid, .two-col-grid { grid-template-columns: 1fr; }
 }
