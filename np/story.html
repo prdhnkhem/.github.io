@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मेरो कथा | खेम राज प्रधान</title>
+    <!-- NEPALI: Translate meta tags -->
+    <meta name="description" content="[Translate to Nepali] The personal journey of Khem Raj Pradhan. A raw, unfiltered story of transformation from a disconnected youth...">
+    <meta name="keywords" content="[Translate to Nepali] Khem Raj Pradhan story, The Joon Project, Hunate history, Vipassana...">
+    <meta name="author" content="Khem Raj Pradhan">
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../style.css?v=1.1">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">खेम</a>
+            </div>
+            <!-- NEPALI: Translated navigation -->
+            <ul class="nav-links-desktop">
+                <li><a href="story.html" class="active">मेरो कथा</a></li>
+                <li><a href="philosophy.html">दर्शन</a></li>
+                <li><a href="blueprint.html">खाका (हुनाटे)</a></li>
+                <li><a href="journal.html">जर्नल</a></li>
+                <li><a href="support.html">सहयोग</a></li>
+                <li><a href="join.html" class="nav-cta">जोडिनुहोस्</a></li>
+                <li class="lang-switch">
+                    <a href="../story.html">EN</a> | <a href="story.html" class="active">NP</a>
+                </li>
+            </ul>
+            <div class="hamburger"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+        </nav>
+    </header>
+
+    <div class="mobile-nav">
+        <div class="mobile-nav-close">✕</div>
+        <ul>
+            <li><a href="story.html">मेरो कथा</a></li>
+            <li><a href="philosophy.html">दर्शन</a></li>
+            <li><a href="blueprint.html">खाका (हुनाटे)</a></li>
+            <li><a href="journal.html">जर्नल</a></li>
+            <li><a href="support.html">सहयोग</a></li>
+            <li><a href="join.html">जोडिनुहोस्</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- NEPALI: All content below needs to be translated -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">मेरो कथा</h1>
+                <p class="page-subtitle">[NEPALI TEXT] This is not a history of accomplishments. It is the story of a vow, forged in the fire of a life lived at the edges of a broken world.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container text-container">
+
+                <h2>[NEPALI] I. The Forging of a Question (1991 - 2013)</h2>
+                <p>[NEPALI TEXT] My life began as a question. Born in the hills of Bhojpur... a silent observer.</p>
+                <p>[NEPALI TEXT] This feeling of being lost became my reality... searching for purpose in a world that only valued profit.</p>
+                <p>[NEPALI TEXT] The breaking point was absolute... My liberation was my own responsibility.</p>
+                
+                <div class="experience-log">
+                    <h3>[NEPALI] Experience Log: Chapter I</h3>
+                    <div class="log-item">
+                        <h4>[NEPALI] Key Learnings:</h4>
+                        <ul>
+                            <li>[NEPALI TEXT] A direct, visceral understanding of how the education and social systems create disconnection and addiction.</li>
+                            <li>[NEPALI TEXT] The realization that true purpose cannot be found in external validation or societal approval.</li>
+                            <li>[NEPALI TEXT] The profound lesson that absolute personal responsibility is the only true path to freedom.</li>
+                        </ul>
+                    </div>
+                    <div class="log-item">
+                        <h4>[NEPALI] Skills Gained:</h4>
+                        <ul>
+                            <li>[NEPALI] Radical Self-Reliance</li>
+                            <li>[NEPALI] Resilience in High-Stress Environments</li>
+                            <li>[NEPALI] Critical Analysis of Social Systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr class="section-divider">
+                
+                <!-- ... All other chapters and experience logs would be similarly translated ... -->
+                
+                <div class="continue-journey">
+                    <p>[NEPALI TEXT] My story led me to a philosophy. A way of seeing the world that became the foundation for everything to come.</p>
+                    <a href="philosophy.html" class="btn">[NEPALI] Continue to The Philosophy &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer needs translation -->
+    <footer>
+        <div class="container">
+            <!-- ... translated footer content ... -->
+        </div>
+    </footer>
+
+    <script>
+        // Javascript does not need translation
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+        if (hamburger && mobileNav && closeBtn) {
+            hamburger.addEventListener('click', () => { mobileNav.classList.add('mobile-nav-active'); });
+            closeBtn.addEventListener('click', () => { mobileNav.classList.remove('mobile-nav-active'); });
+            const mobileLinks = document.querySelectorAll('.mobile-nav a');
+            mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileNav.classList.remove('mobile-nav-active'); }); });
+        }
+    </script>
+</body>
+</html>
