@@ -314,7 +314,26 @@ footer a:hover { color: white; }
 /* -------------------------------------------------------------------------- */
 /*                            END OF ADDITIONS                             */
 /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*           START: Additions for Blueprint Page (v1.1)                       */
+/* -------------------------------------------------------------------------- */
 
+/* Adds a bit more space above the 3-column grid for better breathing room */
+#blueprint-details .problem-grid {
+    margin-top: 3rem;
+}
+
+/* Optional: Add a subtle icon to each card in the blueprint */
+#blueprint-details .problem-card h3::before {
+    content: '✧'; /* A spark or star symbol */
+    margin-right: 10px;
+    color: var(--prana-red);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                            END OF ADDITIONS                             */
+/* -------------------------------------------------------------------------- */
 
 /* ==========================================================================
    KHEM RAJ PRADHAN | The Modern Manifesto CSS (Version 7.0 - Final)
