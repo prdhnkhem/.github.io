@@ -142,6 +142,111 @@ footer a:hover { color: white; }
 /* -------------------------------------------------------------------------- */
 /*                             END OF ADDITIONS                             */
 /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*           START: Additions for Story Page (v1.1)                           */
+/* -------------------------------------------------------------------------- */
+
+/* 1. Page Header Styling
+   --------------------------------------------*/
+.page-header {
+    background-color: #E0D9C9; /* A slightly darker sand color from the hero section */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+    color: #555;
+}
+
+/* 2. Experience Log Styling
+   --------------------------------------------*/
+.experience-log {
+    background-color: #f5f2eb; /* A lighter version of sand for contrast */
+    border-left: 4px solid var(--prana-red);
+    padding: 1.5rem 2rem;
+    margin: 2.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.experience-log h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--shunya-black);
+}
+
+.experience-log .log-item {
+    margin-top: 1rem;
+}
+
+.experience-log h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.experience-log ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.experience-log li {
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.experience-log li::before {
+    content: '✓'; /* Checkmark symbol */
+    position: absolute;
+    left: 0;
+    color: var(--prana-red);
+    font-weight: bold;
+}
+
+/* 3. Continue Journey Link Styling
+   --------------------------------------------*/
+.continue-journey {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.continue-journey p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.continue-journey .btn {
+    background: none;
+    border: 2px solid var(--akasha-blue);
+    color: var(--akasha-blue);
+    font-weight: 700;
+}
+
+.continue-journey .btn:hover {
+    background: var(--akasha-blue);
+    color: white;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                            END OF ADDITIONS                             */
+/* -------------------------------------------------------------------------- */
 
 /* ==========================================================================
    KHEM RAJ PRADHAN | The Modern Manifesto CSS (Version 7.0 - Final)
