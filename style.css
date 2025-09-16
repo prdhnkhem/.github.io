@@ -334,6 +334,132 @@ footer a:hover { color: white; }
 /* -------------------------------------------------------------------------- */
 /*                            END OF ADDITIONS                             */
 /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*           START: Additions for Join Us Page (v1.1)                         */
+/* -------------------------------------------------------------------------- */
+
+/* 1. Join Options Grid
+   --------------------------------------------*/
+.join-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.join-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: 5px solid var(--akasha-blue); /* Accent color on top */
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.join-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.join-card p {
+    flex-grow: 1; /* Pushes button to the bottom */
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.join-card .btn {
+    width: 100%;
+}
+
+/* 2. Team Showcase Section
+   --------------------------------------------*/
+.team-category {
+    margin-top: 3rem;
+}
+
+.team-category-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--prana-red);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile-card h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.2rem;
+}
+
+.profile-card .role {
+    color: #666;
+    margin: 0;
+}
+
+.profile-card.placeholder {
+    background-color: #f5f2eb;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px; /* To give it some size */
+    color: #777;
+    font-style: italic;
+}
+
+
+/* 3. Direct Contact Section
+   --------------------------------------------*/
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.contact-section h3 {
+    font-size: 1.5rem;
+}
+
+.contact-section p {
+    max-width: 500px;
+    margin: 0.5rem auto 1.5rem;
+}
+
+.email-link {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #f5f2eb;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            END OF ADDITIONS                             */
+/* -------------------------------------------------------------------------- */
 
 /* ==========================================================================
    KHEM RAJ PRADHAN | The Modern Manifesto CSS (Version 7.0 - Final)
