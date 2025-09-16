@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=3.5">
+    <link rel="stylesheet" href="css/style.css?v=4.0">
     <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
 
     <header>
         <a href="index.html" class="logo">Khem Raj Pradhan</a>
-        <nav>
+        <nav class="desktop-nav">
             <a href="my-story.html">My Story</a>
             <a href="the-great-imbalance.html">The Imbalance</a>
             <a href="the-hunate-solution.html">The Solution</a>
@@ -25,7 +25,20 @@
             <a href="support-the-journey.html">Support</a>
             <a href="support-the-journey-ne.html" id="lang-switcher">नेपाली</a>
         </nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
+    <nav class="mobile-nav">
+        <a href="my-story.html">My Story</a>
+        <a href="the-great-imbalance.html">The Imbalance</a>
+        <a href="the-hunate-solution.html">The Solution</a>
+        <a href="join-the-journey.html">Join</a>
+        <a href="support-the-journey.html">Support</a>
+        <a href="support-the-journey-ne.html" id="lang-switcher-mobile">नेपाली</a>
+    </nav>
 
     <main>
         <section class="page-header">
@@ -38,18 +51,18 @@
             <div class="text-center">
                 <h2>Our Simple, Transparent Process</h2>
                 <div class="three-col-grid">
-                    <div class="process-step">
-                        <div class="icon"><i class="fas fa-seedling"></i></div>
+                    <div class="icon-feature">
+                        <span class="icon"><i class="fas fa-seedling"></i></span>
                         <h4>1. Explore the Impact</h4>
                         <p>See our Catalogs of Impact below to find a contribution that resonates with your heart.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="icon-feature">
+                        <span class="icon"><i class="fas fa-hand-holding-heart"></i></span>
                         <h4>2. Choose Your Path</h4>
                         <p>Decide whether to give a financial gift or an in-kind sponsorship of materials.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="icon"><i class="fas fa-eye"></i></div>
+                    <div class="icon-feature">
+                        <span class="icon"><i class="fas fa-eye"></i></span>
                         <h4>3. Track Every Rupee</h4>
                         <p>Watch your contribution at work in real-time on our public transparency ledger.</p>
                     </div>
@@ -99,9 +112,6 @@
                     </ul>
                 </div>
             </div>
-             <div class="text-center" style="margin-top: 40px;">
-                <a href="https://forms.gle/hnXJoUNrXFzDEUFH8" target="_blank" rel="noopener noreferrer" class="button">Click To Donate</a>
-            </div>
 
             <hr>
             
@@ -139,8 +149,10 @@
                    </ul>
                 </div>
             </div>
-             <div class="text-center" style="margin-top: 40px;">
-                <a href="https://forms.gle/hnXJoUNrXFzDEUFH8" target="_blank" rel="noopener noreferrer" class="button">Click To Sponsor</a>
+            
+            <div class="text-center" style="margin-top: 60px;">
+                <p>To discuss a financial donation or in-kind sponsorship, please let us know through our supporter form.</p>
+                <a href="https://forms.gle/hnXJoUNrXFzDEUFH8" target="_blank" rel="noopener noreferrer" class="button">Contact Us to Support</a>
             </div>
 
             <hr>
@@ -160,11 +172,11 @@
                 </div>
                 <div class="qr-container">
                     <div class="qr-box">
-                        <h4>Scan for Nabil Bank</h4>
+                        <p><strong>Scan for Nabil Bank</strong></p>
                         <img src="assets/qr-nabil.PNG" alt="QR Code for Nabil Bank">
                     </div>
                     <div class="qr-box">
-                        <h4>Scan for eSewa</h4>
+                        <p><strong>Scan for eSewa</strong></p>
                         <img src="assets/qr-esewa.JPG" alt="QR Code for eSewa">
                     </div>
                 </div>
@@ -230,6 +242,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js?v=3.4"></script>
+    <script src="js/script.js?v=4.0"></script>
 </body>
 </html>
