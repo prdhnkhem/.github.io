@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=1.0">
+    <link rel="stylesheet" href="css/style.css?v=2.0">
     <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
@@ -19,6 +19,7 @@
         <a href="index.html" class="logo">Khem Raj Pradhan</a>
         <nav>
             <a href="my-story.html">My Story</a>
+            <a href="the-great-imbalance.html">The Imbalance</a>
             <a href="the-hunate-solution.html">The Solution</a>
             <a href="join-the-journey.html">Join</a>
             <a href="support-the-journey.html">Support</a>
@@ -27,16 +28,28 @@
     </header>
 
     <main>
+        <section class="page-header">
+            <h1>Let’s Build Together</h1>
+            <p class="subtitle">Every contribution, no matter the size, is a seed planted for a regenerative future. Your support is the energy that fuels this entire movement.</p>
+        </section>
+
         <div class="container">
+            <!-- Process Section -->
             <div style="text-align: center;">
-                <h1 style="font-size: 3em;">Let’s Build Together.</h1>
-                <p style="font-style: italic; font-size: 1.1em; max-width: 600px; margin: 0 auto 50px auto;">Every contribution, no matter the size, is a seed planted for a regenerative future. Your support is the energy that fuels this entire movement.</p>
+                <h2>Our Simple, Transparent Process</h2>
+                <p>We invite you to become a co-creator with us. Here is how you can contribute.</p>
+                <p style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2em;">
+                    1. Choose Your Path &nbsp; &rarr; &nbsp; 2. See Our Catalog of Impact &nbsp; &rarr; &nbsp; 3. Track Every Rupee
+                </p>
             </div>
 
+            <hr>
+
+            <!-- Donation Options Section -->
             <div class="support-grid">
                 <div class="support-details">
-                    <h3>Become a Donor or Sponsor</h3>
-                    <p>You can fuel the movement with a financial seed or an in-kind contribution. Your effort makes this work possible. After all, we are one community. Our kids will be friends growing in the same community.</p>
+                    <h3>Financial Donations</h3>
+                    <p>You can contribute directly to our mission via bank transfer or e-wallet. Your support helps us buy tools, seeds, and provide for our core team.</p>
                     
                     <h4>Direct Bank Transfer</h4>
                     <p>
@@ -46,10 +59,7 @@
                         <strong>Account Number:</strong> 02210017511644<br>
                         <strong>SWIFT/BIC:</strong> NARBNPKA
                     </p>
-
-                    <p>If you wish to provide an in-kind sponsorship (materials, tools, pro-bono services) or discuss a larger partnership, please let us know through our supporter form.</p>
-                    <a href="https://forms.gle/hnXJoUNrXFzDEUFH8" class="button">See All Contribution Options</a>
-                    <!-- ACTION: Replace # with your Supporter Application Form link -->
+                    <p>After donating, please consider filling out our supporter form so we can thank you and allocate your gift correctly.</p>
                 </div>
                 <div class="support-qr">
                     <h3 style="text-align: center;">Scan to Contribute</h3>
@@ -60,41 +70,71 @@
                 </div>
             </div>
 
-            <hr style="margin: 60px 0;">
+            <div class="home-section" style="padding: 60px 0;">
+                <h3>Sponsorships & In-Kind Contributions</h3>
+                <p>If you or your company can provide materials, tools, or professional services, you become a vital partner. We are currently seeking sponsors for:</p>
+                <ul>
+                    <li>Farming & Seeds (Fruit trees, non-hybrid seeds, irrigation pipes)</li>
+                    <li>Construction Materials (Eco-friendly cement, bamboo, tools)</li>
+                    <li>Energy & Tech (Solar panels, batteries, laptops, cameras)</li>
+                </ul>
+                <p>To see a full list of our needs and to discuss a partnership, we invite you to connect with us through our supporter form.</p>
+                <a href="https://forms.gle/hnXJoUNrXFzDEUFH8" target="_blank" rel="noopener noreferrer" class="button">Become a Donor or Sponsor</a>
+            </div>
 
+            <hr>
+
+            <!-- Transparency Section -->
             <div style="text-align: center;">
                 <h2>Our Vow of Radical Transparency</h2>
-                <p>We believe that trust is our most valuable currency. As an unregistered, citizen-led movement, our accountability comes from our absolute transparency. Every single rupee is tracked on our live, public financial ledger for you to review at any time.</p>
-                <a href="https://forms.gle/hnXJoUNrXFzDEUFH8" class="button button-secondary">View Our Live Financial Ledger</a>
-                 <!-- ACTION: Replace # with the public link to your Google Sheet -->
+                <p>Trust is our most valuable currency. As an unregistered, citizen-led movement, our accountability comes from our absolute transparency. Below is our live, real-time financial ledger. You can see every single rupee that comes in and every single rupee that goes out, updated within 24 hours. This is our vow to you.</p>
+                
+                <div class="responsive-iframe-container">
+                    <iframe src="YOUR_GOOGLE_SHEET_PUBLISH_LINK_HERE"></iframe>
+                    <!-- 
+                    ACTION: To get this link:
+                    1. Open your LIVE_Financial_Transparency_Ledger.gsheet.
+                    2. Go to File > Share > Publish to web.
+                    3. In the dropdown, choose "Entire Document".
+                    4. Choose "Web page" as the format.
+                    5. Click "Publish" and copy the link that it gives you.
+                    6. Paste that link into the src="..." attribute above.
+                    -->
+                </div>
             </div>
 
         </div>
     </main>
 
     <footer>
-        <!-- Footer is consistent across all pages -->
+        <div class="footer-nav">
+            <a href="my-story.html">My Story</a>
+            <a href="the-great-imbalance.html">The Imbalance</a>
+            <a href="the-hunate-solution.html">The Solution</a>
+            <a href="join-the-journey.html">Join</a>
+            <a href="support-the-journey.html">Support</a>
+        </div>
         <div class="footer-socials">
             <div class="social-group">
                 <h4>Khem Raj Pradhan (Personal)</h4>
                 <div class="social-icons">
-                    <a href="https://www.youtube.com/@khem.hunatian" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.facebook.com/khem.hunatian/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/khem.hunatian/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://x.com/khemhunatian" target="_blank" aria-label="X"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="social-group">
                 <h4>Hunate Project</h4>
                 <div class="social-icons">
-                    <a href="https://www.youtube.com/@hunateproject" target="_blank" aria-label="YouTube Nepali"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.facebook.com/hunateproject" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/hunateproject/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@hunateproject" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://x.com/hunateproject" target="_blank" aria-label="X"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/company/66320052" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@hunateproject" target="_blank" rel="noopener noreferrer" aria-label="YouTube Nepali"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/hunateproject" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/hunateproject/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@hunateproject" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://x.com/hunateproject" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/66320052" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
@@ -103,6 +143,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js?v=1.0"></script>
+    <script src="js/script.js?v=2.0"></script>
 </body>
 </html>
