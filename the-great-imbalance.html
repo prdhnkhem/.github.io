@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=3.6">
+    <link rel="stylesheet" href="css/style.css?v=4.0">
     <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
 
     <header>
         <a href="index.html" class="logo">Khem Raj Pradhan</a>
-        <nav>
+        <nav class="desktop-nav">
             <a href="my-story.html">My Story</a>
             <a href="the-great-imbalance.html">The Imbalance</a>
             <a href="the-hunate-solution.html">The Solution</a>
@@ -25,7 +25,20 @@
             <a href="support-the-journey.html">Support</a>
             <a href="the-great-imbalance-ne.html" id="lang-switcher">नेपाली</a>
         </nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
+    <nav class="mobile-nav">
+        <a href="my-story.html">My Story</a>
+        <a href="the-great-imbalance.html">The Imbalance</a>
+        <a href="the-hunate-solution.html">The Solution</a>
+        <a href="join-the-journey.html">Join</a>
+        <a href="support-the-journey.html">Support</a>
+        <a href="the-great-imbalance-ne.html" id="lang-switcher-mobile">नेपाली</a>
+    </nav>
 
     <main>
         <section class="page-header">
@@ -78,7 +91,7 @@
                 <h3>The Healthcare Industry: Profiting from Sickness</h3>
                 <p>We have outsourced our well-being to a medical industry that profits from our illness. It is a system designed to manage symptoms, not to cultivate true health. We are prescribed synthetic pills to numb our pain but are rarely guided to address the roots of our suffering: the dead food we eat, the chronic stress we endure, and the toxic environments we inhabit.</p>
             </section>
-
+            
             <div class="reflective-questions" style="max-width: 750px; margin-left: auto; margin-right: auto;">
                 <h4>Questions for Your Reflection:</h4>
                 <ul>
@@ -186,6 +199,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js?v=3.6"></script>
+    <script src="js/script.js?v=4.0"></script>
 </body>
 </html>
