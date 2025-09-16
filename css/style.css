@@ -1,4 +1,4 @@
-/* --- Hunate Brand Guide: style.css v2.0 --- */
+/* --- Hunate Brand Guide: style.css v3.0 --- */
 
 /* 1. Variables & Global Styles */
 :root {
@@ -37,7 +37,7 @@ h3 { font-size: 1.6em; }
 
 p {
     margin-bottom: 20px;
-    max-width: 65ch; /* Improves readability */
+    max-width: 65ch;
 }
 
 a {
@@ -72,18 +72,19 @@ hr {
     border: 0;
     height: 1px;
     background: var(--himal-stone);
-    opacity: 0.5;
-    margin: 60px 0;
+    opacity: 0.3;
+    margin: 60px auto;
+    max-width: 200px;
 }
 
-/* 2. Header & Footer Structure */
+/* 2. Header & V3.0 Footer Structure */
 header {
     background-color: white;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--himal-stone);
+    border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -97,7 +98,7 @@ header .logo {
 }
 
 header nav a {
-    margin-left: 25px;
+    margin-left: 20px;
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 0.9em;
@@ -107,52 +108,62 @@ header nav a {
 footer {
     background-color: var(--shunya-black);
     color: var(--manjusha-sand);
-    padding: 50px 20px 30px 20px;
-    text-align: center;
+    padding: 60px 20px 30px 20px;
 }
 
-.footer-nav {
-    margin-bottom: 30px;
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    text-align: left;
 }
 
-.footer-nav a {
-    color: white;
-    margin: 0 15px;
-    font-family: var(--font-heading);
-    font-size: 0.9em;
-}
-
-.footer-socials {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    border-top: 1px solid var(--himal-stone);
-    border-bottom: 1px solid var(--himal-stone);
-    padding: 30px 0;
-}
-
-.footer-socials h4 {
+.footer-column h4 {
     font-family: var(--font-heading);
     color: white;
-    margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--prana-red);
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
-.social-icons a {
-    margin: 0 10px;
-    color: var(--manjusha-sand);
-    font-size: 1.4em;
-}
-
-.footer-copyright {
+.footer-column p, .footer-column a {
     font-size: 0.9em;
     color: var(--himal-stone);
-    margin-top: 30px;
 }
 
-/* 3. Page Specific Sections */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul a {
+    color: var(--manjusha-sand);
+}
+
+.social-icons-footer a {
+    margin-right: 15px;
+    font-size: 1.5em;
+    color: var(--manjusha-sand);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--himal-stone);
+    padding-top: 30px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--himal-stone);
+}
+
+/* 3. V3.0 Page Specific Sections */
 .hero {
     background-size: cover;
     background-position: center;
@@ -169,121 +180,35 @@ footer {
 
 .hero h1 {
     font-size: 3.2em;
-    margin-bottom: 10px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .hero p {
     font-size: 1.2em;
     max-width: 600px;
-    margin: 0 auto 30px auto;
+    margin: 20px auto 30px auto;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
 
-.page-header {
-    background-color: white;
-    text-align: center;
-    padding: 80px 20px;
+.home-section {
+    padding: 80px 0;
     border-bottom: 1px solid #ddd;
 }
-
-.page-header h1 {
-    font-size: 3em;
-    margin-bottom: 15px;
+.home-section .container {
+    text-align: center; /* V3.0 Centering Fix */
+}
+.home-section p {
+    margin-left: auto; /* V3.0 Centering Fix */
+    margin-right: auto; /* V3.0 Centering Fix */
 }
 
-.page-header p.subtitle {
-    font-style: italic;
-    font-size: 1.15em;
-    max-width: 700px;
-    margin: 0 auto;
-    color: var(--himal-stone);
-}
-
-.content-body {
-    max-width: 720px; /* Optimal for reading */
-    text-align: left;
-    margin: 60px auto;
-}
-
-/* My Story Page Enhancements */
-.youtube-cta {
+.bg-white {
     background-color: white;
-    border: 1px solid #ddd;
-    border-left: 5px solid var(--prana-red);
-    padding: 25px;
-    margin: 40px 0;
-    text-align: center;
-    border-radius: 5px;
 }
 
-.youtube-cta p {
-    margin: 0 0 15px 0;
-    font-size: 1.1em;
-}
-
-.pull-quote {
-    font-size: 1.3em;
-    font-style: italic;
-    color: var(--prana-red);
-    border-left: 3px solid var(--akasha-blue);
-    padding-left: 20px;
-    margin: 40px 20px;
-}
-
-/* Join/Support Page Enhancements */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    justify-content: center; /* Center the grid items */
-}
-
-.card {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-}
-
-.card h3 { color: var(--prana-red); margin-top: 0; }
-.card p { flex-grow: 1; }
-
-.support-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-}
-.support-qr img {
-    max-width: 200px;
-    display: block;
-    margin: 10px auto;
-}
-.support-qr p { text-align: center; }
-
-.responsive-iframe-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 100%; /* Aspect ratio for a square-ish view */
-    margin-top: 30px;
-}
-
-.responsive-iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #ccc;
-}
-
-
-/* 4. Mobile Responsiveness */
+/* 4. V3.0 Mobile Responsiveness */
 @media (max-width: 768px) {
+    body { font-size: 16px; }
     header {
         flex-direction: column;
     }
@@ -294,11 +219,10 @@ footer {
     }
     header nav a {
         margin: 0 8px;
+        font-size: 0.8em;
     }
     .hero h1 { font-size: 2.2em; }
-    .hero p { font-size: 1.1em; }
-    .page-header h1 { font-size: 2.2em; }
-    h2 { font-size: 1.8em; }
-    .footer-socials { flex-direction: column; gap: 30px; }
-    .support-grid { grid-template-columns: 1fr; }
+    h2 { font-size: 2em; }
+    .footer-grid { text-align: center; }
+    .footer-column h4 { display: block; }
 }
