@@ -460,6 +460,79 @@ footer a:hover { color: white; }
 /* -------------------------------------------------------------------------- */
 /*                            END OF ADDITIONS                             */
 /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*           START: Additions for Journal Page (v1.1)                         */
+/* -------------------------------------------------------------------------- */
+
+#journal-main .container {
+    max-width: 900px; /* A slightly wider container for reading comfort */
+}
+
+.journal-grid-fullpage {
+    display: grid;
+    grid-template-columns: 1fr; /* A single column layout */
+    gap: 3rem; /* More space between posts */
+}
+
+.journal-post-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    border-left: 5px solid var(--prana-red);
+}
+
+.post-meta {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-heading);
+    font-size: 0.9em;
+    color: #777;
+}
+
+.post-category {
+    background-color: var(--akasha-blue);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.post-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.post-title a {
+    color: var(--shunya-black);
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    color: var(--prana-red);
+}
+
+.post-excerpt {
+    margin: 0;
+    line-height: 1.8;
+    color: #444;
+}
+
+.post-read-more {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--prana-red);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                            END OF ADDITIONS                             */
+/* -------------------------------------------------------------------------- */
 
 /* ==========================================================================
    KHEM RAJ PRADHAN | The Modern Manifesto CSS (Version 7.0 - Final)
