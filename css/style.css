@@ -1,4 +1,4 @@
-/* --- Hunate Brand Guide: style.css v3.0 --- */
+/* --- Hunate Brand Guide: style.css v3.2 --- */
 
 /* 1. Variables & Global Styles */
 :root {
@@ -37,7 +37,7 @@ h3 { font-size: 1.6em; }
 
 p {
     margin-bottom: 20px;
-    max-width: 65ch;
+    max-width: 65ch; /* Improves readability for long text blocks */
 }
 
 a {
@@ -77,7 +77,7 @@ hr {
     max-width: 200px;
 }
 
-/* 2. Header & V3.0 Footer Structure */
+/* 2. Header & Footer Structure */
 header {
     background-color: white;
     padding: 15px 30px;
@@ -163,7 +163,7 @@ footer {
     color: var(--himal-stone);
 }
 
-/* 3. V3.0 Page Specific Sections */
+/* 3. Page Specific Sections */
 .hero {
     background-size: cover;
     background-position: center;
@@ -190,39 +190,125 @@ footer {
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
 
+.page-header {
+    background-color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-header h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.page-header p.subtitle {
+    font-style: italic;
+    font-size: 1.15em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--himal-stone);
+}
+
+.content-body {
+    max-width: 720px; /* Optimal for reading */
+    text-align: left;
+    margin: 60px auto;
+}
+
 .home-section {
     padding: 80px 0;
     border-bottom: 1px solid #ddd;
 }
 .home-section .container {
-    text-align: center; /* V3.0 Centering Fix */
+    text-align: center;
 }
 .home-section p {
-    margin-left: auto; /* V3.0 Centering Fix */
-    margin-right: auto; /* V3.0 Centering Fix */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bg-white {
     background-color: white;
 }
 
-/* 4. V3.0 Mobile Responsiveness */
+/* 4. Page Enhancements */
+.youtube-cta {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-left: 5px solid var(--prana-red);
+    padding: 25px;
+    margin: 40px 0;
+    text-align: center;
+    border-radius: 5px;
+}
+.youtube-cta p { font-size: 1.1em; margin: 0 0 15px 0; }
+
+.pull-quote {
+    font-size: 1.3em;
+    font-style: italic;
+    color: var(--prana-red);
+    border-left: 3px solid var(--akasha-blue);
+    padding-left: 20px;
+    margin: 40px 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.card h3 { color: var(--prana-red); margin-top: 0; }
+.card p { flex-grow: 1; }
+
+.support-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+.support-qr img { max-width: 200px; display: block; margin: 10px auto; }
+.support-qr p { text-align: center; }
+
+.responsive-iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+    margin-top: 30px;
+}
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+}
+
+/* 5. Mobile Responsiveness */
 @media (max-width: 768px) {
     body { font-size: 16px; }
-    header {
-        flex-direction: column;
-    }
-    header nav {
-        margin-top: 15px;
-        width: 100%;
-        text-align: center;
-    }
-    header nav a {
-        margin: 0 8px;
-        font-size: 0.8em;
-    }
+    header { flex-direction: column; }
+    header nav { margin-top: 15px; width: 100%; text-align: center; }
+    header nav a { margin: 0 8px; font-size: 0.8em; }
     .hero h1 { font-size: 2.2em; }
     h2 { font-size: 2em; }
     .footer-grid { text-align: center; }
     .footer-column h4 { display: block; }
+    .support-grid { grid-template-columns: 1fr; }
+}
+
+/* V3.2 FOOTER CENTERING FIX */
+.footer-bottom p {
+    max-width: none; /* This is the fix. It removes the width limit just for this paragraph. */
 }
