@@ -10,55 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=3.5">
+    <link rel="stylesheet" href="css/style.css?v=3.6">
     <link rel="icon" href="favicon.png" type="image/png">
-    
-    <style>
-        /* Specific styles for this page's layout */
-        .journey-section {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            margin-bottom: 60px;
-        }
-        .journey-icon {
-            flex-basis: 20%;
-            text-align: center;
-        }
-        .journey-icon .icon {
-            font-size: 3em; /* Smaller icon size */
-            color: var(--prana-red);
-            margin-bottom: 20px;
-            display: block;
-        }
-        .journey-text {
-            flex-basis: 80%;
-            text-align: left;
-        }
-        .journey-text h3 {
-            margin-top: 0;
-            font-size: 2em;
-        }
-        .journey-text p {
-            max-width: none; /* Override global paragraph width */
-        }
-        .journey-section:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        @media (max-width: 768px) {
-            .journey-section, .journey-section:nth-child(even) {
-                flex-direction: column;
-                text-align: center;
-            }
-            .journey-text {
-                text-align: center;
-            }
-            .journey-text p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -83,72 +36,62 @@
         <div class="container">
 
             <!-- Engineers -->
-            <div class="journey-section">
-                <div class="journey-icon"><span class="icon"><i class="fas fa-brain"></i></span></div>
-                <div class="journey-text">
-                    <h3>The Call for Life Designers: Become a Hunate Engineer</h3>
-                    <p>This is a call to the young visionaries, the multi-skilled builders, and the courageous hearts ready to dedicate their lives to a new way of being. A Hunate Engineer is not a job title; it is a sacred responsibility to co-create the blueprint for a regenerative future.</p>
-                    <p><strong>Who We Seek:</strong> We are looking for individuals under 30 with a deep passion, a humble spirit, and expertise in one of our 13 core domains. You must be a self-starter, a deep thinker, and ready to commit to a journey of intense learning and service.</p>
-                    <p><strong>The Path:</strong> The selection process is a journey of mutual discovery, involving a detailed application, a first assignment to test your vision, and a final alignment dialogue. This is not for everyone; it is for the truly called.</p>
-                    <a href="https://forms.gle/1AZUtMrmXLa3fFtQA" target="_blank" rel="noopener noreferrer" class="button">Apply to be an Engineer</a>
-                </div>
-            </div>
+            <section class="feature-section">
+                <span class="icon"><i class="fas fa-brain"></i></span>
+                <h3>The Call for Life Designers: Become a Hunate Engineer</h3>
+                <p>This is a call to the young visionaries, the multi-skilled builders, and the courageous hearts ready to dedicate their lives to a new way of being. A Hunate Engineer is not a job title; it is a sacred responsibility to co-create the blueprint for a regenerative future.</p>
+                <p><strong>Who We Seek:</strong> We are looking for individuals under 30 with a deep passion, a humble spirit, and expertise in one of our 13 core domains. You must be a self-starter, a deep thinker, and ready to commit to a journey of intense learning and service.</p>
+                <p><strong>The Path:</strong> The selection process is a journey of mutual discovery, involving a detailed application, a first assignment to test your vision, and a final alignment dialogue. This is not for everyone; it is for the truly called.</p>
+                <a href="https://forms.gle/1AZUtMrmXLa3fFtQA" target="_blank" rel="noopener noreferrer" class="button">Apply to be an Engineer</a>
+            </section>
 
             <hr>
 
             <!-- Mentors -->
-            <div class="journey-section">
-                <div class="journey-icon"><span class="icon"><i class="fas fa-landmark"></i></span></div>
-                <div class="journey-text">
-                    <h3>The Call for Wisdom Keepers: Become a Hunate Mentor</h3>
-                    <p>A new generation's energy must be guided by the embodied wisdom of its elders. We are seeking a council of respected leaders and experts to serve as the ethical compass and strategic guardians of our movement. This is not a role of management, but of sacred guidance.</p>
-                    <p><strong>Who We Seek:</strong> Esteemed professionals and practitioners in our core domains who feel a deep responsibility to pass on their life's learnings. Your role is high-impact, requiring only a few hours a month.</p>
-                    <p><strong>The Path:</strong> Our engagement begins with a respectful dialogue to ensure philosophical alignment, followed by an in-person meeting to formalize the partnership. This is an invitation to shape a legacy.</p>
-                    <a href="https://forms.gle/59rQGRCKtQJYWXf48" target="_blank" rel="noopener noreferrer" class="button">Express Interest as a Mentor</a>
-                </div>
-            </div>
+            <section class="feature-section">
+                <span class="icon"><i class="fas fa-landmark"></i></span>
+                <h3>The Call for Wisdom Keepers: Become a Hunate Mentor</h3>
+                <p>A new generation's energy must be guided by the embodied wisdom of its elders. We are seeking a council of respected leaders and experts to serve as the ethical compass and strategic guardians of our movement. This is not a role of management, but of sacred guidance.</p>
+                <p><strong>Who We Seek:</strong> Esteemed professionals and practitioners in our core domains who feel a deep responsibility to pass on their life's learnings. Your role is high-impact, requiring only a few hours a month.</p>
+                <p><strong>The Path:</strong> Our engagement begins with a respectful dialogue to ensure philosophical alignment, followed by an in-person meeting to formalize the partnership. This is an invitation to shape a legacy.</p>
+                <a href="https://forms.gle/59rQGRCKtQJYWXf48" target="_blank" rel="noopener noreferrer" class="button">Express Interest as a Mentor</a>
+            </section>
 
             <hr>
             
             <!-- Hubs -->
-            <div class="journey-section">
-                <div class="journey-icon"><span class="icon"><i class="fas fa-home"></i></span></div>
-                <div class="journey-text">
-                    <h3>The Call for Lighthouses: Become a Hunate Hub</h3>
-                    <p>We are seeking 14 courageous partners—7 families and 7 orphanages—to embark on a profound, multi-year journey of transformation. Your home and land will become a living example of a self-sufficient, regenerative way of life for your entire community.</p>
-                    <p><strong>Who We Seek:</strong> Partners with secure land access, a deep desire for self-reliance, a willingness to work hard, and an open heart to learn and share. You will be the living proof that a new world is possible.</p>
-                    <p><strong>The Path:</strong> A careful selection process involving a detailed application, a site visit, an in-depth interview, and a final decision by our Weighted Council ensures a deep and lasting partnership.</p>
-                    <a href="https://forms.gle/qbWwi5ix1rgf29QR8" target="_blank" rel="noopener noreferrer" class="button">Apply for Partnership</a>
-                </div>
-            </div>
+            <section class="feature-section">
+                <span class="icon"><i class="fas fa-home"></i></span>
+                <h3>The Call for Lighthouses: Become a Hunate Hub</h3>
+                <p>We are seeking 14 courageous partners—7 families and 7 orphanages—to embark on a profound, multi-year journey of transformation. Your home and land will become a living example of a self-sufficient, regenerative way of life for your entire community.</p>
+                <p><strong>Who We Seek:</strong> Partners with secure land access, a deep desire for self-reliance, a willingness to work hard, and an open heart to learn and share. You will be the living proof that a new world is possible.</p>
+                <p><strong>The Path:</strong> A careful selection process involving a detailed application, a site visit, an in-depth interview, and a final decision by our Weighted Council ensures a deep and lasting partnership.</p>
+                <a href="https://forms.gle/qbWwi5ix1rgf29QR8" target="_blank" rel="noopener noreferrer" class="button">Apply for Partnership</a>
+            </section>
 
             <hr>
 
             <!-- Volunteers -->
-            <div class="journey-section">
-                <div class="journey-icon"><span class="icon"><i class="fas fa-hands-helping"></i></span></div>
-                <div class="journey-text">
-                    <h3>The Call for Co-Creators: Become a Volunteer</h3>
-                    <p>This is an invitation to get your hands in the soil. We are looking for passionate individuals to join us on the ground for a minimum of 3 months. This is not voluntourism; it is a deep dive into community living, hard work, and the practical application of Hunateculture.</p>
-                    <p><strong>Who We Seek:</strong> Resilient, adaptable individuals with practical skills (in farming, building, teaching, or media) and a spirit of service. You must be ready for simple living and a profound, life-changing experience.</p>
-                    <p><strong>The Path:</strong> An application followed by an alignment interview to ensure your expectations and skills are a good fit for the needs of our hubs.</p>
-                    <a href="https://forms.gle/F6hwmC4LiQ1soKzE8" target="_blank" rel="noopener noreferrer" class="button">Apply to Volunteer</a>
-                </div>
-            </div>
+            <section class="feature-section">
+                <span class="icon"><i class="fas fa-hands-helping"></i></span>
+                <h3>The Call for Co-Creators: Become a Volunteer</h3>
+                <p>This is an invitation to get your hands in the soil. We are looking for passionate individuals to join us on the ground for a minimum of 3 months. This is not voluntourism; it is a deep dive into community living, hard work, and the practical application of Hunateculture.</p>
+                <p><strong>Who We Seek:</strong> Resilient, adaptable individuals with practical skills (in farming, building, teaching, or media) and a spirit of service. You must be ready for simple living and a profound, life-changing experience.</p>
+                <p><strong>The Path:</strong> An application followed by an alignment interview to ensure your expectations and skills are a good fit for the needs of our hubs.</p>
+                <a href="https://forms.gle/F6hwmC4LiQ1soKzE8" target="_blank" rel="noopener noreferrer" class="button">Apply to Volunteer</a>
+            </section>
 
             <hr>
 
             <!-- District Representatives -->
-            <div class="journey-section">
-                <div class="journey-icon"><span class="icon"><i class="fas fa-map-marker-alt"></i></span></div>
-                <div class="journey-text">
-                    <h3>The Call for Living Bridges: Become a District Representative</h3>
-                    <p>The Hunate Movement is built on deep local wisdom. We are seeking trusted individuals to be our eyes, ears, and heart in every district of Nepal. This is a sacred role of service, connection, and trust.</p>
-                    <p><strong>Who We Seek:</strong> Individuals with deep, respected roots in their community, excellent communication skills, and a profound understanding of the local culture. Your integrity is your most important qualification.</p>
-                    <p><strong>The Path:</strong> A process involving an application, a first assignment to assess your local insight, and an alignment dialogue.</p>
-                    <a href="https://forms.gle/Ct2aKnM26key3nC46" target="_blank" rel="noopener noreferrer" class="button">Apply to be a DR</a>
-                </div>
-            </div>
+            <section class="feature-section">
+                <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                <h3>The Call for Living Bridges: Become a District Representative</h3>
+                <p>The Hunate Movement is built on deep local wisdom. We are seeking trusted individuals to be our eyes, ears, and heart in every district of Nepal. This is a sacred role of service, connection, and trust.</p>
+                <p><strong>Who We Seek:</strong> Individuals with deep, respected roots in their community, excellent communication skills, and a profound understanding of the local culture. Your integrity is your most important qualification.</p>
+                <p><strong>The Path:</strong> A process involving an application, a first assignment to assess your local insight, and an alignment dialogue.</p>
+                <a href="https://forms.gle/Ct2aKnM26key3nC46" target="_blank" rel="noopener noreferrer" class="button">Apply to be a DR</a>
+            </section>
 
         </div>
     </main>
@@ -198,6 +141,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js?v=3.5"></script>
+    <script src="js/script.js?v=3.6"></script>
 </body>
 </html>
