@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>दर्शन | खेम राज प्रधान</title>
+    <!-- NEPALI: Translate meta tags -->
+    <meta name="description" content="[Translate to Nepali] The core philosophy behind the HUNATE Movement...">
+    <meta name="keywords" content="[Translate to Nepali] HUNATE philosophy, failing social system...">
+    <meta name="author" content="Khem Raj Pradhan">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=1.1">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">खेम</a></div>
+            <ul class="nav-links-desktop">
+                <li><a href="story.html">मेरो कथा</a></li>
+                <li><a href="philosophy.html" class="active">दर्शन</a></li>
+                <li><a href="blueprint.html">खाका (हुनाटे)</a></li>
+                <li><a href="journal.html">जर्नल</a></li>
+                <li><a href="support.html">सहयोग</a></li>
+                <li><a href="join.html" class="nav-cta">जोडिनुहोस्</a></li>
+                <li class="lang-switch">
+                    <a href="../philosophy.html">EN</a> | <a href="philosophy.html" class="active">NP</a>
+                </li>
+            </ul>
+            <div class="hamburger"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+        </nav>
+    </header>
+    
+    <!-- Mobile Nav should also be translated -->
+
+    <main>
+        <!-- NEPALI: All content below needs translation -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">दर्शन</h1>
+                <p class="page-subtitle">[NEPALI TEXT] A system is only as strong as its foundation. To build a new world, we must first have the courage to diagnose the old one.</p>
+            </div>
+        </section>
+
+        <section class="content-section" id="diagnosis">
+            <div class="container text-container">
+                <h2>[NEPALI] The Diagnosis: Our Failing Social Systems</h2>
+                <p class="section-intro" style="text-align: left;">[NEPALI TEXT] My journey revealed a simple, painful truth... Below is a diagnosis of the core fractures.</p>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">[NEPALI] I. The Human Condition</button>
+                        <div class="accordion-content"><p>[NEPALI TEXT] We are taught to treat our bodies like machines...</p></div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">[NEPALI] II. Health, Food & Medicine</button>
+                        <div class="accordion-content"><p>[NEPALI TEXT] We have outsourced our well-being...</p></div>
+                    </div>
+                    <!-- Translate all other accordion items -->
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="content-section" id="principles">
+            <div class="container">
+                <h2>[NEPALI] The Foundational Principles of the Solution</h2>
+                <p class="section-intro">[NEPALI TEXT] From this diagnosis, a new design for living can emerge...</p>
+                <div class="problem-grid">
+                    <div class="problem-card"><h3>[NEPALI] 1. HUNATE (The Research)</h3><p>[NEPALI TEXT] The core research philosophy...</p></div>
+                    <div class="problem-card"><h3>[NEPALI] 2. Hunateculture (The System)</h3><p>[NEPALI TEXT] The practical design system for life...</p></div>
+                    <div class="problem-card"><h3>[NEPALI] 3. Becoming Hunatian (The Path)</h3><p>[NEPALI TEXT] The journey of personal transformation...</p></div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+        
+        <div class="continue-journey">
+            <p>[NEPALI TEXT] This philosophy is the foundation for a practical plan of action. A blueprint for a new world.</p>
+            <a href="blueprint.html" class="btn">[NEPALI] Continue to The Blueprint &rarr;</a>
+        </div>
+    </main>
+    
+    <footer>
+        <!-- Translate the footer -->
+    </footer>
+
+    <!-- The JavaScript does not need translation -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+        if (hamburger && mobileNav && closeBtn) {
+            hamburger.addEventListener('click', () => { mobileNav.classList.add('mobile-nav-active'); });
+            closeBtn.addEventListener('click', () => { mobileNav.classList.remove('mobile-nav-active'); });
+            const mobileLinks = document.querySelectorAll('.mobile-nav a');
+            mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileNav.classList.remove('mobile-nav-active'); }); });
+        }
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
