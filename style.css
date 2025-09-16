@@ -247,6 +247,74 @@ footer a:hover { color: white; }
 /* -------------------------------------------------------------------------- */
 /*                            END OF ADDITIONS                             */
 /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*           START: Additions for Philosophy Page (v1.1)                      */
+/* -------------------------------------------------------------------------- */
+
+/* 1. Accordion Styling
+   --------------------------------------------*/
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* This is key for the rounded corners */
+}
+
+.accordion-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    background-color: #fff;
+    color: var(--shunya-black);
+    cursor: pointer;
+    padding: 1.5rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header:hover, .accordion-header.active {
+    background-color: #f5f2eb; /* A lighter sand color */
+}
+
+.accordion-header::after {
+    content: '+'; /* Plus sign icon */
+    font-size: 1.5rem;
+    color: var(--himal-stone);
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+    content: '−'; /* Minus sign icon */
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content p {
+    padding: 1.5rem;
+    margin: 0;
+    line-height: 1.7;
+    border-top: 1px solid #f0f0f0; /* A subtle separator */
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            END OF ADDITIONS                             */
+/* -------------------------------------------------------------------------- */
+
 
 /* ==========================================================================
    KHEM RAJ PRADHAN | The Modern Manifesto CSS (Version 7.0 - Final)
