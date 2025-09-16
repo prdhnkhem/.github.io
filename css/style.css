@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1100px; /* Wider for more professional layouts */
     margin: 0 auto;
     padding: 20px;
 }
@@ -34,63 +34,23 @@ h1, h2, h3, h4 {
 }
 
 h2 { font-size: 2.5em; }
-h3 { font-size: 1.6em; }
+h3 { font-size: 1.8em; }
 
 p {
     margin-bottom: 20px;
-    max-width: 65ch; /* Improves readability */
+    max-width: 65ch;
 }
 
-a {
-    color: var(--akasha-blue);
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-}
+a { color: var(--akasha-blue); text-decoration: none; transition: opacity 0.3s ease; }
+a:hover { opacity: 0.8; }
 
-a:hover {
-    opacity: 0.8;
-}
+.button { display: inline-block; background-color: var(--akasha-blue); color: white !important; padding: 12px 25px; font-family: var(--font-heading); font-weight: 700; border-radius: 5px; text-align: center; border: 2px solid var(--akasha-blue); }
+.button-secondary { background-color: transparent; color: var(--shunya-black) !important; border-color: var(--shunya-black); }
 
-.button {
-    display: inline-block;
-    background-color: var(--akasha-blue);
-    color: white !important;
-    padding: 12px 25px;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    border-radius: 5px;
-    text-align: center;
-    border: 2px solid var(--akasha-blue);
-}
+hr { border: 0; height: 1px; background: var(--himal-stone); opacity: 0.3; margin: 80px auto; max-width: 200px; }
 
-.button-secondary {
-    background-color: transparent;
-    color: var(--shunya-black) !important;
-    border-color: var(--shunya-black);
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    background: var(--himal-stone);
-    opacity: 0.3;
-    margin: 80px auto;
-    max-width: 200px;
-}
-
-/* 2. Header & Footer Structure */
-header {
-    background-color: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
+/* 2. Header & Footer */
+header { background-color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 100; }
 header .logo { font-family: var(--font-heading); font-weight: 700; font-size: 1.5em; color: var(--prana-red); }
 header nav a { margin-left: 20px; font-family: var(--font-heading); font-weight: 600; font-size: 0.9em; color: var(--shunya-black); }
 
@@ -105,7 +65,7 @@ footer { background-color: var(--shunya-black); color: var(--manjusha-sand); pad
 .footer-bottom { border-top: 1px solid var(--himal-stone); padding-top: 30px; margin-top: 40px; text-align: center; font-size: 0.9em; color: var(--himal-stone); }
 .footer-bottom p { max-width: none; }
 
-/* 3. Page Specific Sections */
+/* 3. Page Structures */
 .hero { background-size: cover; background-position: center; color: white; text-align: center; padding: 120px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 70vh; background-color: var(--shunya-black); }
 .hero h1 { font-size: 3.2em; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
 .hero p { font-size: 1.2em; max-width: 600px; margin: 20px auto 30px auto; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
@@ -115,22 +75,18 @@ footer { background-color: var(--shunya-black); color: var(--manjusha-sand); pad
 .page-header p.subtitle { font-style: italic; font-size: 1.15em; max-width: 700px; margin: 0 auto; color: var(--himal-stone); }
 
 .content-body { max-width: 720px; text-align: left; margin: 60px auto; }
-
-.home-section { padding: 80px 0; border-bottom: 1px solid #ddd; }
-.home-section .container { text-align: center; }
-.home-section p { margin-left: auto; margin-right: auto; }
-.bg-white { background-color: white; }
 .text-center { text-align: center; }
 .text-center p { margin-left: auto; margin-right: auto; }
 .text-center .max-width-override { max-width: none; }
 
-
-/* 4. V3.5 Page Enhancements & Layouts */
+/* 4. V3.5 Component Styles */
 .three-col-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
 .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
-.process-step { text-align: center; }
-.process-step .icon { font-size: 2.5em; color: var(--prana-red); margin-bottom: 10px; }
-.process-step h4 { margin-bottom: 5px; font-size: 1.2em; }
+
+.icon-feature { text-align: center; }
+.icon-feature .icon { font-size: 2.5em; color: var(--prana-red); margin-bottom: 15px; display: block; }
+.icon-feature h4 { margin-bottom: 10px; font-size: 1.2em; }
+.icon-feature p { font-size: 0.95em; margin: 0 auto; }
 
 .youtube-cta { background-color: white; border: 1px solid #ddd; border-left: 5px solid var(--prana-red); padding: 25px; margin: 40px 0; text-align: center; border-radius: 5px; }
 .youtube-cta p { font-size: 1.1em; margin: 0 auto 15px auto; }
