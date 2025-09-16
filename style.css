@@ -533,6 +533,62 @@ footer a:hover { color: white; }
 /* -------------------------------------------------------------------------- */
 /*                            END OF ADDITIONS                             */
 /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*           START: Additions for Support Page (v1.1)                         */
+/* -------------------------------------------------------------------------- */
+
+.support-category {
+    margin: 3rem 0;
+}
+
+.support-category h3 {
+    font-size: 1.6rem;
+    border-bottom: 2px solid var(--himal-stone);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.support-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.support-item h4 {
+    margin-top: 0;
+    color: var(--akasha-blue);
+}
+
+.support-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.support-category li {
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    border-left: 3px solid var(--prana-red);
+}
+
+.support-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                            END OF ADDITIONS                             */
+/* -------------------------------------------------------------------------- */
 
 /* ==========================================================================
    KHEM RAJ PRADHAN | The Modern Manifesto CSS (Version 7.0 - Final)
