@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>खाका (हुनाटे) | खेम राज प्रधान</title>
+    <!-- NEPALI: Translate meta tags -->
+    <meta name="description" content="[Translate to Nepali] The strategic blueprint for the HUNATE Movement...">
+    <meta name="keywords" content="[Translate to Nepali] HUNATE blueprint, 7-7-7 Initiative...">
+    <meta name="author" content="Khem Raj Pradhan">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=1.1">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">खेम</a></div>
+            <ul class="nav-links-desktop">
+                <li><a href="story.html">मेरो कथा</a></li>
+                <li><a href="philosophy.html">दर्शन</a></li>
+                <li><a href="blueprint.html" class="active">खाका (हुनाटे)</a></li>
+                <li><a href="journal.html">जर्नल</a></li>
+                <li><a href="support.html">सहयोग</a></li>
+                <li><a href="join.html" class="nav-cta">जोडिनुहोस्</a></li>
+                <li class="lang-switch">
+                    <a href="../blueprint.html">EN</a> | <a href="blueprint.html" class="active">NP</a>
+                </li>
+            </ul>
+            <div class="hamburger"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+        </nav>
+    </header>
+
+    <!-- Remember to translate the mobile navigation as well -->
+    <div class="mobile-nav">...</div>
+
+    <main>
+        <!-- NEPALI: Translate all content below -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">कार्यको लागि खाका</h1>
+                <p class="page-subtitle">[NEPALI TEXT] Philosophy is the seed. Action is the water. This is our strategic plan to cultivate a regenerative future, from the grassroots up.</p>
+            </div>
+        </section>
+
+        <section class="content-section" id="blueprint-details">
+            <div class="container">
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <h3>[NEPALI] I. The HUNATE Movement</h3>
+                        <p>[NEPALI TEXT] This is our public, citizen-led campaign to awaken consciousness...</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>[NEPALI] II. The 7-7-7 Initiative</h3>
+                        <p>[NEPALI TEXT] This is our immediate, on-the-ground mission. We will partner with 7 families and 7 orphanages...</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>[NEPALI] III. The Hunate HQ</h3>
+                        <p>[NEPALI TEXT] This is our long-term vision. To build a physical headquarters in Nepal...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+        
+        <div class="continue-journey">
+            <p>[NEPALI TEXT] This blueprint is not a static document; it is an open invitation. See how you can become an architect of this new world.</p>
+            <a href="join.html" class="btn">[NEPALI] Continue to Join Us &rarr;</a>
+        </div>
+    </main>
+    
+    <footer>
+        <!-- Translate the footer -->
+    </footer>
+
+    <script>
+        // No translation needed for the script
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+        if (hamburger && mobileNav && closeBtn) {
+            hamburger.addEventListener('click', () => { mobileNav.classList.add('mobile-nav-active'); });
+            closeBtn.addEventListener('click', () => { mobileNav.classList.remove('mobile-nav-active'); });
+            const mobileLinks = document.querySelectorAll('.mobile-nav a');
+            mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileNav.classList.remove('mobile-nav-active'); }); });
+        }
+    </script>
+</body>
+</html>
