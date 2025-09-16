@@ -49,7 +49,7 @@ a:hover { opacity: 0.8; }
 
 hr { border: 0; height: 1px; background: var(--himal-stone); opacity: 0.3; margin: 80px auto; max-width: 200px; }
 
-/* 2. Header & Footer */
+/* 2. Header & Footer Structure */
 header { background-color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 100; }
 header .logo { font-family: var(--font-heading); font-weight: 700; font-size: 1.5em; color: var(--prana-red); }
 header nav a { margin-left: 20px; font-family: var(--font-heading); font-weight: 600; font-size: 0.9em; color: var(--shunya-black); }
@@ -83,10 +83,32 @@ footer { background-color: var(--shunya-black); color: var(--manjusha-sand); pad
 .three-col-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
 .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
 
-.icon-feature { text-align: center; }
-.icon-feature .icon { font-size: 2.5em; color: var(--prana-red); margin-bottom: 15px; display: block; }
-.icon-feature h4 { margin-bottom: 10px; font-size: 1.2em; }
-.icon-feature p { font-size: 0.95em; margin: 0 auto; }
+.icon-feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 80px; /* Row gap and column gap */
+    margin: 60px 0;
+}
+.icon-feature {
+    text-align: center;
+}
+.icon-feature .icon {
+    font-size: 2.5em;
+    color: var(--prana-red);
+    margin-bottom: 20px;
+    display: block;
+}
+.icon-feature h4 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+.icon-feature p {
+    font-size: 1em;
+    margin: 0 auto;
+    color: var(--shunya-black);
+    opacity: 0.9;
+}
+
 
 .youtube-cta { background-color: white; border: 1px solid #ddd; border-left: 5px solid var(--prana-red); padding: 25px; margin: 40px 0; text-align: center; border-radius: 5px; }
 .youtube-cta p { font-size: 1.1em; margin: 0 auto 15px auto; }
@@ -116,5 +138,5 @@ footer { background-color: var(--shunya-black); color: var(--manjusha-sand); pad
     h2 { font-size: 2em; }
     .footer-grid { text-align: center; }
     .footer-column h4 { display: block; }
-    .three-col-grid, .two-col-grid { grid-template-columns: 1fr; }
+    .three-col-grid, .two-col-grid, .icon-feature-grid { grid-template-columns: 1fr; }
 }
