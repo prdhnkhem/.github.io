@@ -26,8 +26,10 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="index.html" class="nav__logo">
-                <img src="../assets/images/fevicon.png" alt="Hunate Logo">
-                Khem Raj Pradhan
+                 <div class="nav__logo-text">
+                    <span class="nav__logo-title">Khem Raj Pradhan</span>
+                    <span class="nav__logo-subtitle">Hunate</span>
+                </div>
             </a>
             
             <div class="nav__menu" id="nav-menu">
@@ -55,17 +57,34 @@
             <h2 class="section__title">The Catalog of Impact</h2>
              <div class="container">
                 <p class="about__description" style="text-align: center; max-width: 800px; margin: 0 auto 2.5rem auto;">
-                    This is not a catalog of our needs; it is a map of our shared dreams. Every contribution is a seed you plant with us for a regenerative future. We operate with **radical transparency**, and every rupee is tracked publicly. Your trust is our most sacred vow.
+                    This is not a catalog of our needs; it is a map of our shared dreams. The Hunate Movement is built on a simple, powerful truth: a better world is not only possible, it is waiting to be grown. Every contribution is a seed you plant with us. We operate with <strong>radical transparency</strong>, and every rupee is tracked publicly. Your trust is our most sacred vow.
                 </p>
+                <div class="accordion">
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h4>Where Your Support Goes</h4>
+                            <i class="ri-add-line accordion__icon"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <div class="accordion__description">
+                                <ul>
+                                    <li><strong>Nurturing a Hunate Hub:</strong> Your support provides the tangible seeds, tools, and materials for a family or orphanage to build a thriving, self-sufficient home. This includes everything from a food forest starter kit to the foundations of a safe, natural house.</li>
+                                    <li><strong>Empowering Our Engineers:</strong> Contributions help cover the modest travel, food, and accommodation costs for our dedicated core team, allowing them to provide essential on-the-ground guidance to our partner hubs across Nepal.</li>
+                                    <li><strong>In-Kind Sponsorship:</strong> We also welcome in-kind donations of farming supplies, building materials, tools, and technology. If you can provide physical resources, you become a vital partner in our mission.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="section" id="how-to-donate">
             <h2 class="section__title">How to Contribute</h2>
-            <div class="donate__container container grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: start;">
-                 <div class="donate__ways">
+            <div class="donate__container container">
+                 <div class="donate__ways" style="max-width: 500px; margin: 0 auto;">
                     <h3>Direct Bank Transfer</h3>
-                    <p>The most direct way to support our work is through a bank deposit. Please use the details below.</p>
+                    <p>The most direct way to support our work is through a bank deposit or mobile wallet transfer using the details below.</p>
                     <div class="qr-codes">
                         <figure>
                             <img src="../assets/images/esewa-qr.png" alt="eSewa QR Code for donation." loading="lazy">
@@ -89,59 +108,11 @@
                     </div>
                 </div>
 
-                <div>
-                    <h3>Where Your Support Goes</h3>
-                    <p>You can choose to support a specific part of our mission. Your donation directly funds the tangible tools and resources that build self-sufficient communities.</p>
-                    <div class="accordion">
-                        <div class="accordion__item">
-                            <header class="accordion__header">
-                                <h4>Nurturing a Hunate Hub</h4>
-                                <i class="ri-add-line accordion__icon"></i>
-                            </header>
-                            <div class="accordion__content">
-                                <div class="accordion__description">
-                                    <ul>
-                                        <li>• **A Food Forest Starter Kit:** Fund a diverse collection of fruit and nut tree saplings.</li>
-                                        <li>• **Tools of Self-Reliance:** Equip a family with a complete set of durable farming tools.</li>
-                                        <li>• **Water Security:** Fund the construction of a small pond for rainwater harvesting.</li>
-                                        <li>• **A Healthy Home:** Contribute to safe, non-toxic kitchen setups and natural building materials.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion__item">
-                            <header class="accordion__header">
-                                <h4>Empowering Our Engineers</h4>
-                                <i class="ri-add-line accordion__icon"></i>
-                            </header>
-                            <div class="accordion__content">
-                                <div class="accordion__description">
-                                    <ul>
-                                        <li>• **Tools for Design:** Contribute to essential technology like laptops and cameras for our team.</li>
-                                        <li>• **The Journey of Service:** Fund an Engineer's travel to a remote hub to provide on-the-ground guidance.</li>
-                                        <li>• **Fuel for the Fire:** Support the basic food and accommodation costs for a full-time Engineer.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion__item">
-                            <header class="accordion__header">
-                                <h4>In-Kind Sponsorship</h4>
-                                <i class="ri-add-line accordion__icon"></i>
-                            </header>
-                            <div class="accordion__content">
-                                <div class="accordion__description">
-                                    <p>If you or your company can provide physical materials, you become a vital in-kind sponsor. We are always in need of:</p>
-                                    <ul>
-                                        <li>• **Farming Supplies:** Quality seeds, fruit saplings, irrigation pipes, water pumps.</li>
-                                        <li>• **Building Materials:** Wood, bamboo, stone, and other natural construction materials.</li>
-                                        <li>• **Tools:** Carpentry tools, farming tools, safety equipment.</li>
-                                        <li>• **Technology:** Solar panels, batteries, laptops, cameras.</li>
-                                    </ul>
-                                    <p>To become a sponsor, please get in touch via our <a href="contact.html">contact page</a>.</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="donation-sheet">
+                    <h3>Our Vow of Radical Transparency</h3>
+                    <p>Every contribution is publicly recorded. We are currently setting up a live Google Sheet to display all donations and expenditures in real-time. This will be embedded here soon.</p>
+                    <div style="border: 1px dashed var(--border-color); padding: 2rem; border-radius: .5rem; margin-top: 1rem;">
+                        <p>Live Donation Tracker Coming Soon</p>
                     </div>
                      <a href="https://forms.gle/hnXJoUNrXFzDEUFH8" target="_blank" rel="noopener noreferrer" class="button button--flex" style="margin-top: 2rem;">
                         Become a Registered Donor <i class="ri-arrow-right-line"></i>
@@ -155,43 +126,22 @@
          <div class="footer__container container grid">
             <div>
                 <h3 class="footer__title">Khem Raj Pradhan</h3>
-                <p class="footer__description">The Hunate Movement</p>
+                <p class="footer__description">Hunate</p>
             </div>
 
             <ul class="footer__links">
                 <li><a href="about.html" class="footer__link">About</a></li>
                 <li><a href="projects.html" class="footer__link">Projects</a></li>
-                <li><a href="join.html" class="footer__link">Join</a></li>
+                <li><a href="join.html" class="footer__link">Get Involved</a></li>
             </ul>
 
-            <div class="footer__socials-grid">
-                <div class="footer__socials-group">
-                    <h4>Personal</h4>
-                    <div class="socials footer__socials">
-                        <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ri-facebook-box-fill"></i></a>
-                        <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ri-instagram-fill"></i></a>
-                        <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="ri-tiktok-fill"></i></a>
-                        <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="ri-twitter-x-line"></i></a>
-                        <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
-                        <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
-                    </div>
-                </div>
-                 <div class="footer__socials-group">
-                    <h4>Hunate Project (Nepali)</h4>
-                    <div class="socials footer__socials">
-                        <a href="https://www.facebook.com/hunateproject" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ri-facebook-box-fill"></i></a>
-                        <a href="https://www.instagram.com/hunateproject/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ri-instagram-fill"></i></a>
-                        <a href="https://www.tiktok.com/@hunateproject" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="ri-tiktok-fill"></i></a>
-                        <a href="https://x.com/hunateproject" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="ri-twitter-x-line"></i></a>
-                        <a href="https://www.youtube.com/@hunateproject" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
-                    </div>
-                </div>
-                 <div class="footer__socials-group">
-                    <h4>Hunate Project (Global)</h4>
-                    <div class="socials footer__socials">
-                         <a href="https://www.youtube.com/@hunateproject-global" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
-                    </div>
-                </div>
+            <div class="socials footer__socials">
+                <a href="https://www.facebook.com/khem.hunatian/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ri-facebook-box-fill"></i></a>
+                <a href="https://www.instagram.com/khem.hunatian/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ri-instagram-fill"></i></a>
+                <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="ri-tiktok-fill"></i></a>
+                <a href="https://x.com/khemhunatian" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+                <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+                <a href="https://www.youtube.com/@khem.hunatian" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
             </div>
         </div>
         <p class="footer__copy">© 2025 Khem Raj Pradhan. All Rights Reserved.</p>
