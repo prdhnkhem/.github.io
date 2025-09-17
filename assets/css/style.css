@@ -88,8 +88,8 @@ a:hover {
 /* --- Reusable CSS Classes --- */
 .container {
     max-width: 1024px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .grid {
@@ -104,17 +104,24 @@ a:hover {
     background-color: var(--section-bg-color);
 }
 
+.section__header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
 .section__title {
     font-size: var(--h2-font-size);
-    text-align: center;
     margin-bottom: 0.5rem;
 }
 
 .section__subtitle {
     display: block;
-    text-align: center;
+    font-size: var(--normal-font-size);
     color: var(--text-color-light);
-    margin-bottom: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* --- Header & Nav --- */
@@ -236,6 +243,7 @@ a:hover {
 .home__container {
     position: relative;
     z-index: 2;
+    padding: 0 1rem;
 }
 .home__bg {
     position: absolute;
@@ -254,6 +262,15 @@ a:hover {
     text-shadow: 0 2px 4px rgba(0,0,0,0.6);
     max-width: 800px;
     margin: 0 auto;
+}
+.home__subtitle {
+    font-size: 1.125rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    max-width: 700px;
+    margin: 1.5rem auto 0;
+    font-weight: var(--font-medium);
+    line-height: 1.6;
 }
 .home__buttons {
     margin-top: 2.5rem;
@@ -292,11 +309,6 @@ a:hover {
     background-color: var(--primary-color);
     color: #fff;
 }
-.button--flex {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-}
 
 /* --- Content Styling --- */
 .content-block {
@@ -319,6 +331,10 @@ a:hover {
 }
 .content-block li {
     margin-bottom: 0.75rem;
+}
+.centered-cta {
+    text-align: center;
+    margin-top: 2rem;
 }
 
 /* Accordion */
@@ -356,6 +372,14 @@ body.dark-theme .accordion__item {
     text-align: left;
     line-height: 1.7;
 }
+.accordion__description ul {
+    list-style-position: inside;
+    list-style-type: disc;
+    padding-left: 1rem;
+}
+.accordion__description li {
+    margin-bottom: 0.5rem;
+}
 .accordion-open {
     padding-bottom: 1rem;
 }
@@ -381,11 +405,6 @@ body.dark-theme .accordion__item {
 .card__title {
     font-size: var(--h3-font-size);
     margin-bottom: 1rem;
-}
-
-.map__container img {
-    border-radius: .5rem;
-    border: 1px solid var(--border-color);
 }
 
 /* Donate Page */
@@ -468,7 +487,7 @@ body.dark-theme .accordion__item {
 /* --- Footer --- */
 .footer {
     background-color: var(--container-color);
-    padding: 3rem 0;
+    padding: 3rem 1rem;
 }
 .footer__container {
     text-align: center;
@@ -500,25 +519,12 @@ body.dark-theme .accordion__item {
     text-align: center;
 }
 
-/* --- Scrollbar --- */
-::-webkit-scrollbar {
-    width: .6rem;
-    background-color: hsl(220, 8%, 90%);
-    border-radius: .5rem;
-}
-::-webkit-scrollbar-thumb {
-    background-color: hsl(220, 8%, 70%);
-    border-radius: .5rem;
-}
-body.dark-theme::-webkit-scrollbar {
-    background-color: hsl(220, 8%, 20%);
-}
-body.dark-theme::-webkit-scrollbar-thumb {
-    background-color: hsl(220, 8%, 30%);
-}
-
 /* --- Media Queries --- */
 @media screen and (min-width: 768px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
     .nav {
         height: var(--header-height);
     }
@@ -545,19 +551,10 @@ body.dark-theme::-webkit-scrollbar-thumb {
     body.dark-theme .nav__link {
         color: var(--text-color);
     }
-    .nav__link.active-link, .nav__link:hover {
+    .nav__link:hover {
         color: var(--primary-color);
     }
 
-    .about__container {
-        grid-template-columns: .6fr 1fr;
-        align-items: center;
-        gap: 3rem;
-    }
-    .about__data {
-        text-align: left;
-    }
-    
     .contact-grid {
         grid-template-columns: 1fr 1fr;
         text-align: left;
@@ -579,10 +576,6 @@ body.dark-theme::-webkit-scrollbar-thumb {
 }
 
 @media screen and (min-width: 1024px) {
-    .container {
-        margin-left: auto;
-        margin-right: auto;
-    }
     .section {
         padding: 7rem 0 2rem;
     }
