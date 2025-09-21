@@ -582,3 +582,153 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     opacity: 1;
     transform: translateY(0);
 }
+/* ==========================================================================
+   13. Bio Page Specific Styles (/khem.html)
+   ========================================================================== */
+
+.portrait-image {
+    border: 5px solid var(--color-surface);
+    box-shadow: var(--shadow-md);
+    border-radius: 4px;
+}
+
+.section-divider {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+    margin: 3rem 0;
+}
+
+/* CV Section */
+.cv-section {
+    margin-top: 2rem;
+}
+
+.cv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.cv-category h3 {
+    font-family: var(--font-serif-headings);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-accent-red);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.cv-category ul {
+    list-style: none;
+    padding-left: 0;
+    color: var(--color-text-secondary);
+}
+
+.cv-category ul li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.cv-category ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 1.2rem;
+    color: var(--color-accent-red);
+}
+
+.cv-category p {
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+}
+.cv-category p strong {
+    color: var(--color-text-primary);
+    display: block;
+}
+
+
+/* Support Section */
+.support-section {
+    background-color: var(--color-surface-alt);
+    margin-top: 4rem;
+    padding: 4rem 2rem;
+    /* Negative margin to make it full-width */
+    margin-left: -2rem;
+    margin-right: -2rem;
+}
+
+.section-subheadline {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    max-width: 700px;
+    margin: 1rem auto 0 auto;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .support-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+.support-details h3, .support-qrs h3 {
+    font-family: var(--font-serif-headings);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.bank-details-box {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent-blue);
+    padding: 1.5rem;
+    font-size: 1rem;
+}
+
+.bank-details-box p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+.bank-details-box p:last-child {
+    margin-bottom: 0;
+}
+.bank-details-box strong {
+    color: var(--color-text-primary);
+}
+
+.qr-code-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.qr-code {
+    text-align: center;
+}
+
+.qr-code img {
+    max-width: 150px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 0.5rem;
+}
+
+.qr-code span {
+    font-weight: 700;
+    color: var(--color-text-secondary);
+}
