@@ -499,6 +499,67 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     margin-bottom: 2rem;
     flex-grow: 1;
 }
+/* ==========================================================================
+   12. Sub-Menu / Dropdown Styles
+   ========================================================================== */
+
+.main-navigation ul li {
+    position: relative; /* Required for submenu positioning */
+}
+
+.has-submenu > a::after {
+    content: ' ▾'; /* Simple dropdown indicator */
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-surface);
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    min-width: 220px;
+    border: 1px solid var(--color-border);
+    border-top: 2px solid var(--color-accent-red);
+    box-shadow: var(--shadow-md);
+    z-index: 100;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    text-transform: none;
+    letter-spacing: 0;
+    border: none !important; /* Override parent border */
+    white-space: nowrap;
+}
+
+.submenu a:hover {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+/* Show submenu on hover for desktop */
+@media (min-width: 992px) {
+    .has-submenu:hover > .submenu {
+        display: block;
+    }
+}
+
+/* Style for mobile when submenu is opened via JS */
+.submenu-open > .submenu {
+    display: block;
+}
 
 .hub-card-content .btn {
     align-self: flex-start; /* Aligns button to the left */
