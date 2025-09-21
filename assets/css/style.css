@@ -893,3 +893,56 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     font-size: 1.2rem;
     color: var(--color-accent-blue);
 }
+/* ==========================================================================
+   16. Course Page Styles (/hunatian.html)
+   ========================================================================== */
+
+.course-structure {
+    margin-top: 3rem;
+}
+
+.chapter {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    background-color: var(--color-surface);
+    border-top: 3px solid var(--color-accent-blue);
+    box-shadow: var(--shadow-sm);
+}
+
+.chapter h3 {
+    font-family: var(--font-serif-headings);
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.chapter p {
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.task-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.task-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.task-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 900;
+    color: var(--color-accent-red);
+}
+
+.task-list li strong {
+    font-family: var(--font-sans-body);
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
