@@ -851,29 +851,45 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     margin: 0;
 }
 /* ==========================================================================
-   15. Hunateculture Page Styles
+   15. Hunateculture Page Styles (Corrected)
    ========================================================================== */
 
-.article-inset .two-column-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.inset-box {
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent-blue);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
 }
 
-@media (min-width: 768px) {
-    .article-inset .two-column-layout {
-        flex-direction: row;
-    }
+.inset-box h3 {
+    font-family: var(--font-serif-headings);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
 }
 
-.article-inset .main-column {
-    border-right: none;
-    padding-right: 0;
+.inset-box p {
+    margin-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
-    .article-inset .main-column {
-        border-right: 1px solid var(--color-border);
-        padding-right: 2rem;
-    }
+.custom-list-condensed {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.custom-list-condensed li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+}
+
+.custom-list-condensed li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 1.2rem;
+    color: var(--color-accent-blue);
 }
