@@ -583,7 +583,7 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     transform: translateY(0);
 }
 /* ==========================================================================
-   13. Bio Page Specific Styles (/khem.html) (Revised)
+   13. Bio Page Specific Styles (/khem.html) (Corrected)
    ========================================================================== */
 
 .bio-page .article-header {
@@ -592,10 +592,11 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
 
 .bio-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Mobile-first: stack elements vertically */
     gap: 3rem;
 }
 
+/* On larger screens, switch to a row layout */
 @media (min-width: 992px) {
     .bio-container {
         flex-direction: row;
@@ -605,14 +606,19 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
 .bio-sidebar {
     flex: 1;
     min-width: 280px;
-    position: sticky;
-    top: 150px; /* Adjust based on header height */
-    align-self: flex-start; /* Important for sticky positioning */
+    /* Removed 'position: sticky' and related properties to fix scrolling */
+}
+
+/* On mobile, ensure the image comes first */
+@media (max-width: 991px) {
+    .bio-sidebar {
+        order: -1; /* This moves the sidebar to the top */
+    }
 }
 
 .bio-content {
     flex: 3;
-    min-width: 0;
+    min-width: 0; /* Prevents flexbox overflow issues */
 }
 
 .portrait-image {
