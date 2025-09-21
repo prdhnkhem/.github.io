@@ -500,33 +500,45 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     flex-grow: 1;
 }
 /* ==========================================================================
-   12. Sub-Menu / Dropdown Styles
+   12. Sub-Menu / Dropdown Styles (Corrected)
    ========================================================================== */
 
 .main-navigation ul li {
     position: relative; /* Required for submenu positioning */
 }
 
+/* Adds the small down-arrow indicator */
 .has-submenu > a::after {
-    content: ' ▾'; /* Simple dropdown indicator */
+    content: ' ▾';
     display: inline-block;
     font-size: 0.8rem;
+    margin-left: 2px;
+    transition: transform 0.2s ease-in-out;
 }
 
 .submenu {
-    display: none;
+    /* This is the core of the fix: hide the menu by default */
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+
+    /* Styling and positioning */
     position: absolute;
     top: 100%;
     left: 0;
     background-color: var(--color-surface);
     list-style: none;
     padding: 0.5rem 0;
-    margin: 0;
+    margin-top: 5px; /* Adds a small gap */
     min-width: 220px;
     border: 1px solid var(--color-border);
     border-top: 2px solid var(--color-accent-red);
     box-shadow: var(--shadow-md);
     z-index: 100;
+
+    /* Animation */
+    transform: translateY(10px);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, visibility 0.2s;
 }
 
 .submenu li {
@@ -540,8 +552,9 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     font-size: 0.9rem;
     text-transform: none;
     letter-spacing: 0;
-    border: none !important; /* Override parent border */
+    border: none !important; /* Override parent border style */
     white-space: nowrap;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .submenu a:hover {
@@ -549,18 +562,23 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     color: var(--color-text-primary);
 }
 
-/* Show submenu on hover for desktop */
+/* --- The Logic for Showing the Menu --- */
+
+/* For DESKTOP: Show submenu on hover */
 @media (min-width: 992px) {
     .has-submenu:hover > .submenu {
-        display: block;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .has-submenu:hover > a::after {
+        transform: rotate(180deg);
     }
 }
 
-/* Style for mobile when submenu is opened via JS */
+/* For MOBILE: Show submenu when the '.submenu-open' class is added by JavaScript */
 .submenu-open > .submenu {
-    display: block;
-}
-
-.hub-card-content .btn {
-    align-self: flex-start; /* Aligns button to the left */
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
