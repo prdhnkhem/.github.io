@@ -449,3 +449,57 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     font-size: 1.1rem;
     color: var(--color-text-secondary);
 }
+/* ==========================================================================
+   11. Hub Page Styles (/about.html, etc.)
+   ========================================================================== */
+
+.hub-page-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.hub-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hub-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.hub-card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.hub-card-title {
+    font-family: var(--font-serif-headings);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.hub-card-subtitle {
+    display: block;
+    font-family: var(--font-serif-headings);
+    font-style: italic;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.hub-card-content p {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.hub-card-content .btn {
+    align-self: flex-start; /* Aligns button to the left */
+}
