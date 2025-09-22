@@ -1257,3 +1257,51 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     color: var(--color-accent-blue);
     text-decoration: underline;
 }
+/* ==========================================================================
+   23. Utility Page Styles (404, etc.)
+   ========================================================================== */
+
+.utility-page-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.utility-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.utility-box {
+    background-color: var(--color-surface);
+    padding: 3rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    border-top: 5px solid var(--color-accent-red);
+}
+
+.utility-title {
+    font-family: var(--font-serif-headings);
+    font-size: 6rem;
+    font-weight: 900;
+    margin-bottom: 0;
+    line-height: 1;
+    color: var(--color-text-primary);
+}
+
+.utility-subtitle {
+    font-family: var(--font-serif-headings);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-secondary);
+}
+
+.utility-box p {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
