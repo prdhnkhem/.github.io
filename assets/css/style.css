@@ -946,3 +946,50 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     font-weight: 700;
     color: var(--color-text-primary);
 }
+/* ==========================================================================
+   17. Initiative Page Styles (/7-7-7-initiative.html)
+   ========================================================================== */
+
+.role-list {
+    margin-top: 2rem;
+}
+
+.role-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.role-item:first-child {
+    border-top: 1px solid var(--color-border);
+}
+
+.role-item h3 {
+    font-family: var(--font-serif-headings);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.role-item p {
+    color: var(--color-text-secondary);
+    margin-bottom: 0;
+}
+
+.join-us-section {
+    margin-top: 3rem;
+    padding: 3rem 2rem;
+    background-color: var(--color-surface-alt);
+    text-align: center;
+    margin-left: -2rem;
+    margin-right: -2rem;
+}
+
+.join-us-section h2 {
+    font-family: var(--font-serif-headings);
+    font-size: 2rem;
+}
+
+.join-us-section p {
+    max-width: 700px;
+    margin: 1rem auto 0 auto;
+    color: var(--color-text-secondary);
+}
