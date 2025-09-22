@@ -1040,3 +1040,14 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     text-align: center;
     margin-top: 1.5rem; /* Added more space for better balance */
 }
+/* ==========================================================================
+   19. Support Page Styles (/support.html)
+   ========================================================================== */
+
+.financial-transparency-notice {
+    max-width: 900px; /* Matches the content width above it */
+    margin: 2rem auto 0 auto; /* Centers the block and adds space on top */
+    text-align: center;
+    font-style: italic;
+    color: var(--color-text-secondary);
+}
