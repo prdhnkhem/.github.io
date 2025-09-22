@@ -1051,3 +1051,72 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     font-style: italic;
     color: var(--color-text-secondary);
 }
+/* ==========================================================================
+   20. Donate Objects Page Styles
+   ========================================================================== */
+
+.category-list {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.category-list h3 {
+    font-family: var(--font-serif-headings);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+.category-list ul {
+    list-style: none;
+    padding-left: 0;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.category-list ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.category-list ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 1.2rem;
+    color: var(--color-accent-blue);
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.book-category {
+    padding: 1.5rem;
+    background-color: var(--color-surface);
+    border-bottom: 3px solid var(--color-accent-red);
+}
+
+.book-category h4 {
+    font-family: var(--font-serif-headings);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.book-category p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
