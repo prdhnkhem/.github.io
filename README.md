@@ -1,65 +1,79 @@
-# HUNATE Movement - Website
+# Website for Khem Raj Pradhan & The Hunate Movement
 
-This repository contains the static website files for the HUNATE Movement, founded by Khem Raj Pradhan. The site is built with plain HTML, CSS, and JavaScript, ready for deployment on GitHub Pages.
+This repository contains the source code for the official website, [khemrajpradhan.com.np](https://khemrajpradhan.com.np). The site is a bilingual (English and Nepali), static website built with HTML, CSS, and JavaScript. It is designed to be hosted on GitHub Pages and served via Cloudflare.
 
-## Deployment to GitHub Pages
+## Project Overview
 
-Follow these exact steps to deploy and configure your website.
+* **Purpose:** To share the personal story of Khem Raj Pradhan and provide a comprehensive resource for the Hunate Movement, its philosophy, and its initiatives.
+* **Technology:** HTML, CSS, JavaScript (no complex frameworks).
+* **Hosting:** GitHub Pages.
+* **Domain & DNS:** Cloudflare.
 
-### Step 1: Push Files to Your Repository
+## File Structure
 
-1.  **Repository Name:** Ensure your repository is named `prdhnkhem.github.io`. This is a special repository name that tells GitHub to build and deploy from the `main` branch automatically.
-2.  **Upload Files:** Upload all the files and folders (`/en`, `/ne`, `/assets`, `/content`, `index.html`, `CNAME`, etc.) provided in this package directly into the root of the `prdhnkhem.github.io` repository.
-3.  **Commit and Push:** Commit the files to your `main` branch and push them to GitHub.
+The repository is organized to be as simple as possible to maintain.
 
-GitHub Actions will automatically build and deploy your site. It should be live within a few minutes at `https://prdhnkhem.github.io`.
+```
+/
+│
+├── CNAME                  # Points to the custom domain
+├── .nojekyll              # Disables Jekyll on GitHub Pages
+├── 404.html               # Custom 404 page
+├── index.html             # The main language selection page
+├── README.md              # This file
+├── robots.txt             # Instructions for search engines
+├── sitemap.xml            # Map of the site for SEO
+├── privacy-policy.html
+└── terms-and-conditions-of-use.html
+│
+├── assets/                # Contains all static files
+│   ├── css/style.css      # The single stylesheet for the entire site
+│   ├── js/main.js         # The single JavaScript file for interactivity
+│   └── images/            # All image assets
+│
+├── english/               # Contains all English HTML pages
+│   ├── index.html
+│   ├── about.html
+│   └── ... (all other English pages)
+│
+└── nepali/                # Contains all Nepali HTML pages
+    ├── index.html
+    ├── about.html
+    └── ... (all other Nepali pages)
+```
 
-### Step 2: Configure Your Custom Domain (`khemrajpradhan.com.np`)
+## How to Update the Website
 
-The `CNAME` file is already included in this repository, which tells GitHub Pages which custom domain to use. Now you just need to configure your domain's DNS settings.
+Updating the website is designed to be straightforward.
 
-**Go to your domain registrar's website (the service where you bought `khemrajpradhan.com.np`) and find the DNS management section.**
+### Editing Content
 
-You have two options. Using A records is the recommended modern practice for apex domains.
+To change the text on any page, you simply need to edit the corresponding HTML file.
 
-#### Option A: Using A Records (Recommended)
+1.  Navigate to the correct language folder (`/english/` or `/nepali/`).
+2.  Find the HTML file for the page you want to change (e.g., to edit the English "About" page, open `/english/about.html`).
+3.  Open the file and make your text edits directly in the HTML.
+4.  Save the file.
 
-1.  Create four **A** records pointing to the GitHub Pages IP addresses:
-    * `185.199.108.153`
-    * `185.199.109.153`
-    * `185.199.110.153`
-    * `185.199.111.153`
+### Adding or Replacing Images
 
-    Your DNS configuration should look like this:
+1.  Make sure your new image has the exact same filename and extension as the one you are replacing.
+2.  Upload the new image to the `/assets/images/` folder, overwriting the old one.
 
-| Type | Host/Name | Value/Points to | TTL |
-| :--- | :-------- | :-------------------- | :-- |
-| A | `@` | `185.199.108.153` | Auto |
-| A | `@` | `185.199.109.153` | Auto |
-| A | `@` | `185.199.110.153` | Auto |
-| A | `@` | `185.199.111.153` | Auto |
+### Updating Links
 
-2.  (Optional but Recommended) Create a **CNAME** record for the `www` subdomain to redirect `www.khemrajpradhan.com.np` to `khemrajpradhan.com.np`.
+To change a link (e.g., update a Google Form link):
 
-| Type | Host/Name | Value/Points to | TTL |
-| :--- | :-------- | :----------------------- | :-- |
-| CNAME| `www` | `prdhnkhem.github.io` | Auto |
+1.  Open the relevant HTML file(s) where the link appears.
+2.  Find the `<a>` tag and change the `href="..."` attribute to the new URL.
+3.  Save the file.
 
-#### Option B: Using a CNAME Record (Alternative for `www` subdomain)
+## Deployment
 
-If you prefer to make `www.khemrajpradhan.com.np` your primary domain, you would need to change the content of the `CNAME` file to `www.khemrajpradhan.com.np` and then configure your DNS as follows. This is generally not recommended for root domains.
+This site is set up for automatic deployment via GitHub Pages.
 
-| Type | Host/Name | Value/Points to | TTL |
-| :--- | :-------- | :----------------------- | :-- |
-| CNAME| `www` | `prdhnkhem.github.io` | Auto |
+1.  **Commit and Push:** After making any changes, commit them to your repository and push them to the `main` (or `master`) branch.
+2.  **GitHub Pages:** GitHub will automatically detect the changes and redeploy the site. This process usually takes 1-2 minutes.
+3.  **Cloudflare:** Your Cloudflare settings should already be configured to point your domain to the GitHub Pages server. No changes are needed here unless you are changing the domain itself.
 
-You would also need to set up a redirect from the root domain (`khemrajpradhan.com.np`) to the `www` subdomain with your domain registrar.
-
-### Step 3: Verify and Enforce HTTPS
-
-1.  **Wait for DNS:** DNS changes can take anywhere from a few minutes to 48 hours to propagate across the internet.
-2.  **Check GitHub Settings:** Go to your repository's `Settings` > `Pages`.
-3.  **Custom Domain:** Your custom domain `khemrajpradhan.com.np` should appear. If there is an error, wait for the DNS to update.
-4.  **Enforce HTTPS:** Once GitHub has verified your domain, check the box for **"Enforce HTTPS"**. This ensures your site is served securely.
-
-Your website is now live and configured correctly at **https://khemrajpradhan.com.np**.
+**Note:** If you ever experience issues with caching after an update, you may need to purge the cache in your Cloudflare dashboard.
