@@ -1310,3 +1310,20 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     pointer-events: none;
     text-decoration: none;
 }
+/* ==========================================================================
+   22. Contact Page Fixes
+   ========================================================================== */
+
+.contact-action-btn {
+    margin-top: 1rem;
+}
+
+.contact-info-box a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+.contact-info-box a:hover {
+    color: var(--color-accent-blue);
+    text-decoration: underline;
+}
