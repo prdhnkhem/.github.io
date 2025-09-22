@@ -994,7 +994,7 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     color: var(--color-text-secondary);
 }
 /* ==========================================================================
-   18. Join Page Specific Styles (/join.html)
+   18. Join Page Specific Styles (/join.html) (Corrected)
    ========================================================================== */
 
 .join-section-highlight {
@@ -1033,6 +1033,10 @@ body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue
     margin-bottom: 1rem;
 }
 
+/* This is the corrected rule for all buttons on this page */
 .role-btn {
-    margin-top: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem; /* Added more space for better balance */
 }
