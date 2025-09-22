@@ -1,63 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
   <url>
-    <loc>https://khemrajpradhan.com.np/en/index.html</loc>
-    <lastmod>2025-09-17</lastmod>
+    <loc>https://khemrajpradhan.com.np/index.html</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://khemrajpradhan.com.np/ne/index.html</loc>
-    <lastmod>2025-09-17</lastmod>
+    <loc>https://khemrajpradhan.com.np/english/index.html</loc>
     <priority>1.00</priority>
   </url>
+  
   <url>
-    <loc>https://khemrajpradhan.com.np/en/about.html</loc>
-    <lastmod>2025-09-17</lastmod>
+    <loc>https://khemrajpradhan.com.np/english/problems.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://khemrajpradhan.com.np/ne/about.html</loc>
-    <lastmod>2025-09-17</lastmod>
+    <loc>https://khemrajpradhan.com.np/english/about.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://khemrajpradhan.com.np/en/projects.html</loc>
-    <lastmod>2025-09-17</lastmod>
+    <loc>https://khemrajpradhan.com.np/english/khem.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/the-joon-project.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/hunate-project.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/solutions.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://khemrajpradhan.com.np/ne/projects.html</loc>
-    <lastmod>2025-09-17</lastmod>
+    <loc>https://khemrajpradhan.com.np/english/hunateculture.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/hunatian.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/movement.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://khemrajpradhan.com.np/en/join.html</loc>
-    <lastmod>2025-09-17</lastmod>
+    <loc>https://khemrajpradhan.com.np/english/7-7-7-initiative.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/hunate-hq.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/hunate-nepal.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/hunate-world.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/join.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/support.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/engineers.html</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/mentors.html</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/district-representatives.html</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/14-hub-partners.html</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/volunteers.html</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/support-hq.html</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/donate-objects.html</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://khemrajpradhan.com.np/english/contact.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://khemrajpradhan.com.np/ne/join.html</loc>
-    <lastmod>2025-09-17</lastmod>
-    <priority>0.80</priority>
+    <loc>https://khemrajpradhan.com.np/english/press.html</loc>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://khemrajpradhan.com.np/privacy-policy.html</loc>
+    <priority>0.30</priority>
   </url>
   <url>
-    <loc>https://khemrajpradhan.com.np/en/donate.html</loc>
-    <lastmod>2025-09-17</lastmod>
-    <priority>0.80</priority>
+    <loc>https://khemrajpradhan.com.np/terms-and-conditions-of-use.html</loc>
+    <priority>0.30</priority>
   </url>
-  <url>
-    <loc>https://khemrajpradhan.com.np/ne/donate.html</loc>
-    <lastmod>2025-09-17</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://khemrajpradhan.com.np/en/contact.html</loc>
-    <lastmod>2025-09-17</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://khemrajpradhan.com.np/ne/contact.html</loc>
-    <lastmod>2025-09-17</lastmod>
-    <priority>0.80</priority>
-  </url>
+
 </urlset>
