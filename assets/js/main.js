@@ -13,29 +13,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile Menu Toggle
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mainNav = document.getElementById('main-navigation');
-    if (mobileMenuToggle && mainNav) {
+    if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             document.body.classList.toggle('mobile-menu-open');
         });
     }
 
     // Mobile Sub-menu Logic
-    const submenuLinks = document.querySelectorAll('.has-submenu > a');
+    const submenuLinks = document.querySelectorAll('.main-navigation .has-submenu > a');
     submenuLinks.forEach(link => {
         link.addEventListener('click', (event) => {
             if (window.innerWidth < 1024) {
                 const parentLi = link.parentElement;
-                if (!parentLi.classList.contains('submenu-open')) {
+                const isSubmenuOpen = parentLi.classList.contains('submenu-open');
+                
+                // If a submenu exists and it's not already open, prevent navigation and open it.
+                if (parentLi.querySelector('.submenu') && !isSubmenuOpen) {
                     event.preventDefault();
-                    // Close other open submenus first
-                    document.querySelectorAll('.has-submenu.submenu-open').forEach(openLi => {
+                    
+                    // Close any other submenus that might be open.
+                    document.querySelectorAll('.main-navigation .has-submenu.submenu-open').forEach(openLi => {
                         if(openLi !== parentLi) {
                            openLi.classList.remove('submenu-open');
                         }
                     });
+                    
+                    // Toggle the clicked submenu.
                     parentLi.classList.add('submenu-open');
                 }
+                // If the submenu is already open, the link will navigate as normal on the second tap.
+                // If there's no submenu, it will also navigate as normal.
             }
         });
     });
