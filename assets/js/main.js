@@ -5,13 +5,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- FUTURE FUNCTIONALITY ---
 
-    // 1. Mobile Navigation Toggle
-    // We will add code here to make the hamburger menu icon
-    // open and close the full-screen mobile navigation overlay.
+document.addEventListener('DOMContentLoaded', () => {
 
-    // 2. Dark Mode Toggle
-    // We will add code here to switch between light and dark themes
-    // and save the user's preference in localStorage.
+    // --- Mobile Navigation Toggle ---
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', () => {
+            // Toggle the 'active' class on the nav overlay
+            mobileNav.classList.toggle('active');
+            
+            // Toggle the hamburger icon animation
+            menuToggle.classList.toggle('active');
+
+            // Lock or unlock body scroll
+            if (mobileNav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+
+    // --- FUTURE: Dark Mode Toggle ---
+    // The code for dark mode functionality will go here.
+    
+    console.log("Hunate website scripts loaded and mobile menu is active.");
+});
 
     // 3. Copy to Clipboard functionality
     // We will add code for the contact page's "Copy" buttons here.
