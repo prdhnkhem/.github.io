@@ -31,7 +31,6 @@
     --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Dark mode class */
 body.dark-mode {
     --color-background: var(--dark-color-background);
     --color-surface: var(--dark-color-surface);
@@ -41,1305 +40,332 @@ body.dark-mode {
     --color-surface-alt: var(--dark-color-surface-alt);
 }
 
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--font-sans-body); background-color: var(--color-background); color: var(--color-text-primary); line-height: 1.7; transition: background-color 0.3s ease, color 0.3s ease; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--color-accent-blue); text-decoration: none; }
+a:hover { text-decoration: underline; color: var(--color-accent-blue-hover); }
+.page-container { max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 2rem; }
+.skip-link { position: absolute; top: -40px; left: 0; background: var(--color-accent-blue); color: white; padding: 8px; z-index: 1000; transition: top 0.3s; }
+.skip-link:focus { top: 0; }
+.section-headline { font-family: var(--font-serif-headings); font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 1rem; }
+.section-subheadline { font-size: 1.1rem; color: var(--color-text-secondary); max-width: 700px; margin: 0 auto 3rem auto; text-align: center; }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* ==========================================================================
+   2. Site Header (Redesigned with Hamburger Menu)
+   ========================================================================== */
+
+.site-header {
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-html {
-    font-size: 16px;
-    scroll-behavior: smooth;
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-body {
-    font-family: var(--font-sans-body);
-    background-color: var(--color-background);
+.logo {
+    font-family: var(--font-serif-headings);
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+.logo a {
     color: var(--color-text-primary);
-    line-height: 1.7;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-a {
-    color: var(--color-accent-blue);
     text-decoration: none;
 }
-a:hover {
-    text-decoration: underline;
-    color: var(--color-accent-blue-hover);
-}
 
-.page-container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 2rem;
-}
-
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: var(--color-accent-blue);
-    color: white;
-    padding: 8px;
-    z-index: 100;
-    transition: top 0.3s;
-}
-.skip-link:focus { top: 0; }
-
-/* ==========================================================================
-   2. Language Selector Page Styles (Redesigned)
-   ========================================================================== */
-
-.front-page-container {
-    width: 100%;
-    max-width: 700px;
-}
-
-.front-page-box {
-    background-color: var(--color-surface);
-    padding: 2.5rem 3rem;
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-md);
-    text-align: center;
-}
-
-.front-page-title {
-    font-family: var(--font-serif-headings);
-    font-size: 2.8rem;
-    font-weight: 900;
-    margin: 0;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--color-text-primary);
-}
-
-.front-page-divider {
-    height: 1px;
-    background-color: var(--color-border);
-    margin: 1rem auto;
-}
-
-.front-page-subtitle {
-    font-family: var(--font-serif-headings);
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--color-text-secondary);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.front-page-intro {
-    font-size: 1.1rem;
-    color: var(--color-text-secondary);
-    margin: 2rem 0;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-.front-page-instruction {
-    font-style: italic;
-    color: var(--color-text-secondary);
-    margin-bottom: 2rem;
-}
-
-.front-page-buttons {
+.header-toggles {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-@media (min-width: 600px) {
-    .front-page-buttons {
-        flex-direction: row;
-        justify-content: center;
-    }
+.language-switch, .dark-mode-toggle {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
 }
-/* ==========================================================================
-   3. Main Site Header & Navigation
-   ========================================================================== */
-
-.site-header { background-color: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 1rem 2rem; position: sticky; top: 0; z-index: 99; transition: background-color 0.3s ease, border-color 0.3s ease; }
-.header-container { max-width: 1200px; margin: 0 auto; }
-.header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-.logo { font-family: var(--font-serif-headings); font-size: 2rem; font-weight: 900; text-align: center; }
-.logo a { color: var(--color-text-primary); text-decoration: none; }
-.language-switch, .dark-mode-toggle { font-size: 0.9rem; font-weight: 700; color: var(--color-text-secondary); background: none; border: none; cursor: pointer; padding: 0.5rem; }
-.dark-mode-toggle { display: flex; align-items: center; }
 .dark-mode-toggle .moon-icon { display: none; }
 .dark-mode-toggle .sun-icon { display: block; }
 body.dark-mode .dark-mode-toggle .moon-icon { display: block; }
 body.dark-mode .dark-mode-toggle .sun-icon { display: none; }
-.main-navigation { border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: 0.5rem 0; }
-.main-navigation ul { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; gap: 1.5rem; }
-.main-navigation a { text-transform: uppercase; font-size: 0.8rem; font-weight: 700; color: var(--color-text-secondary); letter-spacing: 0.5px; padding: 0.5rem 0; border-bottom: 2px solid transparent; }
-.main-navigation a:hover, .main-navigation a.active { color: var(--color-text-primary); border-bottom-color: var(--color-accent-red); text-decoration: none; }
 
-/* ==========================================================================
-   4. Hero Section
-   ========================================================================== */
-.hero-section { position: relative; height: 60vh; min-height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; background-size: cover; background-position: center; background-attachment: fixed; }
-.hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); }
-.hero-content { position: relative; z-index: 2; max-width: 800px; padding: 2rem; }
-.hero-headline { font-family: var(--font-serif-headings); font-size: 3.5rem; font-weight: 900; margin-bottom: 0.5rem; letter-spacing: 1px; }
-.hero-subheadline { font-family: var(--font-serif-headings); font-style: italic; font-size: 1.5rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9); }
-.hero-mission { font-size: 1.1rem; margin-bottom: 2rem; }
-.hero-cta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-.btn { padding: 0.8rem 1.8rem; border-radius: 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; border: 2px solid transparent; }
-.btn:hover { text-decoration: none; }
-.btn-primary { background-color: var(--color-accent-red); color: #fff; }
-.btn-primary:hover { background-color: var(--color-accent-red-hover); transform: translateY(-2px); }
-.btn-secondary { background-color: transparent; border-color: #fff; color: #fff; }
-.btn-secondary:hover { background-color: #fff; color: var(--color-text-primary); transform: translateY(-2px); }
-.btn-secondary-dark { border-color: var(--color-text-primary); color: var(--color-text-primary); }
-.btn-secondary-dark:hover { background-color: var(--color-text-primary); color: var(--color-surface); transform: translateY(-2px); }
-
-
-/* ==========================================================================
-   5. Main Content Grid (Newspaper Layout)
-   ========================================================================== */
-.main-grid { padding: 4rem 2rem; }
-.section-headline-container { text-align: center; margin-bottom: 3rem; }
-.section-headline { font-family: var(--font-serif-headings); font-size: 2.5rem; font-weight: 700; display: inline-block; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-border); }
-.section-headline-left { font-family: var(--font-serif-headings); font-size: 2.2rem; margin-bottom: 1.5rem; }
-
-.newspaper-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: min-content;
-    gap: 2rem;
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    padding: 0.5rem;
+    z-index: 1001; /* Above overlay */
 }
+.mobile-menu-toggle svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-text-primary);
+}
+.mobile-menu-toggle .close-icon { display: none; }
 
-.grid-item {
-    background-color: var(--color-surface);
-    padding: 1.5rem;
-    border: 1px solid var(--color-border);
-}
-
-.main-story { grid-column: 1 / 3; grid-row: 1 / 3; }
-.secondary-story { grid-column: 3 / 5; grid-row: 1 / 2; }
-.tertiary-story { grid-column: 1 / 2; grid-row: 3 / 4; }
-.filler-quote { grid-column: 3 / 5; grid-row: 2 / 3; display: flex; align-items: center; justify-content: center; background-color: var(--color-surface-alt); }
-.project-box { grid-column: 2 / 3; grid-row: 3 / 4; background-color: var(--color-surface-alt); }
-.image-box { grid-column: 3 / 5; grid-row: 3 / 4; padding: 0; border: none; }
-
-.article-title { font-family: var(--font-serif-headings); font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; }
-.article-title-small { font-family: var(--font-serif-headings); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; }
-.grid-item p { margin-bottom: 1rem; color: var(--color-text-secondary); text-align: justify; }
-.article-image { margin-bottom: 1rem; }
-.article-image figcaption, .image-box figcaption { font-size: 0.9rem; color: var(--color-text-secondary); text-align: center; margin-top: 0.5rem; font-style: italic; }
-.read-more { font-weight: 700; color: var(--color-accent-blue); }
-.filler-quote blockquote { font-family: var(--font-serif-headings); font-style: italic; font-size: 1.5rem; text-align: center; border: none; padding: 0; color: var(--color-text-secondary); }
-
-/* Responsive Grid */
-@media (max-width: 1024px) {
-    .main-story { grid-column: 1 / 5; grid-row: 1 / 2; }
-    .secondary-story { grid-column: 1 / 3; grid-row: 2 / 3; }
-    .filler-quote { grid-column: 3 / 5; grid-row: 2 / 3; }
-    .tertiary-story { grid-column: 1 / 3; grid-row: 3 / 4; }
-    .project-box { grid-column: 1 / 3; grid-row: 4 / 5; }
-    .image-box { grid-column: 3 / 5; grid-row: 3 / 5; }
-}
-@media (max-width: 768px) {
-    .newspaper-grid { display: flex; flex-direction: column; }
-    .image-box { order: -1; } /* move image towards top on mobile */
-}
-
-/* ==========================================================================
-   6. Feature Section (Solutions)
-   ========================================================================== */
-.feature-section {
-    background-color: var(--color-surface-alt);
-    padding: 4rem 0;
-    border-top: 1px solid var(--color-border);
-}
-.feature-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-}
-.feature-text { flex: 1; }
-.feature-text p { color: var(--color-text-secondary); margin-bottom: 2rem; font-size: 1.1rem; }
-.feature-image { flex: 1; max-width: 500px; }
-.feature-image img { border-radius: 8px; box-shadow: var(--shadow-md); }
-.feature-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
-@media (max-width: 900px) {
-    .feature-content { flex-direction: column; }
-    .feature-image { order: -1; margin-bottom: 2rem; }
-    .section-headline-left { text-align: center; }
-}
-
-/* ==========================================================================
-   7. Movement Section
-   ========================================================================== */
-.movement-section { padding: 4rem 2rem; }
-.movement-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-.movement-card {
-    border: 1px solid var(--color-border);
-    padding: 2rem;
-    background-color: var(--color-surface);
-}
-.movement-card h3 { font-family: var(--font-serif-headings); font-size: 1.5rem; margin-bottom: 1rem; }
-.movement-card p { color: var(--color-text-secondary); margin-bottom: 1.5rem; }
-
-/* ==========================================================================
-   8. Press Teaser Section
-   ========================================================================== */
-.press-teaser-section {
-    background-color: var(--color-accent-blue);
-    color: #fff;
-    padding: 3rem 0;
-    text-align: center;
-}
-body.dark-mode .press-teaser-section { background-color: var(--color-accent-blue-hover); }
-.press-teaser-section .section-headline-left { color: #fff; }
-.press-subheadline {
-    color: rgba(255,255,255,0.9);
-    margin-bottom: 1.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.press-teaser-section .btn-secondary-dark {
-    border-color: #fff;
-    color: #fff;
-}
-.press-teaser-section .btn-secondary-dark:hover {
-    background-color: #fff;
-    color: var(--color-accent-blue);
-}
-
-
-/* ==========================================================================
-   9. Main Site Footer
-   ========================================================================== */
-.site-footer { background-color: var(--color-text-primary); color: var(--color-background); padding: 3rem 2rem; font-size: 0.9rem; }
-.footer-container { max-width: 1200px; margin: 0 auto; }
-.footer-columns { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--color-border); }
-.footer-col h4 { font-family: var(--font-serif-headings); font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-.footer-col ul { list-style: none; }
-.footer-col ul li { margin-bottom: 0.5rem; }
-.footer-col a { color: var(--color-text-secondary); }
-.footer-col a:hover { color: #fff; text-decoration: underline; }
-.footer-col-left { text-align: left; }
-.footer-col-center { text-align: center; }
-.footer-col-right { text-align: right; }
-.social-links { display: flex; gap: 1rem; justify-content: flex-end; }
-.social-links a { display: inline-block; width: 30px; height: 30px; line-height: 30px; text-align: center; border: 1px solid var(--color-text-secondary); border-radius: 50%; font-weight: 700; }
-.social-links a:hover { background: #fff; color: var(--color-text-primary); border-color: #fff; text-decoration: none; }
-.footer-bottom { text-align: center; color: var(--color-text-secondary); }
-.footer-legal { margin-top: 0.5rem; }
-.footer-legal a { color: var(--color-text-secondary); }
-.footer-legal span { margin: 0 0.5rem; }
-
-/* Responsive footer */
-@media (max-width: 768px) {
-    .footer-columns { flex-direction: column; text-align: center; }
-    .footer-col-left, .footer-col-center, .footer-col-right { text-align: center; }
-    .social-links { justify-content: center; }
-}
-/* ==========================================================================
-   10. Article Page Styles (/problems.html, etc.)
-   ========================================================================== */
-
-.article-page {
-    padding-top: 3rem;
-    padding-bottom: 4rem;
-}
-
-.article-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 2rem;
-}
-
-.article-main-title {
-    font-family: var(--font-serif-headings);
-    font-size: 3rem;
-    font-weight: 900;
-    margin-bottom: 1rem;
-}
-
-.article-subtitle {
-    font-size: 1.2rem;
-    color: var(--color-text-secondary);
-    max-width: 800px;
-    margin: 0 auto;
-    font-style: italic;
-}
-
-.two-column-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
+/* Main Navigation (Desktop) */
+.main-navigation { display: none; } /* Hidden on mobile */
 @media (min-width: 992px) {
-    .two-column-layout {
-        flex-direction: row;
-    }
+    .main-navigation { display: block; }
 }
 
-.main-column {
-    flex: 3;
-    min-width: 0; /* Prevents flexbox overflow */
-}
-
-.sidebar-column {
-    flex: 1;
-    min-width: 0;
-}
-
-.article-content h2 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.8rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 0.5rem;
-}
-
-.article-content h2:first-child {
-    margin-top: 0;
-}
-
-.article-content p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: justify;
-    color: var(--color-text-secondary);
-}
-
-.article-content blockquote {
-    font-family: var(--font-serif-headings);
-    font-style: italic;
-    font-size: 1.3rem;
-    margin: 2rem 0;
-    padding: 1.5rem;
-    border-left: 4px solid var(--color-accent-red);
-    background-color: var(--color-surface);
-    color: var(--color-text-secondary);
-    line-height: 1.7;
-}
-
-.sidebar-widget {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.sidebar-widget h3 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
-
-.sidebar-widget p {
-    color: var(--color-text-secondary);
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
-.cta-widget {
-    background-color: var(--color-surface-alt);
-    text-align: center;
-}
-
-.full-width {
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-
-.article-conclusion {
-    margin-top: 4rem;
-    padding-top: 3rem;
-    border-top: 1px solid var(--color-border);
-    text-align: center;
-}
-.article-conclusion h2 {
-    font-family: var(--font-serif-headings);
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-.article-conclusion p {
-    max-width: 700px;
-    margin: 0 auto 2rem auto;
-    font-size: 1.1rem;
-    color: var(--color-text-secondary);
-}
-/* ==========================================================================
-   11. Hub Page Styles (/about.html, etc.)
-   ========================================================================== */
-
-.hub-page-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.hub-card {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
+.main-navigation ul {
     display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    list-style: none;
+    gap: 1.5rem;
 }
-
-.hub-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-}
-
-.hub-card-content {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.hub-card-title {
-    font-family: var(--font-serif-headings);
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-
-.hub-card-subtitle {
-    display: block;
-    font-family: var(--font-serif-headings);
-    font-style: italic;
-    color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
-}
-
-.hub-card-content p {
-    color: var(--color-text-secondary);
-    margin-bottom: 2rem;
-    flex-grow: 1;
-}
-/* ==========================================================================
-   12. Sub-Menu / Dropdown Styles (Corrected)
-   ========================================================================== */
-
-.main-navigation ul li {
-    position: relative; /* Required for submenu positioning */
-}
-
-/* Adds the small down-arrow indicator */
-.has-submenu > a::after {
-    content: ' ▾';
-    display: inline-block;
+.main-navigation ul li { position: relative; }
+.main-navigation a {
+    text-transform: uppercase;
     font-size: 0.8rem;
-    margin-left: 2px;
-    transition: transform 0.2s ease-in-out;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.5px;
+    padding: 1rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
 }
-
+.main-navigation a:hover, .main-navigation a.active {
+    color: var(--color-text-primary);
+    border-bottom-color: var(--color-accent-red);
+    text-decoration: none;
+}
+.has-submenu > a::after { content: ' ▾'; }
 .submenu {
-    /* This is the core of the fix: hide the menu by default */
-    display: block;
-    visibility: hidden;
-    opacity: 0;
-
-    /* Styling and positioning */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: var(--color-surface);
     list-style: none;
     padding: 0.5rem 0;
-    margin-top: 5px; /* Adds a small gap */
     min-width: 220px;
     border: 1px solid var(--color-border);
-    border-top: 2px solid var(--color-accent-red);
     box-shadow: var(--shadow-md);
     z-index: 100;
-
-    /* Animation */
-    transform: translateY(10px);
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, visibility 0.2s;
 }
-
-.submenu li {
-    width: 100%;
-}
-
+.has-submenu:hover > .submenu { display: block; }
 .submenu a {
     display: block;
     padding: 0.75rem 1.5rem;
-    color: var(--color-text-secondary);
-    font-size: 0.9rem;
     text-transform: none;
-    letter-spacing: 0;
-    border: none !important; /* Override parent border style */
+    border: none !important;
     white-space: nowrap;
-    transition: background-color 0.2s, color 0.2s;
 }
 
-.submenu a:hover {
-    background-color: var(--color-background);
-    color: var(--color-text-primary);
-}
-
-/* --- The Logic for Showing the Menu --- */
-
-/* For DESKTOP: Show submenu on hover */
-@media (min-width: 992px) {
-    .has-submenu:hover > .submenu {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-    }
-    .has-submenu:hover > a::after {
-        transform: rotate(180deg);
-    }
-}
-
-/* For MOBILE: Show submenu when the '.submenu-open' class is added by JavaScript */
-.submenu-open > .submenu {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-}
-/* ==========================================================================
-   13. Bio Page Specific Styles (/khem.html) (Corrected)
-   ========================================================================== */
-
-.bio-page .article-header {
-    margin-bottom: 2rem;
-}
-
-.bio-container {
-    display: flex;
-    flex-direction: column; /* Mobile-first: stack elements vertically */
-    gap: 3rem;
-}
-
-/* On larger screens, switch to a row layout */
-@media (min-width: 992px) {
-    .bio-container {
-        flex-direction: row;
-    }
-}
-
-.bio-sidebar {
-    flex: 1;
-    min-width: 280px;
-    /* Removed 'position: sticky' and related properties to fix scrolling */
-}
-
-/* On mobile, ensure the image comes first */
+/* Mobile Navigation Styles */
 @media (max-width: 991px) {
-    .bio-sidebar {
-        order: -1; /* This moves the sidebar to the top */
+    .mobile-menu-toggle { display: block; }
+    .main-navigation {
+        display: block; /* Make it block to be controlled by class */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-surface);
+        z-index: 1000;
+        padding-top: 6rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
     }
-}
+    body.mobile-menu-open .main-navigation {
+        transform: translateX(0);
+    }
+    body.mobile-menu-open .mobile-menu-toggle .menu-icon { display: none; }
+    body.mobile-menu-open .mobile-menu-toggle .close-icon { display: block; }
 
-.bio-content {
-    flex: 3;
-    min-width: 0; /* Prevents flexbox overflow issues */
-}
-
-.portrait-image {
-    border: 5px solid var(--color-surface);
-    box-shadow: var(--shadow-md);
-    border-radius: 4px;
-    margin-bottom: 2rem;
-}
-
-.bio-content section:not(:last-child) {
-    margin-bottom: 2.5rem;
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid var(--color-border);
-}
-
-.bio-content h2 {
-    font-family: var(--font-serif-headings);
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--color-accent-red);
-}
-
-.bio-content p {
-    font-size: 1.1rem;
-    line-height: 1.9;
-    margin-bottom: 1.5rem;
-    text-align: justify;
-    color: var(--color-text-secondary);
-}
-
-.bio-content blockquote {
-    font-family: var(--font-serif-headings);
-    font-style: italic;
-    font-size: 1.4rem;
-    margin: 2.5rem auto;
-    padding: 1.5rem;
-    border-left: 4px solid var(--color-accent-red);
-    background-color: var(--color-surface);
-    color: var(--color-text-secondary);
-    line-height: 1.8;
-    text-align: center;
-    max-width: 90%;
-}
-
-/* Support Section */
-.support-section {
-    background-color: var(--color-surface-alt);
-    margin-top: 4rem;
-    padding: 4rem 2rem;
-    /* Negative margin to make it full-width */
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    width: 100vw;
-}
-
-.section-subheadline {
-    font-size: 1.1rem;
-    color: var(--color-text-secondary);
-    max-width: 700px;
-    margin: 1rem auto 0 auto;
-    text-align: center;
-}
-
-.support-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    margin-top: 3rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (min-width: 768px) {
-    .support-grid {
-        grid-template-columns: 1fr 1fr;
+    .main-navigation ul {
+        flex-direction: column;
         align-items: center;
+        gap: 0;
     }
-}
-
-.support-details h3, .support-qrs h3 {
-    font-family: var(--font-serif-headings);
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.bank-details-box {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-left: 4px solid var(--color-accent-blue);
-    padding: 1.5rem;
-    font-size: 1rem;
-    text-align: left;
-}
-
-.bank-details-box p {
-    margin-bottom: 0.75rem;
-    line-height: 1.6;
-    text-align: left;
-}
-.bank-details-box p:last-child {
-    margin-bottom: 0;
-}
-.bank-details-box strong {
-    color: var(--color-text-primary);
-}
-
-.qr-code-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.qr-code {
-    text-align: center;
-}
-
-.qr-code img {
-    max-width: 150px;
-    background-color: white;
-    padding: 10px;
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 0.5rem;
-}
-
-.qr-code span {
-    font-weight: 700;
-    color: var(--color-text-secondary);
-}
-/* ==========================================================================
-   14. Manifesto Page Styles (/hunate-project.html) (Corrected)
-   ========================================================================== */
-
-.full-width-article {
-    width: 100%;
-}
-
-/* Fix for heading colors inside articles */
-.bio-content h2, .article-content h2 {
-    color: var(--color-text-primary); /* CHANGED: Was red, now uses primary text color */
-}
-
-/* Fix for the principles list */
-.principles-list {
-    background: var(--color-surface-alt);
-    border-left: 3px solid var(--color-accent-blue);
-    padding: 1.5rem 2rem;
-    margin: 2rem 0;
-}
-.principles-list p {
-    font-family: var(--font-serif-headings);
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 0.5rem;
-    text-align: left;
-}
-.principles-list p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* Re-styling the Vision section to be like a newspaper inset */
-.article-inset {
-    margin: 2rem 0;
-    padding: 2rem;
-    background-color: var(--color-surface-alt);
-}
-.article-inset h3 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-}
-.article-inset p {
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
-
-.custom-ordered-list {
-    list-style: none;
-    counter-reset: custom-counter;
-    padding-left: 0;
-}
-
-.custom-ordered-list li {
-    counter-increment: custom-counter;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    position: relative;
-    padding-left: 50px;
-}
-
-.custom-ordered-list li::before {
-    content: counter(custom-counter);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
-    background-color: var(--color-accent-red);
-    color: #fff;
-    font-family: var(--font-serif-headings);
-    font-weight: 700;
-    border-radius: 50%;
-}
-
-/* Re-styling the timeline to be like a list of dated entries */
-.phase-list {
-    margin-top: 2rem;
-    border-top: 1px solid var(--color-border);
-}
-.phase-item {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--color-border);
-}
-.phase-item h3 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-}
-.phase-item p {
-    color: var(--color-text-secondary);
-    margin: 0;
-}
-/* ==========================================================================
-   15. Hunateculture Page Styles (Corrected)
-   ========================================================================== */
-
-.inset-box {
-    background: var(--color-surface-alt);
-    border: 1px solid var(--color-border);
-    border-left: 3px solid var(--color-accent-blue);
-    padding: 1.5rem 2rem;
-    margin: 2rem 0;
-}
-
-.inset-box h3 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
-
-.inset-box p {
-    margin-bottom: 1rem;
-}
-
-.custom-list-condensed {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 1rem;
-}
-
-.custom-list-condensed li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 0.5rem;
-    color: var(--color-text-secondary);
-}
-
-.custom-list-condensed li::before {
-    content: '›';
-    position: absolute;
-    left: 0;
-    top: -2px;
-    font-size: 1.2rem;
-    color: var(--color-accent-blue);
-}
-/* ==========================================================================
-   16. Course Page Styles (/hunatian.html)
-   ========================================================================== */
-
-.course-structure {
-    margin-top: 3rem;
-}
-
-.chapter {
-    padding: 2rem;
-    margin-bottom: 2.5rem;
-    background-color: var(--color-surface);
-    border-top: 3px solid var(--color-accent-blue);
-    box-shadow: var(--shadow-sm);
-}
-
-.chapter h3 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.8rem;
-    margin-bottom: 0.75rem;
-}
-
-.chapter p {
-    color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
-}
-
-.task-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.task-list li {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.task-list li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-weight: 900;
-    color: var(--color-accent-red);
-}
-
-.task-list li strong {
-    font-family: var(--font-sans-body);
-    font-weight: 700;
-    color: var(--color-text-primary);
-}
-/* ==========================================================================
-   17. Initiative Page Styles (/7-7-7-initiative.html)
-   ========================================================================== */
-
-.role-list {
-    margin-top: 2rem;
-}
-
-.role-item {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--color-border);
-}
-
-.role-item:first-child {
-    border-top: 1px solid var(--color-border);
-}
-
-.role-item h3 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.role-item p {
-    color: var(--color-text-secondary);
-    margin-bottom: 0;
-}
-
-.join-us-section {
-    margin-top: 3rem;
-    padding: 3rem 2rem;
-    background-color: var(--color-surface-alt);
-    text-align: center;
-    margin-left: -2rem;
-    margin-right: -2rem;
-}
-
-.join-us-section h2 {
-    font-family: var(--font-serif-headings);
-    font-size: 2rem;
-}
-
-.join-us-section p {
-    max-width: 700px;
-    margin: 1rem auto 0 auto;
-    color: var(--color-text-secondary);
-}
-/* ==========================================================================
-   18. Join Page Specific Styles (/join.html) (Corrected)
-   ========================================================================== */
-
-.join-section-highlight {
-    background-color: var(--color-surface-alt);
-    padding: 3rem 2rem;
-    margin: 3rem -2rem; /* Extend to edges of container */
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-}
-
-.join-section-columns {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    margin: 3rem 0;
-    padding: 2rem 0;
-    border-bottom: 1px solid var(--color-border);
-}
-
-@media (min-width: 768px) {
-    .join-section-columns {
-        grid-template-columns: 1fr 1fr;
+    .main-navigation ul li { width: 100%; text-align: center; }
+    .main-navigation a {
+        display: block;
+        width: 100%;
+        padding: 1.2rem;
+        font-size: 1.2rem;
+        text-transform: none;
     }
-}
-
-.role-content p {
-    color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
-    max-width: 800px;
-}
-
-.role-content h3 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-/* This is the corrected rule for all buttons on this page */
-.role-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 1.5rem; /* Added more space for better balance */
-}
-/* ==========================================================================
-   19. Support Page Styles (/support.html)
-   ========================================================================== */
-
-.financial-transparency-notice {
-    max-width: 900px; /* Matches the content width above it */
-    margin: 2rem auto 0 auto; /* Centers the block and adds space on top */
-    text-align: center;
-    font-style: italic;
-    color: var(--color-text-secondary);
-}
-/* ==========================================================================
-   20. Donate Objects Page Styles
-   ========================================================================== */
-
-.category-list {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    padding: 2rem;
-    margin: 2rem 0;
-}
-
-.category-list h3 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 0.5rem;
-}
-
-.category-list ul {
-    list-style: none;
-    padding-left: 0;
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-}
-
-.category-list ul li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 0.75rem;
-    color: var(--color-text-secondary);
-}
-
-.category-list ul li::before {
-    content: '›';
-    position: absolute;
-    left: 0;
-    top: -2px;
-    font-size: 1.2rem;
-    color: var(--color-accent-blue);
-}
-
-.book-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.book-category {
-    padding: 1.5rem;
-    background-color: var(--color-surface);
-    border-bottom: 3px solid var(--color-accent-red);
-}
-
-.book-category h4 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.book-category p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
-    margin-bottom: 0.5rem;
-    font-style: italic;
-}
-/* ==========================================================================
-   20. Contact Page Styles
-   ========================================================================== */
-
-.contact-section {
-    padding-bottom: 3rem;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid var(--color-border);
-}
-.contact-section:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-@media (min-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr 1fr;
+    .submenu {
+        display: none; /* Submenus hidden by default on mobile */
+        position: static;
+        background-color: var(--color-background);
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        min-width: auto;
     }
+    .submenu a { font-size: 1rem; background-color: var(--color-surface-alt); }
+    .submenu-open > .submenu { display: block; } /* Shown with JS class */
 }
 
-.contact-card {
-    background-color: var(--color-surface);
-    padding: 2rem;
-    border: 1px solid var(--color-border);
-}
-.contact-card h3 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-.contact-card p {
-    color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
-}
+/* ==========================================================================
+   3. Hero Section & Buttons
+   ========================================================================== */
 
-.contact-info-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color-background);
-    border: 1px solid var(--color-border);
-    padding: 0.75rem 1rem;
-    font-family: monospace;
-    font-size: 1.1rem;
-}
-.copy-btn {
-    background-color: var(--color-accent-blue);
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-.copy-btn:hover {
-    background-color: var(--color-accent-blue-hover);
-}
-.copy-btn.copied {
-    background-color: #27ae60; /* Green for success */
-}
+.hero-section { position: relative; height: 70vh; min-height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; background-size: cover; background-position: center; background-attachment: fixed; }
+.hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); }
+.hero-content { position: relative; z-index: 2; max-width: 800px; padding: 2rem; }
+.hero-headline { font-family: var(--font-serif-headings); font-size: 3.5rem; font-weight: 900; margin-bottom: 0.5rem; }
+.hero-subheadline { font-family: var(--font-serif-headings); font-style: italic; font-size: 1.5rem; margin-bottom: 1.5rem; }
+.hero-mission { font-size: 1.1rem; margin-bottom: 2rem; }
+.hero-cta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 0.8rem 1.8rem; border-radius: 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; border: 2px solid transparent; }
+.btn:hover { text-decoration: none; transform: translateY(-2px); }
+.btn-primary { background-color: var(--color-accent-red); color: #fff; }
+.btn-primary:hover { background-color: var(--color-accent-red-hover); }
+.btn-secondary { background-color: transparent; border-color: #fff; color: #fff; }
+.btn-secondary:hover { background-color: #fff; color: var(--color-text-primary); }
+.btn-secondary-dark { border-color: var(--color-text-primary); color: var(--color-text-primary); }
+.btn-secondary-dark:hover { background-color: var(--color-text-primary); color: var(--color-surface); }
 
+/* ==========================================================================
+   4. Homepage Sections
+   ========================================================================== */
 
-.social-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-@media (min-width: 992px) {
-    .social-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.social-category h3 {
-    font-family: var(--font-serif-headings);
-    font-size: 1.2rem;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.social-links-contact {
+.start-here-section { padding: 4rem 0; background: var(--color-surface-alt); }
+.guided-tour {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-}
-
-.social-links-contact a {
-    padding: 0.5rem;
-    font-weight: 700;
-}
-.social-links-contact a:hover {
-    background-color: var(--color-background);
-    text-decoration: none;
-}
-
-.playlist-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
     gap: 1rem;
 }
-.playlist-item {
-    display: block;
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    padding: 1rem 1.5rem;
+@media (min-width: 992px) {
+    .guided-tour { flex-direction: row; justify-content: center; }
+}
+.tour-step {
+    font-family: var(--font-serif-headings);
     font-weight: 700;
-    transition: all 0.2s;
-}
-.playlist-item:hover {
-    text-decoration: none;
-    border-color: var(--color-accent-red);
-    color: var(--color-accent-red);
-    transform: translateY(-2px);
-}
-/* ==========================================================================
-   22. Contact Page Fixes
-   ========================================================================== */
-
-.contact-action-btn {
-    margin-top: 1rem;
-}
-
-.contact-info-box a {
+    font-size: 1.2rem;
     color: var(--color-text-primary);
     text-decoration: none;
-}
-
-.contact-info-box a:hover {
-    color: var(--color-accent-blue);
-    text-decoration: underline;
-}
-/* ==========================================================================
-   23. Utility Page Styles (404, etc.)
-   ========================================================================== */
-
-.utility-page-body {
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
+    gap: 0.5rem;
 }
-
-.utility-container {
-    width: 100%;
-    max-width: 600px;
+.tour-step span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-accent-blue);
+    color: #fff;
     text-align: center;
 }
-
-.utility-box {
-    background-color: var(--color-surface);
-    padding: 3rem 2.5rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow-md);
-    border-top: 5px solid var(--color-accent-red);
-}
-
-.utility-title {
-    font-family: var(--font-serif-headings);
-    font-size: 6rem;
-    font-weight: 900;
-    margin-bottom: 0;
-    line-height: 1;
-    color: var(--color-text-primary);
-}
-
-.utility-subtitle {
-    font-family: var(--font-serif-headings);
+.tour-arrow {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
     color: var(--color-text-secondary);
+    transform: rotate(90deg);
+}
+@media (min-width: 992px) { .tour-arrow { transform: rotate(0deg); } }
+
+.main-grid { padding: 4rem 2rem; }
+.newspaper-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.grid-item { padding: 1.5rem; border: 1px solid var(--color-border); }
+.main-story { grid-column: 1 / 3; grid-row: 1 / 3; }
+.secondary-story { grid-column: 3 / 5; grid-row: 1 / 2; }
+.tertiary-story { grid-column: 1 / 2; grid-row: 3 / 4; }
+.filler-quote { grid-column: 3 / 5; grid-row: 2 / 3; display: flex; align-items: center; justify-content: center; background-color: var(--color-surface-alt); }
+.project-box { grid-column: 2 / 5; grid-row: 3 / 4; background-color: var(--color-surface-alt); }
+.article-title { font-family: var(--font-serif-headings); font-size: 1.8rem; margin-bottom: 1rem; }
+.article-title-small { font-family: var(--font-serif-headings); font-size: 1.2rem; margin-bottom: 0.75rem; }
+.grid-item p { margin-bottom: 1rem; color: var(--color-text-secondary); }
+.article-image { margin-bottom: 1rem; }
+.article-image figcaption { font-size: 0.9rem; color: var(--color-text-secondary); text-align: center; margin-top: 0.5rem; font-style: italic; }
+.read-more { font-weight: 700; color: var(--color-accent-blue); }
+.filler-quote blockquote { font-family: var(--font-serif-headings); font-style: italic; font-size: 1.5rem; text-align: center; border: none; padding: 0; }
+@media (max-width: 1024px) {
+    .newspaper-grid { display: flex; flex-direction: column; }
 }
 
-.utility-box p {
-    font-size: 1.1rem;
+.cta-section { background-color: var(--color-surface); padding: 4rem 0; border-top: 1px solid var(--color-border); }
+.cta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.cta-card { background-color: var(--color-background); border: 1px solid var(--color-border); padding: 2rem; text-align: center; font-family: var(--font-serif-headings); font-size: 1.2rem; font-weight: 700; color: var(--color-text-primary); transition: all 0.3s ease; }
+.cta-card:hover { text-decoration: none; transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--color-accent-blue); color: var(--color-accent-blue); }
+
+/* ==========================================================================
+   5. Site Footer (Redesigned)
+   ========================================================================== */
+
+.site-footer {
+    background-color: var(--color-text-primary);
     color: var(--color-text-secondary);
-    margin-bottom: 2.5rem;
-    line-height: 1.7;
+    padding: 4rem 2rem 2rem 2rem;
+    font-size: 0.9rem;
 }
+body.dark-mode .site-footer { background-color: #000; }
+.footer-container { max-width: 1200px; margin: 0 auto; }
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+}
+.footer-logo {
+    font-family: var(--font-serif-headings);
+    font-size: 1.5rem;
+    color: var(--color-background);
+    margin-bottom: 1rem;
+}
+.footer-mission { line-height: 1.6; margin-bottom: 1.5rem; }
+.footer-socials { display: flex; gap: 1rem; }
+.footer-socials a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid var(--color-text-secondary);
+    border-radius: 50%;
+    color: var(--color-text-secondary);
+    font-weight: 700;
+}
+.footer-socials a:hover {
+    background: #fff;
+    color: var(--color-text-primary);
+    border-color: #fff;
+    text-decoration: none;
+}
+.footer-heading {
+    font-family: var(--font-serif-headings);
+    font-size: 1.1rem;
+    color: var(--color-background);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 0.75rem; }
+.footer-links a { color: var(--color-text-secondary); }
+.footer-links a:hover { color: #fff; text-decoration: underline; }
+.footer-bottom { text-align: center; color: var(--color-text-secondary); }
+.footer-legal { margin-top: 0.5rem; }
+.footer-legal a { color: var(--color-text-secondary); }
+.footer-legal span { margin: 0 0.5rem; }
