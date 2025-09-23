@@ -16,13 +16,13 @@
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/images/fevicon.png" type="image/png">
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=1.2">
+    <link rel="stylesheet" href="/assets/css/style.css?v=2.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     
-    <script defer src="/assets/js/main.js?v=1.1"></script>
+    <script defer src="/assets/js/main.js?v=2.0"></script>
 </head>
 <body>
 
@@ -30,19 +30,12 @@
 
     <header class="site-header">
         <div class="header-container">
-            <div class="header-top">
-                <a href="/nepali/index.html" class="language-switch">🌐 Nepali</a>
-                <div class="logo">
-                    <a href="/english/index.html">Khem & Hunate</a>
-                </div>
-                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                </button>
+            <div class="logo">
+                <a href="/english/index.html">Khem & Hunate</a>
             </div>
             <nav class="main-navigation">
                 <ul>
-                    <li><a href="/english/index.html">Home</a></li>
+                    <li><a href="/english/index.html" class="active">Home</a></li>
                     <li><a href="/english/problems.html">Problems</a></li>
                     <li class="has-submenu">
                         <a href="/english/about.html">About</a>
@@ -74,28 +67,33 @@
                         <ul class="submenu">
                             <li><a href="/english/engineers.html">Engineers</a></li>
                             <li><a href="/english/mentors.html">Mentors</a></li>
-                            <li><a href="/english/district-representatives.html">Representatives</a></li>
                             <li><a href="/english/14-hub-partners.html">Hub Partners</a></li>
-                            <li><a href="/english/volunteers.html">Volunteers</a></li>
-                            <li><a href="/english/support-hq.html">Support HQ</a></li>
-                            <li><a href="/english/donate-objects.html">Donate Objects</a></li>
                         </ul>
                     </li>
                     <li><a href="/english/contact.html">Contact</a></li>
-                    <li><a href="/english/press.html">Press</a></li>
                 </ul>
             </nav>
+            <div class="header-toggles">
+                <a href="/nepali/index.html" class="language-switch">🌐 NE</a>
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open menu">
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
         </div>
     </header>
 
     <main id="main-content">
-
         <section class="hero-section" style="background-image: url('/assets/images/hero-cover.jpg');">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="hero-headline">Welcome To The Journey</h1>
-                <p class="hero-subheadline">A Journey of Transformation & A Blueprint for a New World.</p>
-                <p class="hero-mission">"We are building a world where humanity, nature, and technology thrive in balance. This is the story of a life dedicated to finding that solution. The Hunate Movement, and how you can be a part of it."</p>
+                <h1 class="hero-headline">Khem Raj Pradhan</h1>
+                <p class="hero-subheadline">A Journey of Transformation. A Blueprint for a New World.</p>
+                <p class="hero-mission">"We are building a world where humanity and nature thrive in balance. This is the story of a life dedicated to finding that solution—the Hunate Movement—and how you can be a part of it."</p>
                 <div class="hero-cta">
                     <a href="/english/movement.html" class="btn btn-primary">Join the Movement</a>
                     <a href="/english/khem.html" class="btn btn-secondary">Read My Story</a>
@@ -103,101 +101,69 @@
             </div>
         </section>
 
+        <section class="start-here-section">
+            <div class="page-container">
+                <h2 class="section-headline">A Guided Tour</h2>
+                <p class="section-subheadline">To understand the full scope of our mission, we recommend exploring the story in this order.</p>
+                <div class="guided-tour">
+                    <a href="/english/khem.html" class="tour-step"><span>1</span> My Story</a>
+                    <div class="tour-arrow">→</div>
+                    <a href="/english/problems.html" class="tour-step"><span>2</span> The Problem</a>
+                    <div class="tour-arrow">→</div>
+                    <a href="/english/solutions.html" class="tour-step"><span>3</span> The Solution</a>
+                    <div class="tour-arrow">→</div>
+                    <a href="/english/join.html" class="tour-step"><span>4</span> Join Us</a>
+                </div>
+            </div>
+        </section>
+
         <div class="page-container main-grid">
             <div class="section-headline-container">
-                <h2 class="section-headline">The Complete Story: An Overview</h2>
+                <h2 class="section-headline">From the Front Page</h2>
             </div>
-            
             <div class="newspaper-grid">
                 <article class="grid-item main-story">
-                    <h3 class="article-title">Khem Raj Pradhan</h3>
+                    <h3 class="article-title">The Man Behind the Movement</h3>
                     <figure class="article-image">
                         <img src="/assets/images/your-portrait.jpg" alt="A portrait of Khem Raj Pradhan.">
-                        <figcaption>Founder of the Hunate Movement.</figcaption>
+                        <figcaption>Khem Raj Pradhan, Founder of the Hunate Movement.</figcaption>
                     </figure>
-                    <p>This movement was born not from theory, but from a life of intense experience. My journey from a remote Nepali village through addiction, imprisonment, and spiritual seeking to becoming a school principal and social innovator forged an unbreakable conviction: that a better world is possible. This website documents that story—the hardships, the discoveries, and the unwavering commitment that led to the Hunate Project. It is a testament to the power of personal transformation to inspire collective change.</p>
+                    <p>This movement was born not from theory, but from a life of intense experience. The journey from a remote Nepali village through addiction and imprisonment to becoming a school principal and social innovator forged an unbreakable conviction: that a better world is possible. This is a testament to the power of personal transformation to inspire collective change.</p>
                     <a href="/english/khem.html" class="read-more">Explore My Journey →</a>
                 </article>
-                
                 <article class="grid-item secondary-story">
                     <h3 class="article-title">Our Broken System</h3>
-                    <p>We live in a time of deep imbalance. Our human-made systems—education, health, economy, governance, technology—were meant to liberate us, yet they are breaking us. We produce enough food, yet millions go hungry. We are globally connected, yet lonelier than ever. Our economies celebrate profit while eroding spirit, community, and land. Nature, our true home, is being poisoned and exploited, while technology designed to empower us often enslaves our attention and choices.</p>
-                    <p>This is not just a crisis of environment or politics, it is a crisis of meaning. Humanity has forgotten its sacred relationship with life itself. We are burning out our bodies, disconnecting from spirit, commodifying relationships, and crushing the youth before they even discover who they are.</p>
-                    <p>But this breakdown is also a turning point: an urgent call to awaken, to heal disconnections, and to consciously choose a regenerative future.</p>
+                    <p>The modern world is built on flawed foundations. Our education system prioritizes memorization over wisdom, our economy values profit over well-being, and our social structures foster division instead of unity. The Hunate philosophy begins with a fearless diagnosis of this systemic failure.</p>
                     <a href="/english/problems.html" class="read-more">Read the full analysis →</a>
                 </article>
-
                 <aside class="grid-item filler-quote">
-                    <blockquote>
-                        "The systems meant to support us are failing. We are disconnected from ourselves, each other, and our planet."
-                    </blockquote>
+                    <blockquote>"We are not here to fight the old system. We are here to build a new one that makes the old system obsolete."</blockquote>
                 </aside>
-
-                 <article class="grid-item tertiary-story">
+                <article class="grid-item tertiary-story">
                     <h3 class="article-title">The Hunate Solution</h3>
-                     <p>The solution is not another top-down ideology, but a return to fundamental principles. 'Hunateculture' is a life-design system for building resilient, self-sufficient, and interconnected communities, starting with the family unit.</p>
+                    <p>'Hunateculture' is a life-design system for building resilient, self-sufficient, and interconnected communities, starting with the family unit.</p>
                     <a href="/english/solutions.html" class="read-more">Discover the Solutions →</a>
                 </article>
-
                 <article class="grid-item project-box">
-                    <h3 class="article-title-small">From the Archives: The Joon Project</h3>
-                    <p>Before Hunate, there was Joon—a project born from compassion for the most vulnerable. Working with orphanages revealed the deep systemic flaws in our approach to care and education, planting the seeds for a more holistic solution.</p>
-                    <a href="/english/the-joon-project.html" class="read-more">Learn about our roots →</a>
+                    <h3 class="article-title-small">Key Initiative: The 7-7-7</h3>
+                    <p>Our flagship mission is to establish 7 self-sustaining Hunate Hubs, supporting 7 families and 7 orphanages, across the 7 provinces of Nepal.</p>
+                    <a href="/english/7-7-7-initiative.html" class="read-more">Learn about the mission →</a>
                 </article>
-
-                <figure class="grid-item image-box">
-                    <img src="/assets/images/map-nepal.png" alt="Map of Nepal highlighting its provinces.">
-                    <figcaption>A grassroots movement starting in Nepal, with a vision for the world.</figcaption>
-                </figure>
             </div>
         </div>
 
-        <section class="feature-section">
+        <section class="cta-section">
             <div class="page-container">
-                <div class="feature-content">
-                    <div class="feature-text">
-                        <h2 class="section-headline-left">The Blueprint: Hunateculture & The Hunatian Course</h2>
-                        <p>We cannot build a new world with old tools. Hunateculture is a practical system for designing a life in harmony with nature, focusing on self-sufficient families, farms, and communities. It's a return to balance. Complementing this is the "Becoming Hunatian" Course, a transformative educational journey. This is not just learning; it's a chapter-by-chapter guide to unlearning harmful patterns and building a life of purpose, resilience, and connection.</p>
-                        <div class="feature-cta">
-                            <a href="/english/hunateculture.html" class="btn btn-primary">Explore Hunateculture</a>
-                            <a href="/english/hunatian.html" class="btn btn-secondary-dark">View the Course</a>
-                        </div>
-                    </div>
-                    <div class="feature-image">
-                        <img src="/assets/images/hero-cover.jpg" alt="A symbolic image of nature and structure in harmony.">
-                    </div>
+                <h2 class="section-headline">Become a Part of the Change</h2>
+                <p class="section-subheadline">This is more than a project; it is a collective effort to build a future that works for all. Your skills, passion, and support are the currency of this new world. Find the role that calls to you and join us.</p>
+                <div class="cta-grid">
+                    <a href="/english/join.html#engineers" class="cta-card">Join as an Engineer</a>
+                    <a href="/english/join.html#mentors" class="cta-card">Become a Mentor</a>
+                    <a href="/english/join.html#partners" class="cta-card">Be a Hub Partner</a>
+                    <a href="/english/volunteers.html" class="cta-card">Volunteer Your Time</a>
+                    <a href="/english/support.html" class="cta-card">Support with a Donation</a>
+                    <a href="/english/hunatian.html" class="cta-card">Enroll in the Course</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="page-container movement-section">
-            <div class="section-headline-container">
-                <h2 class="section-headline">The Hunate Movement: Taking Action</h2>
-            </div>
-            <div class="movement-grid">
-                <div class="movement-card">
-                    <h3>The 7-7-7 Initiative</h3>
-                    <p>Our flagship mission: to establish 7 self-sustaining Hunate Hubs, supporting 7 families and 7 orphanages, across the 7 provinces of Nepal. This is a tangible, scalable model for national transformation.</p>
-                    <a href="/english/7-7-7-initiative.html" class="read-more">Learn about the Initiative →</a>
-                </div>
-                <div class="movement-card">
-                    <h3>Join the Team</h3>
-                    <p>This vision requires a collective of passionate individuals. We are calling for Engineers, Mentors, Volunteers, and Representatives to form the backbone of this movement. Your skills are the currency of change.</p>
-                    <a href="/english/join.html" class="read-more">Find Your Role →</a>
-                </div>
-                <div class="movement-card">
-                    <h3>Support the Vision</h3>
-                    <p>Every great movement is fueled by the support of its community. Financial contributions directly fund the establishment of Hubs, providing resources, training, and hope. Your support builds the future.</p>
-                    <a href="/english/support.html" class="read-more">See Ways to Support →</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="press-teaser-section">
-            <div class="page-container">
-                 <h2 class="section-headline-left">Press & Updates</h2>
-                 <p class="press-subheadline">This page is under development. Soon, it will feature articles, announcements, and stories from the front lines of the Hunate Movement.</p>
-                 <a href="/english/press.html" class="btn btn-secondary-dark">Go to Press Page</a>
             </div>
         </section>
 
@@ -205,33 +171,43 @@
 
     <footer class="site-footer">
         <div class="footer-container">
-            <div class="footer-columns">
-                <div class="footer-col footer-col-left">
-                    <h4>About</h4>
-                    <ul>
-                        <li><a href="/english/khem.html">Khem's Story</a></li>
-                        <li><a href="/english/the-joon-project.html">The Joon Project</a></li>
-                        <li><a href="/english/hunate-project.html">Hunate Project</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col footer-col-center">
-                    <h4>Get Involved</h4>
-                    <ul>
-                        <li><a href="/english/join.html#engineers">Engineers</a></li>
-                        <li><a href="/english/join.html#partners">Hub Partners</a></li>
-                        <li><a href="/english/join.html#volunteers">Volunteers</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col footer-col-right">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="https://www.youtube.com/@khem.hunatian" target="_blank" aria-label="Youtube">YT</a>
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">Khem & Hunate</h3>
+                    <p class="footer-mission">A movement to restore balance and harmony among humanity, nature, and technology.</p>
+                    <div class="footer-socials">
+                         <a href="https://www.youtube.com/@khem.hunatian" target="_blank" aria-label="Youtube">YT</a>
                         <a href="https://www.facebook.com/khem.hunatian/" target="_blank" aria-label="Facebook">FB</a>
                         <a href="https://www.instagram.com/khem.hunatian/" target="_blank" aria-label="Instagram">IG</a>
                         <a href="https://www.tiktok.com/@khem.hunatian" target="_blank" aria-label="Tiktok">TT</a>
                         <a href="https://x.com/khemhunatian" target="_blank" aria-label="X">X</a>
                         <a href="https://www.linkedin.com/in/khemhunatian/" target="_blank" aria-label="LinkedIn">LI</a>
                     </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">About</h4>
+                    <ul class="footer-links">
+                        <li><a href="/english/khem.html">Khem's Story</a></li>
+                        <li><a href="/english/the-joon-project.html">The Joon Project</a></li>
+                        <li><a href="/english/hunate-project.html">Hunate Philosophy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="/english/join.html#engineers">Join as an Engineer</a></li>
+                        <li><a href="/english/join.html#partners">Become a Hub Partner</a></li>
+                        <li><a href="/english/join.html#mentors">Become a Mentor</a></li>
+                        <li><a href="/english/join.html#volunteers">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Key Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="/english/7-7-7-initiative.html">The 7-7-7 Initiative</a></li>
+                        <li><a href="/english/hunateculture.html">Hunateculture System</a></li>
+                        <li><a href="/english/hunatian.html">"Becoming Hunatian" Course</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
