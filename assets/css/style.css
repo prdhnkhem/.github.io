@@ -1,0 +1,311 @@
+/* --- GOOGLE FONT IMPORTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700;900&display=swap');
+
+/* --- CSS VARIABLES (COLOR & FONT PALETTE) --- */
+:root {
+    --font-headline: 'Merriweather', serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Light Mode Colors */
+    --color-text: #212529;
+    --color-background: #f8f9fa;
+    --color-surface: #ffffff;
+    --color-border: #dee2e6;
+    --color-muted: #6c757d;
+
+    /* Accent Colors */
+    --color-accent-red: #c0392b;
+    --color-accent-red-hover: #a93226;
+    --color-accent-blue: #2980b9;
+    --color-accent-blue-hover: #2471a3;
+}
+
+/* --- GLOBAL RESETS & TYPOGRAPHY --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-headline);
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--color-accent-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-accent-blue-hover);
+    text-decoration: underline;
+}
+
+/* --- GLOBAL HEADER --- */
+.global-header {
+    background-color: var(--color-surface);
+    border-bottom: 2px solid var(--color-border);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-muted);
+}
+
+.main-nav a:hover {
+    color: var(--color-text);
+}
+
+.header-toggles {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header-toggles button { /* Placeholder styles for toggles */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero-cover.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    font-family: var(--font-headline);
+    font-weight: 400;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid var(--color-accent-red);
+    color: var(--color-accent-red);
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--color-accent-red);
+    color: #fff;
+}
+
+/* --- MAIN CONTENT SECTIONS --- */
+.page-section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+}
+
+.section-headline {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+/* Guided Tour Section */
+.guided-tour {
+    background-color: var(--color-background);
+}
+
+.tour-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    list-style: none;
+}
+
+.tour-step {
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+}
+
+.tour-step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.tour-step span {
+    font-family: var(--font-headline);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-muted);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Newspaper Layout Section */
+.newspaper-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.main-article h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.main-article p {
+    text-align: justify;
+}
+
+.sidebar-content .portrait {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    border: 3px solid var(--color-border);
+}
+
+.sidebar-content h3 {
+    font-size: 1.5rem;
+}
+
+.pull-quote {
+    border-left: 5px solid var(--color-accent-red);
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+    font-family: var(--font-headline);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--color-muted);
+}
+
+/* --- CALLS TO ACTION SECTION --- */
+.cta-section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.cta-box {
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    text-align: center;
+}
+.cta-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.cta-box .button-group {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* --- GLOBAL FOOTER --- */
+.global-footer {
+    background-color: #212529;
+    color: #f8f9fa;
+    padding-top: 4rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-col a {
+    color: var(--color-muted);
+}
+
+.footer-col a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #495057;
+    text-align: center;
+    padding: 1.5rem 0;
+}
