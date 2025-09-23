@@ -3,10 +3,6 @@
 // DOMContentLoaded ensures the script runs after the entire HTML page is loaded.
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- FUTURE FUNCTIONALITY ---
-
-document.addEventListener('DOMContentLoaded', () => {
-
     // --- Mobile Navigation Toggle ---
     const menuToggle = document.getElementById('mobile-menu-toggle');
     const mobileNav = document.getElementById('mobile-nav');
