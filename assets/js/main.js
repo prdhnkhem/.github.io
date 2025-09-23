@@ -1,6 +1,3 @@
-// Hunate Movement - Main JavaScript File
-
-// DOMContentLoaded ensures the script runs after the entire HTML page is loaded.
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- Mobile Navigation Toggle ---
@@ -9,30 +6,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (menuToggle && mobileNav) {
         menuToggle.addEventListener('click', () => {
-            // Toggle the 'active' class on the nav overlay
             mobileNav.classList.toggle('active');
-            
-            // Toggle the hamburger icon animation
             menuToggle.classList.toggle('active');
-
-            // Lock or unlock body scroll
-            if (mobileNav.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
         });
     }
 
+    // --- Dark Mode Toggle ---
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
 
-    // --- FUTURE: Dark Mode Toggle ---
-    // The code for dark mode functionality will go here.
+    // Function to set the theme
+    const setTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (themeToggle) {
+           themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+    };
+
+    // Check for saved theme in localStorage, or use system preference
+    if (currentTheme) {
+        setTheme(currentTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+    } else {
+        setTheme('light');
+    }
+
+    // Add click event to the toggle button
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+    }
     
-    console.log("Hunate website scripts loaded and mobile menu is active.");
-});
-
-    // 3. Copy to Clipboard functionality
-    // We will add code for the contact page's "Copy" buttons here.
-
-    console.log("Hunate website scripts loaded.");
+    console.log("Hunate website scripts loaded. Mobile menu and Dark Mode are active.");
 });
