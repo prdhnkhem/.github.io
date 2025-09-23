@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" data-theme="light"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome To The Journey</title>
@@ -16,18 +15,49 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="about.html">About</a>
+                        <ul class="sub-menu">
+                            <li><a href="khem.html">Khem's Story</a></li>
+                            <li><a href="the-joon-project.html">The Joon Project</a></li>
+                            <li><a href="hunate-project.html">Hunate Philosophy</a></li>
+                        </ul>
+                    </li>
                     <li><a href="problems.html">Problems</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
-                    <li><a href="movement.html">Movement</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="support.html">Support</a></li>
+                    <li>
+                        <a href="solutions.html">Solutions</a>
+                        <ul class="sub-menu">
+                            <li><a href="hunateculture.html">Hunateculture</a></li>
+                            <li><a href="becoming-hunatian.html">Becoming Hunatian</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="movement.html">Movement</a>
+                         <ul class="sub-menu">
+                            <li><a href="7-7-7-initiative.html">7-7-7 Initiative</a></li>
+                            <li><a href="hunate-hq.html">Hunate HQ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="join.html">Join</a>
+                        <ul class="sub-menu">
+                            <li><a href="as-engineers.html">As Engineers</a></li>
+                            <li><a href="as-mentors.html">As Mentors</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="support.html">Support</a>
+                        <ul class="sub-menu">
+                            <li><a href="finance.html">Financials</a></li>
+                            <li><a href="donate-objects.html">Donate Objects</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="press.html">Press</a></li>
                 </ul>
             </nav>
             <div class="header-toggles">
-                <button title="Dark Mode Toggle">🌙</button>
+                <button id="theme-toggle" title="Toggle Dark Mode">🌙</button>
                 <div class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -40,10 +70,28 @@
     <nav class="mobile-nav" id="mobile-nav">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="problems.html">Problems</a></li>
-            <li><a href="solutions.html">Solutions</a></li>
-            <li><a href="movement.html">Movement</a></li>
+            <li>
+                <a href="about.html">About</a>
+                <ul class="sub-menu">
+                    <li><a href="khem.html">Khem's Story</a></li>
+                    <li><a href="the-joon-project.html">The Joon Project</a></li>
+                </ul>
+            </li>
+             <li><a href="problems.html">Problems</a></li>
+            <li>
+                <a href="solutions.html">Solutions</a>
+                <ul class="sub-menu">
+                    <li><a href="hunateculture.html">Hunateculture</a></li>
+                    <li><a href="becoming-hunatian.html">Becoming Hunatian</a></li>
+                </ul>
+            </li>
+             <li>
+                <a href="movement.html">Movement</a>
+                 <ul class="sub-menu">
+                    <li><a href="7-7-7-initiative.html">7-7-7 Initiative</a></li>
+                    <li><a href="hunate-hq.html">Hunate HQ</a></li>
+                </ul>
+            </li>
             <li><a href="join.html">Join</a></li>
             <li><a href="support.html">Support</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -63,7 +111,6 @@
                 </div>
             </div>
         </section>
-
         <section class="page-section">
             <div class="container">
                 <h2 class="section-headline">An Overview of the Movement</h2>
@@ -91,7 +138,6 @@
                 </div>
             </div>
         </section>
-        
         <section class="page-section single-cta">
             <div class="container">
                 <h2 class="section-headline">Begin Your Personal Journey</h2>
@@ -99,7 +145,6 @@
                 <a href="becoming-hunatian.html" class="cta-button">Explore the Course</a>
             </div>
         </section>
-        
     </main>
 
     <footer class="global-footer">
