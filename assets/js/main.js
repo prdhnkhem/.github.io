@@ -1,46 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-
-    // --- Mobile Navigation Toggle ---
-    const menuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
-
-    if (menuToggle && mobileNav) {
-        menuToggle.addEventListener('click', () => {
-            mobileNav.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-        });
+// --- Dynamic Dateline and Copyright Year ---
+document.addEventListener('DOMContentLoaded', function() {
+    // Dateline
+    const datelineElement = document.getElementById('dateline');
+    if (datelineElement) {
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = now.toLocaleDateString('en-US', options);
+        datelineElement.textContent = `${formattedDate} | Damak, Nepal`;
     }
 
-    // --- Dark Mode Toggle ---
-    const themeToggle = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme');
-
-    // Function to set the theme
-    const setTheme = (theme) => {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        if (themeToggle) {
-           themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-        }
-    };
-
-    // Check for saved theme in localStorage, or use system preference
-    if (currentTheme) {
-        setTheme(currentTheme);
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setTheme('dark');
-    } else {
-        setTheme('light');
+    // Copyright Year
+    const yearElement = document.getElementById('copyright-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
-
-    // Add click event to the toggle button
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            setTheme(newTheme);
-        });
-    }
-    
-    console.log("Hunate website scripts loaded. Mobile menu and Dark Mode are active.");
 });
