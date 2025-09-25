@@ -3,141 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khem & Hunate Movement</title>
-    <style>
-        /* --- Font Imports --- */
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@900&display=swap');
-
-        /* --- Global Resets & Body Styling --- */
-        :root {
-            --font-headline: 'Merriweather', serif;
-            --font-body: 'Lato', sans-serif;
-            --color-text: #1a1a1a;
-            --color-background: #fdfdfd;
-            --color-border: #cccccc;
-            --color-accent-red: #c0392b;
-            --color-accent-red-hover: #a93226;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: var(--color-background);
-            color: var(--color-text);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        /* --- Main Content Box --- */
-        .container {
-            max-width: 700px;
-            width: 100%;
-            text-align: center;
-            border: 2px solid var(--color-border);
-            padding: 40px 50px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        /* --- Newspaper-style Typography --- */
-        .main-headline {
-            font-family: var(--font-headline);
-            font-size: 2.5rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            color: #000;
-        }
-
-        .subtitle {
-            font-family: 'Merriweather', serif;
-            font-size: 1.25rem;
-            color: #555;
-            margin-bottom: 25px;
-            font-style: italic;
-        }
-
-        .intro-paragraph {
-            font-size: 1rem;
-            text-align: justify;
-            margin-bottom: 40px;
-            text-indent: 2em; /* Classic paragraph indent */
-        }
-
-        /* --- Language Selection Buttons --- */
-        .language-selector {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .lang-button {
-            font-family: var(--font-body);
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-decoration: none;
-            padding: 12px 30px;
-            border: 2px solid var(--color-accent-red);
-            border-radius: 5px;
-            color: var(--color-accent-red);
-            background-color: transparent;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .lang-button:hover {
-            background-color: var(--color-accent-red);
-            color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(192, 57, 43, 0.2);
-        }
-        
-        /* --- Responsive Design --- */
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px 25px;
-            }
-            .main-headline {
-                font-size: 2rem;
-            }
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            .language-selector {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .lang-button {
-                width: 100%;
-            }
-        }
-
-    </style>
+    <title>Hunate Project: Choose Your Language</title>
+    <meta name="description" content="Welcome to the Hunate Project. Please select your language to continue.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Lato:wght@400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="language-selector-page">
 
-    <main class="container">
-        <h1 class="main-headline">Khem & Hunate Movement</h1>
-        <h2 class="subtitle">A Journey to Restore Harmony Among Humanity, Nature, and Technology.</h2>
-        <p class="intro-paragraph">
-            This is a call to awaken. In a world of failing systems, we are pioneering a new path, one rooted in ancient wisdom and guided by modern understanding. This is the central hub for the research, philosophy, and practical blueprints designed to build a regenerative future for our families, our communities, and our planet.
-            <p>Choose your language to begin the journey.</p>
-        </p>
-        <div class="language-selector">
-            <a href="/english/index.html" class="lang-button">English</a>
-            <a href="/nepali/index.html" class="lang-button">नेपाली</a>
+    <main class="centered-container">
+        <div class="masthead">
+            <p id="dateline" class="dateline"></p>
+            <h1 class="main-headline">Khem & Hunate Welsomes You</h1>
+            <p class="sub-headline">This Page Contains A Regenerative Blueprint for Humanity, Nature, and Technology.</p>
+            <p class="instruction-text">Please select your Language of Preference:</p>
+            <div class="language-buttons">
+                <a href="english/home.html" class="btn-language">ENGLISH</a>
+                <a href="nepali/home.html" class="btn-language">नेपाली</a>
+            </div>
         </div>
     </main>
 
+    <footer class="simple-footer">
+        <p>© <span id="copyright-year"></span> Khem Raj Pradhan & The Hunate Project</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
