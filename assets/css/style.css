@@ -396,3 +396,71 @@ a:hover {
         gap: 0.5rem;
     }
 }
+/* --- Generic Inner Page Header --- */
+.page-header {
+    background-color: #f7f7f2; /* Off-white background */
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+.page-title {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+}
+.page-lead {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-grey);
+    line-height: 1.8;
+}
+
+/* --- Two-Column Feature Layout (for the-story.html) --- */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.column-feature {
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+}
+.feature-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+    background-color: #f7f7f2;
+}
+.feature-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+}
+.feature-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.feature-content {
+    padding: 1.5rem;
+    text-align: justify;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.feature-content blockquote {
+    font-size: 1.3rem; /* Slightly smaller than homepage quote */
+    margin: 0 0 1.5rem 0;
+    padding-left: 1rem;
+}
+.feature-content .btn-secondary {
+    margin-top: auto; /* Pushes the button to the bottom */
+}
+
+
+/* --- Add to the Mobile Responsiveness @media block --- */
+@media (max-width: 768px) {
+    /* ... existing styles ... */
+    .page-title { font-size: 2.2rem; }
+    .two-column-layout { grid-template-columns: 1fr; }
+}
