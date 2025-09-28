@@ -56,7 +56,6 @@ a:hover {
     color: var(--color-accent-red);
 }
 
-/* FIX #1: This tells the main content to take up all available vertical space, pushing the footer to the bottom. */
 main {
     flex: 1 0 auto;
 }
@@ -351,15 +350,24 @@ body.no-scroll {
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
 }
+.columns-2-sidebar h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
 .inset-box {
     border: 1px solid var(--color-border);
     padding: 1.5rem;
     background-color: var(--color-background);
+    margin-bottom: 1.5rem; /* Add margin between inset boxes */
 }
 .inset-image {
     width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 .inset-box h4 { margin: 0; font-size: 1.2rem; }
 .inset-box .inset-title { font-size: 0.9rem; color: var(--color-grey); margin-bottom: 1rem; }
@@ -394,7 +402,7 @@ body.no-scroll {
 .site-footer {
     background-color: #1a1a1a;
     color: #f1f1f1;
-    margin-top: auto; /* Pushes footer to bottom */
+    margin-top: auto;
 }
 .footer-newsletter {
     background-color: #333;
@@ -514,7 +522,6 @@ body.no-scroll {
     columns: 3;
     column-gap: 2.5rem;
     text-align: justify;
-    /* FIX #2: These rules ensure the article stays within its container, preventing horizontal scroll. */
     width: 100%;
     box-sizing: border-box;
 }
@@ -557,7 +564,7 @@ body.no-scroll {
     border-bottom: 2px solid var(--color-text);
     text-align: center;
     background-color: var(--color-off-white-bg);
-    break-before: column; /* Ensure it doesn't get split weirdly */
+    break-before: column;
 }
 .callout-box h4 {
     font-size: 1.5rem;
@@ -574,18 +581,37 @@ body.no-scroll {
     margin-top: 1.5rem;
 }
 
+/* --- Inset Box List (the-joon-project.html) --- */
+.inset-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    text-align: left;
+}
+.inset-list li {
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.inset-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-red);
+    font-weight: bold;
+}
+
 /* --- Mobile Responsiveness --- */
 @media (max-width: 992px) {
     .site-title { font-size: 2.5rem; }
     .hero-headline { font-size: 2.5rem; }
-    .newspaper-columns { columns: 1; }
-    .columns-2-sidebar, .three-fold-path, .footer-main .container { grid-template-columns: 1fr; }
-    .longform-article { columns: 2; }
+    .columns-2-sidebar { grid-template-columns: 1fr; }
+    .newspaper-columns, .longform-article { columns: 2; }
     .top-bar-section span { display: none; }
 }
 @media (max-width: 768px) {
     .page-title { font-size: 2.2rem; }
-    .two-column-layout { grid-template-columns: 1fr; }
+    .two-column-layout, .three-fold-path, .footer-main .container { grid-template-columns: 1fr; }
     .main-navigation .container { justify-content: flex-end; }
     .menu-toggle {
         display: block;
@@ -639,7 +665,7 @@ body.no-scroll {
         flex-direction: column;
         gap: 0.5rem;
     }
-    .longform-article { columns: 1; }
+    .newspaper-columns, .longform-article { columns: 1; }
     .article-image-float-left { float: none; max-width: 100%; margin: 0 0 1rem 0; }
 }
 
