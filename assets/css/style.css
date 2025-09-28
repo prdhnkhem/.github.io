@@ -357,6 +357,28 @@ body.no-scroll {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--color-border);
 }
+.columns-2-sidebar h4 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.columns-2-sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+.columns-2-sidebar ul li {
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.columns-2-sidebar ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-red);
+    font-weight: bold;
+}
 
 .inset-box {
     border: 1px solid var(--color-border);
@@ -479,7 +501,7 @@ body.no-scroll {
     line-height: 1.8;
 }
 
-/* --- Two-Column Feature Layout (the-story.html) --- */
+/* --- Two-Column Feature Layout --- */
 .two-column-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -517,7 +539,7 @@ body.no-scroll {
     margin-top: auto;
 }
 
-/* --- Long-form Article Styles (khem-story.html & hunate.html) --- */
+/* --- Long-form Article Styles --- */
 .longform-article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -525,7 +547,7 @@ body.no-scroll {
     text-align: justify;
 }
 .longform-article > * {
-    min-width: 0;
+    min-width: 0; 
 }
 .longform-article h3 {
     font-size: 1.5rem;
@@ -561,7 +583,7 @@ body.no-scroll {
 
 /* --- Callout Box (For YouTube links) --- */
 .callout-box {
-    margin: 3rem 0 0 0;
+    margin: 0;
     padding: 2rem;
     border-top: 2px solid var(--color-text);
     border-bottom: 2px solid var(--color-text);
@@ -583,7 +605,7 @@ body.no-scroll {
     margin-top: 1.5rem;
 }
 
-/* --- Inset Box List (the-joon-project.html) --- */
+/* --- Inset Box List --- */
 .inset-list {
     list-style: none;
     padding-left: 0;
@@ -603,7 +625,7 @@ body.no-scroll {
     font-weight: bold;
 }
 
-/* --- Hunate Manifesto Page Specific Styles --- */
+/* --- Hunate Manifesto & Hunateculture Page Styles --- */
 .charter-box {
     border: 1px solid var(--color-border);
     padding: 2rem;
@@ -662,6 +684,14 @@ body.no-scroll {
 }
 .timeline-item p {
     margin: 0.3rem 0 0 0;
+}
+.single-column-narrative {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 
