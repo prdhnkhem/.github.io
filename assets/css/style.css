@@ -517,29 +517,23 @@ body.no-scroll {
     margin-top: auto;
 }
 
-/* --- Long-form Article Styles (khem-story.html) --- */
-/*
-  * BUG FIX: Replaced the old `columns` property with a more stable `grid` layout.
-  * This prevents the content from overflowing horizontally on wider screens
-  * by creating a grid structure that naturally contains the text.
-*/
+/* --- Long-form Article Styles (khem-story.html & hunate.html) --- */
 .longform-article {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
-    grid-auto-flow: dense; /* Allows items to fill gaps */
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
     text-align: justify;
 }
 .longform-article > * {
-    min-width: 0; /* Prevents overflow within grid items */
+    min-width: 0;
 }
 .longform-article h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     border-bottom: 1px solid var(--color-border);
     padding-bottom: 0.5rem;
-    margin-top: 0;
-    grid-column: 1 / -1; /* Makes the heading span all columns */
+    margin: 0 0 1rem 0;
+    grid-column: 1 / -1;
 }
 .longform-article p {
     margin-top: 0;
@@ -561,7 +555,7 @@ body.no-scroll {
     border-left: 3px solid var(--color-border);
     color: var(--color-grey);
     text-align: left;
-    grid-column: span 2; /* Make the quote span two columns for emphasis */
+    grid-column: span 2;
     align-self: center;
 }
 
@@ -609,13 +603,74 @@ body.no-scroll {
     font-weight: bold;
 }
 
+/* --- Hunate Manifesto Page Specific Styles --- */
+.charter-box {
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.charter-box h3 {
+    text-align: center;
+    margin-top: 0;
+}
+.charter-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+.charter-box ul li {
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.charter-box ul li::before {
+    content: '»';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-red);
+    font-weight: bold;
+}
+.timeline {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.timeline-group {
+    margin-bottom: 2rem;
+}
+.timeline-group h4 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--color-grey);
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+.timeline-item {
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--color-accent-red);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.timeline-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.timeline-item strong {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+}
+.timeline-item p {
+    margin: 0.3rem 0 0 0;
+}
+
+
 /* --- Mobile Responsiveness --- */
 @media (max-width: 992px) {
     .site-title { font-size: 2.5rem; }
     .hero-headline { font-size: 2.5rem; }
     .columns-2-sidebar { grid-template-columns: 1fr; }
-    .newspaper-columns { columns: 2; }
-    .longform-article { grid-template-columns: repeat(2, 1fr); }
+    .newspaper-columns, .longform-article { grid-template-columns: repeat(2, 1fr); }
     .top-bar-section span { display: none; }
 }
 @media (max-width: 768px) {
@@ -678,3 +733,4 @@ body.no-scroll {
     .longform-article blockquote { grid-column: span 1; }
     .article-image-float-left { float: none; max-width: 100%; margin: 0 0 1rem 0; }
 }
+
