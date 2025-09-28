@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // --- Theme Switcher Logic ---
+    const lightModeBtn = document.getElementById('theme-toggle-light');
+    const darkModeBtn = document.getElementById('theme-toggle-dark');
+    const body = document.body;
+
+    // Function to apply the saved theme on page load
+    const applySavedTheme = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
+        }
+    };
+
+    // Event listeners for theme toggle buttons
+    if (lightModeBtn && darkModeBtn) {
+        lightModeBtn.addEventListener('click', () => {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+        });
+
+        darkModeBtn.addEventListener('click', () => {
+            body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        });
+    }
+    
+    // Apply theme on initial load
+    applySavedTheme();
+
     // --- Dynamic Dateline and Copyright Year ---
     const datelineElement = document.getElementById('dateline');
     if (datelineElement) {
@@ -20,13 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (menuToggle && mainMenu) {
         menuToggle.addEventListener('click', function() {
             mainMenu.classList.toggle('is-active');
-
-            // Add a class to body to prevent scrolling when menu is open
             document.body.classList.toggle('no-scroll');
-
-            // Update ARIA attribute for accessibility
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             menuToggle.setAttribute('aria-expanded', !isExpanded);
         });
     }
 });
+
