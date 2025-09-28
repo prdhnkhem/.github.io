@@ -625,7 +625,7 @@ body.no-scroll {
     font-weight: bold;
 }
 
-/* --- Hunate Manifesto & Hunateculture Page Styles --- */
+/* --- Manifesto & Hunateculture Styles --- */
 .charter-box {
     border: 1px solid var(--color-border);
     padding: 2rem;
@@ -692,6 +692,51 @@ body.no-scroll {
     font-family: var(--font-serif);
     font-size: 1.2rem;
     line-height: 1.8;
+}
+
+/* --- Becoming Hunatian Page Styles --- */
+.curriculum {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.curriculum-list {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: curriculum-counter;
+}
+.curriculum-list li {
+    counter-increment: curriculum-counter;
+    position: relative;
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
+}
+.curriculum-list li::before {
+    content: counter(curriculum-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 900;
+    background-color: var(--color-off-white-bg);
+    border-right: 1px solid var(--color-border);
+    color: var(--color-accent-red);
+}
+.curriculum-list li strong {
+    display: block;
+    font-size: 1.3rem;
+    font-family: var(--font-serif);
+    margin-bottom: 0.5rem;
+}
+.curriculum-list li p {
+    margin: 0;
 }
 
 
