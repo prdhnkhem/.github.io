@@ -362,7 +362,7 @@ body.no-scroll {
     border: 1px solid var(--color-border);
     padding: 1.5rem;
     background-color: var(--color-background);
-    margin-bottom: 1.5rem; /* Add margin between inset boxes */
+    margin-bottom: 1.5rem;
 }
 .inset-image {
     width: 100%;
@@ -479,7 +479,7 @@ body.no-scroll {
     line-height: 1.8;
 }
 
-/* --- Two-Column Feature Layout (for the-story.html) --- */
+/* --- Two-Column Feature Layout (the-story.html) --- */
 .two-column-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -518,12 +518,20 @@ body.no-scroll {
 }
 
 /* --- Long-form Article Styles (khem-story.html) --- */
+/*
+  * BUG FIX: Replaced the old `columns` property with a more stable `grid` layout.
+  * This prevents the content from overflowing horizontally on wider screens
+  * by creating a grid structure that naturally contains the text.
+*/
 .longform-article {
-    columns: 3;
-    column-gap: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    grid-auto-flow: dense; /* Allows items to fill gaps */
+    gap: 2.5rem;
     text-align: justify;
-    width: 100%;
-    box-sizing: border-box;
+}
+.longform-article > * {
+    min-width: 0; /* Prevents overflow within grid items */
 }
 .longform-article h3 {
     font-size: 1.2rem;
@@ -531,7 +539,7 @@ body.no-scroll {
     border-bottom: 1px solid var(--color-border);
     padding-bottom: 0.5rem;
     margin-top: 0;
-    break-before: column;
+    grid-column: 1 / -1; /* Makes the heading span all columns */
 }
 .longform-article p {
     margin-top: 0;
@@ -552,8 +560,9 @@ body.no-scroll {
     padding: 0 1rem;
     border-left: 3px solid var(--color-border);
     color: var(--color-grey);
-    break-inside: avoid-column;
     text-align: left;
+    grid-column: span 2; /* Make the quote span two columns for emphasis */
+    align-self: center;
 }
 
 /* --- Callout Box (For YouTube links) --- */
@@ -564,7 +573,6 @@ body.no-scroll {
     border-bottom: 2px solid var(--color-text);
     text-align: center;
     background-color: var(--color-off-white-bg);
-    break-before: column;
 }
 .callout-box h4 {
     font-size: 1.5rem;
@@ -606,7 +614,8 @@ body.no-scroll {
     .site-title { font-size: 2.5rem; }
     .hero-headline { font-size: 2.5rem; }
     .columns-2-sidebar { grid-template-columns: 1fr; }
-    .newspaper-columns, .longform-article { columns: 2; }
+    .newspaper-columns { columns: 2; }
+    .longform-article { grid-template-columns: repeat(2, 1fr); }
     .top-bar-section span { display: none; }
 }
 @media (max-width: 768px) {
@@ -665,7 +674,7 @@ body.no-scroll {
         flex-direction: column;
         gap: 0.5rem;
     }
-    .newspaper-columns, .longform-article { columns: 1; }
+    .newspaper-columns, .longform-article { grid-template-columns: 1fr; }
+    .longform-article blockquote { grid-column: span 1; }
     .article-image-float-left { float: none; max-width: 100%; margin: 0 0 1rem 0; }
 }
-
