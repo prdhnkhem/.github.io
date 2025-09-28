@@ -163,3 +163,121 @@ body:not(.dark-mode) #theme-toggle-light { display: none; }
     .site-brand { grid-row: 1; } /* Puts brand on top on mobile */
 }
 
+/* --- Add this to the end of assets/css/style.css, before the @media queries --- */
+
+/* --- Long-form Article Styles (khem-story.html) --- */
+.longform-article {
+    columns: 3;
+    column-gap: 2.5rem;
+    text-align: justify;
+}
+.longform-article h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    break-before: column; /* Start new column with h3 */
+}
+.longform-article p {
+    margin-top: 0;
+}
+.article-image-float-left {
+    width: 100%;
+    height: auto;
+    float: left;
+    margin: 0.3rem 1.5rem 1rem 0;
+    shape-outside: margin-box;
+    max-width: 300px; /* Adjust as needed */
+}
+.longform-article blockquote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    border-left: 3px solid var(--color-border);
+    color: var(--color-grey);
+    break-inside: avoid-column;
+    text-align: left;
+}
+
+/* --- Callout Box (For YouTube links) --- */
+.callout-box {
+    margin: 3rem 0;
+    padding: 2rem;
+    border-top: 2px solid var(--color-text);
+    border-bottom: 2px solid var(--color-text);
+    text-align: center;
+    background-color: var(--color-off-white-bg);
+}
+.callout-box h4 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+.callout-box h4 .fas {
+    color: var(--color-accent-red);
+    margin-right: 0.5rem;
+}
+.callout-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* --- Timeline Section (khem-story.html) --- */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline-category {
+    margin-bottom: 2rem;
+}
+.timeline-category h4 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+.timeline-item {
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--color-border);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px; /* (_border-width / 2) + _circle-width / 2 */
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-grey);
+    border-radius: 50%;
+}
+.timeline-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0;
+}
+.timeline-meta {
+    font-size: 0.9rem;
+    color: var(--color-grey);
+    margin: 0.2rem 0 0.5rem 0;
+}
+.timeline-item p {
+    margin-bottom: 0;
+}
+
+
+/* --- Add to the Mobile Responsiveness @media block --- */
+@media (max-width: 992px) {
+    /* ... existing styles ... */
+    .longform-article { columns: 2; }
+}
+@media (max-width: 768px) {
+    /* ... existing styles ... */
+    .longform-article { columns: 1; }
+    .article-image-float-left { float: none; max-width: 100%; margin: 0 0 1rem 0; }
+}
+
