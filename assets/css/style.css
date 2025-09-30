@@ -329,22 +329,6 @@ body.no-scroll {
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--color-text);
 }
-.newspaper-columns {
-    column-gap: 2rem;
-    text-align: justify;
-}
-.columns-3 { columns: 3; }
-.newspaper-columns p { margin-top: 0; }
-.newspaper-columns blockquote {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.5rem;
-    margin: 1.5rem 0;
-    padding: 0 1rem;
-    border-left: 3px solid var(--color-border);
-    color: var(--color-grey);
-    break-inside: avoid-column;
-}
 .columns-2-sidebar {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -560,14 +544,6 @@ body.no-scroll {
 .longform-article p {
     margin-top: 0;
 }
-.article-image-float-left {
-    width: 100%;
-    height: auto;
-    float: left;
-    margin: 0.3rem 1.5rem 1rem 0;
-    shape-outside: margin-box;
-    max-width: 300px;
-}
 .longform-article blockquote {
     font-family: var(--font-serif);
     font-style: italic;
@@ -581,7 +557,7 @@ body.no-scroll {
     align-self: center;
 }
 
-/* --- Callout Box (For YouTube links) --- */
+/* --- Callout Box --- */
 .callout-box {
     margin: 0;
     padding: 2rem;
@@ -625,7 +601,7 @@ body.no-scroll {
     font-weight: bold;
 }
 
-/* --- Manifesto & Hunateculture Styles --- */
+/* --- Manifesto, Hunateculture, Movement Page Styles --- */
 .charter-box {
     border: 1px solid var(--color-border);
     padding: 2rem;
@@ -694,7 +670,6 @@ body.no-scroll {
     line-height: 1.8;
 }
 
-/* --- Becoming Hunatian Page Styles --- */
 .curriculum {
     max-width: 900px;
     margin: 0 auto;
@@ -739,14 +714,80 @@ body.no-scroll {
     margin: 0;
 }
 
+.story-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+.story-main-column {
+    text-align: justify;
+}
+.story-main-column h3, .story-full-width-section h3 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+.story-main-column p, .story-full-width-section p {
+    margin-top: 0;
+}
+.story-main-column blockquote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.8rem;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    border-left: 3px solid var(--color-border);
+    color: var(--color-grey);
+    text-align: left;
+    max-width: 80%;
+}
+.story-sidebar-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.story-full-width-section {
+    margin-bottom: 3rem;
+    text-align: justify;
+}
+
+/* --- The Movement Page Styles --- */
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.role-card {
+    border: 1px solid var(--color-border);
+    padding: 1.5rem;
+    background: var(--color-background);
+}
+.role-card h4 {
+    font-size: 1.3rem;
+    margin-top: 0;
+    border-bottom: 2px solid var(--color-accent-red);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+.role-call-to-action {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 992px) {
     .site-title { font-size: 2.5rem; }
     .hero-headline { font-size: 2.5rem; }
     .columns-2-sidebar { grid-template-columns: 1fr; }
-    .newspaper-columns, .longform-article { grid-template-columns: repeat(2, 1fr); }
+    .longform-article { grid-template-columns: repeat(2, 1fr); }
     .top-bar-section span { display: none; }
+    .story-grid { grid-template-columns: 1fr; }
+    .story-sidebar-column { grid-row: 1; }
 }
 @media (max-width: 768px) {
     .page-title { font-size: 2.2rem; }
@@ -804,8 +845,9 @@ body.no-scroll {
         flex-direction: column;
         gap: 0.5rem;
     }
-    .newspaper-columns, .longform-article { grid-template-columns: 1fr; }
+    .longform-article { grid-template-columns: 1fr; }
     .longform-article blockquote { grid-column: span 1; }
     .article-image-float-left { float: none; max-width: 100%; margin: 0 0 1rem 0; }
+    .role-grid { grid-template-columns: 1fr; }
 }
 
