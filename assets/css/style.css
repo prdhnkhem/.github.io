@@ -526,40 +526,6 @@ body.no-scroll {
     margin-top: auto;
 }
 
-/* --- Long-form Article Styles --- */
-.longform-article {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    text-align: justify;
-}
-.longform-article > * {
-    min-width: 0; 
-}
-.longform-article h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 0.5rem;
-    margin: 0 0 1rem 0;
-    grid-column: 1 / -1;
-}
-.longform-article p {
-    margin-top: 0;
-}
-.longform-article blockquote {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.8rem;
-    margin: 1.5rem 0;
-    padding: 0 1rem;
-    border-left: 3px solid var(--color-border);
-    color: var(--color-grey);
-    text-align: left;
-    grid-column: span 2;
-    align-self: center;
-}
-
 /* --- Callout Box --- */
 .callout-box {
     margin: 0;
@@ -604,7 +570,7 @@ body.no-scroll {
     font-weight: bold;
 }
 .color-coded-list li::before {
-    content: '■'; /* Square bullet */
+    content: '■';
     font-size: 1.2em;
     line-height: 1;
 }
@@ -615,15 +581,9 @@ body.no-scroll {
 .color-coded-list .zone-blue::before { color: #3498db; }
 
 /* --- Manifesto, Hunateculture, Movement Page Styles --- */
-.charter-box {
-    border: 1px solid var(--color-border);
-    padding: 2rem;
-    max-width: 800px;
+.charter-box, .timeline, .curriculum, .single-column-narrative {
+    max-width: 900px;
     margin: 0 auto;
-}
-.charter-box h3 {
-    text-align: center;
-    margin-top: 0;
 }
 .charter-box ul {
     list-style: none;
@@ -641,16 +601,9 @@ body.no-scroll {
     color: var(--color-accent-red);
     font-weight: bold;
 }
-.timeline {
-    max-width: 900px;
-    margin: 0 auto;
-}
-.timeline-group {
-    margin-bottom: 2rem;
-}
+.timeline-group { margin-bottom: 2rem; }
 .timeline-group h4 {
     font-size: 1rem;
-    text-transform: uppercase;
     color: var(--color-grey);
     letter-spacing: 1px;
     border-bottom: 1px solid var(--color-border);
@@ -671,27 +624,19 @@ body.no-scroll {
     font-family: var(--font-serif);
     font-size: 1.2rem;
 }
-.timeline-item p {
-    margin: 0.3rem 0 0 0;
-}
+.timeline-item p { margin: 0.3rem 0 0 0; }
 .timeline-btn {
     margin-top: 1rem;
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
 }
 .single-column-narrative {
-    max-width: 800px;
-    margin: 0 auto;
     text-align: center;
     font-family: var(--font-serif);
     font-size: 1.2rem;
     line-height: 1.8;
 }
 
-.curriculum {
-    max-width: 900px;
-    margin: 0 auto;
-}
 .curriculum-list {
     list-style: none;
     padding-left: 0;
@@ -728,48 +673,7 @@ body.no-scroll {
     font-family: var(--font-serif);
     margin-bottom: 0.5rem;
 }
-.curriculum-list li p {
-    margin: 0;
-}
-
-.story-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
-.story-main-column {
-    text-align: justify;
-}
-.story-main-column h3, .story-full-width-section h3 {
-    font-size: 1.8rem;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-.story-main-column p, .story-full-width-section p {
-    margin-top: 0;
-}
-.story-main-column blockquote {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.8rem;
-    margin: 1.5rem auto;
-    padding: 0 1rem;
-    border-left: 3px solid var(--color-border);
-    color: var(--color-grey);
-    text-align: left;
-    max-width: 80%;
-}
-.story-sidebar-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-.story-full-width-section {
-    margin-bottom: 3rem;
-    text-align: justify;
-}
+.curriculum-list li p { margin: 0; }
 
 .role-grid {
     display: grid;
@@ -791,13 +695,8 @@ body.no-scroll {
     padding-bottom: 0.5rem;
     display: inline-block;
 }
-.role-card .btn-secondary {
-    margin-top: auto;
-}
-.role-card .social-icons {
-    margin-top: auto;
-    font-size: 1.5rem;
-}
+.role-card .btn-secondary, .role-card .social-icons { margin-top: auto; }
+.role-card .social-icons { font-size: 1.5rem; }
 .role-call-to-action {
     text-align: center;
     font-family: var(--font-serif);
@@ -810,10 +709,9 @@ body.no-scroll {
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
-.qr-code-item {
-    text-align: center;
-}
+.qr-code-item { text-align: center; }
 .qr-code-item img {
     max-width: 200px;
     height: auto;
@@ -825,19 +723,89 @@ body.no-scroll {
     font-family: var(--font-serif);
 }
 
+/* --- Khem Story Page - Dynamic Layout --- */
+.story-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+.story-main-column { text-align: justify; }
+.story-main-column h3, .story-full-width-section h3 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+.story-main-column p, .story-full-width-section p { margin-top: 0; }
+.story-main-column blockquote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.8rem;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    border-left: 3px solid var(--color-border);
+    color: var(--color-grey);
+    text-align: left;
+    max-width: 80%;
+}
+.story-sidebar-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.story-full-width-section {
+    margin-bottom: 3rem;
+    text-align: justify;
+}
+
+/* --- Our Community Hub Page --- */
+.role-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.role-gallery-grid.single-item-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.role-card-item {
+    border: 1px solid var(--color-border);
+    background: var(--color-background);
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.role-icon {
+    font-size: 3rem;
+    color: var(--color-accent-red);
+    margin-bottom: 1rem;
+}
+.role-card-item h4 {
+    font-size: 1.4rem;
+    margin-top: 0;
+}
+.role-card-item p {
+    flex-grow: 1;
+}
+.role-card-item .btn-secondary {
+    margin-top: 1rem;
+}
+
 /* --- Mobile Responsiveness --- */
 @media (max-width: 992px) {
     .site-title { font-size: 2.5rem; }
     .hero-headline { font-size: 2.5rem; }
-    .columns-2-sidebar { grid-template-columns: 1fr; }
-    .longform-article { grid-template-columns: repeat(2, 1fr); }
+    .columns-2-sidebar, .story-grid { grid-template-columns: 1fr; }
     .top-bar-section span { display: none; }
-    .story-grid { grid-template-columns: 1fr; }
     .story-sidebar-column { grid-row: 1; }
+    .role-gallery-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
     .page-title { font-size: 2.2rem; }
-    .two-column-layout, .three-fold-path, .footer-main .container { grid-template-columns: 1fr; }
+    .two-column-layout, .three-fold-path, .footer-main .container, .role-grid { grid-template-columns: 1fr; }
     .main-navigation .container { justify-content: flex-end; }
     .menu-toggle {
         display: block;
@@ -862,9 +830,7 @@ body.no-scroll {
         overflow-y: auto;
         z-index: 999;
     }
-    .main-menu.is-active {
-        display: flex;
-    }
+    .main-menu.is-active { display: flex; }
     .main-menu .menu-item > a {
         color: #fff;
         font-size: 1.5rem;
@@ -883,17 +849,9 @@ body.no-scroll {
         color: #ccc;
         font-size: 1.1rem;
     }
-    .footer-bottom-bar .container {
+    .footer-bottom-bar .container, .header-top-bar .container {
         flex-direction: column;
         gap: 0.5rem;
     }
-    .header-top-bar .container {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .longform-article { grid-template-columns: 1fr; }
-    .longform-article blockquote { grid-column: span 1; }
-    .role-grid { grid-template-columns: 1fr; }
-    .donation-qr-grid { flex-direction: column; align-items: center; }
 }
 
