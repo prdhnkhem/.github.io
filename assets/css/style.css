@@ -603,6 +603,16 @@ body.no-scroll {
     color: var(--color-accent-red);
     font-weight: bold;
 }
+.color-coded-list li::before {
+    content: '■'; /* Square bullet */
+    font-size: 1.2em;
+    line-height: 1;
+}
+.color-coded-list .zone-yellow::before { color: #f1c40f; }
+.color-coded-list .zone-brown::before { color: #8B4513; }
+.color-coded-list .zone-red::before { color: #e74c3c; }
+.color-coded-list .zone-green::before { color: #2ecc71; }
+.color-coded-list .zone-blue::before { color: #3498db; }
 
 /* --- Manifesto, Hunateculture, Movement Page Styles --- */
 .charter-box {
@@ -795,6 +805,26 @@ body.no-scroll {
     font-weight: 700;
 }
 
+.donation-qr-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.qr-code-item {
+    text-align: center;
+}
+.qr-code-item img {
+    max-width: 200px;
+    height: auto;
+    border: 2px solid var(--color-border);
+}
+.qr-code-item strong {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: var(--font-serif);
+}
+
 /* --- Mobile Responsiveness --- */
 @media (max-width: 992px) {
     .site-title { font-size: 2.5rem; }
@@ -864,5 +894,6 @@ body.no-scroll {
     .longform-article { grid-template-columns: 1fr; }
     .longform-article blockquote { grid-column: span 1; }
     .role-grid { grid-template-columns: 1fr; }
+    .donation-qr-grid { flex-direction: column; align-items: center; }
 }
 
