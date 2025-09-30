@@ -55,6 +55,9 @@ a {
 a:hover {
     color: var(--color-accent-red);
 }
+.text-center {
+    text-align: center;
+}
 
 main {
     flex: 1 0 auto;
@@ -378,7 +381,7 @@ body.no-scroll {
 .inset-box h4 { margin: 0; font-size: 1.2rem; }
 .inset-box .inset-title { font-size: 0.9rem; color: var(--color-grey); margin-bottom: 1rem; }
 .btn-secondary {
-    display: block;
+    display: inline-block;
     text-align: center;
     padding: 0.6rem 1rem;
     background-color: transparent;
@@ -661,6 +664,11 @@ body.no-scroll {
 .timeline-item p {
     margin: 0.3rem 0 0 0;
 }
+.timeline-btn {
+    margin-top: 1rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+}
 .single-column-narrative {
     max-width: 800px;
     margin: 0 auto;
@@ -753,7 +761,6 @@ body.no-scroll {
     text-align: justify;
 }
 
-/* --- The Movement Page Styles --- */
 .role-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -764,6 +771,8 @@ body.no-scroll {
     border: 1px solid var(--color-border);
     padding: 1.5rem;
     background: var(--color-background);
+    display: flex;
+    flex-direction: column;
 }
 .role-card h4 {
     font-size: 1.3rem;
@@ -771,6 +780,13 @@ body.no-scroll {
     border-bottom: 2px solid var(--color-accent-red);
     padding-bottom: 0.5rem;
     display: inline-block;
+}
+.role-card .btn-secondary {
+    margin-top: auto;
+}
+.role-card .social-icons {
+    margin-top: auto;
+    font-size: 1.5rem;
 }
 .role-call-to-action {
     text-align: center;
@@ -847,7 +863,6 @@ body.no-scroll {
     }
     .longform-article { grid-template-columns: 1fr; }
     .longform-article blockquote { grid-column: span 1; }
-    .article-image-float-left { float: none; max-width: 100%; margin: 0 0 1rem 0; }
     .role-grid { grid-template-columns: 1fr; }
 }
 
