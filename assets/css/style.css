@@ -724,7 +724,6 @@ body.no-scroll {
     font-family: var(--font-serif);
 }
 
-/* --- Khem Story Page - Dynamic Layout --- */
 .story-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -760,7 +759,6 @@ body.no-scroll {
     text-align: justify;
 }
 
-/* --- Our Community Hub Page --- */
 .role-gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -795,7 +793,7 @@ body.no-scroll {
     margin-top: 1rem;
 }
 
-/* --- Profile Grid (Admins, Engineers, etc.) --- */
+/* --- Community Profile Pages --- */
 .profile-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -826,6 +824,24 @@ body.no-scroll {
     font-size: 0.9rem;
     word-break: break-all;
 }
+.role-definitions-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.role-definition {
+    border-left: 3px solid var(--color-accent-red);
+    padding-left: 1.5rem;
+}
+.role-definition h4 {
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+.role-definition p {
+    margin: 0;
+}
 
 
 /* --- Mobile Responsiveness --- */
@@ -839,7 +855,7 @@ body.no-scroll {
 }
 @media (max-width: 768px) {
     .page-title { font-size: 2.2rem; }
-    .two-column-layout, .three-fold-path, .footer-main .container, .role-grid { grid-template-columns: 1fr; }
+    .two-column-layout, .three-fold-path, .footer-main .container, .role-grid, .role-definitions-list { grid-template-columns: 1fr; }
     .main-navigation .container { justify-content: flex-end; }
     .menu-toggle {
         display: block;
