@@ -548,6 +548,7 @@ body.no-scroll {
     justify-content: center;
     gap: 1rem;
     margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 /* --- Inset Box List --- */
@@ -793,6 +794,39 @@ body.no-scroll {
 .role-card-item .btn-secondary {
     margin-top: 1rem;
 }
+
+/* --- Profile Grid (Admins, Engineers, etc.) --- */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.profile-card {
+    border: 1px solid var(--color-border);
+    background: var(--color-background);
+    text-align: center;
+    padding: 1.5rem;
+}
+.profile-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+.profile-card h4 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+.profile-card .profile-role {
+    font-weight: 700;
+    color: var(--color-grey);
+    margin: 0.2rem 0;
+}
+.profile-card .profile-contact {
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 992px) {
