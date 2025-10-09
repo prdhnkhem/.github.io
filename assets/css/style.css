@@ -793,7 +793,6 @@ body.no-scroll {
     margin-top: 1rem;
 }
 
-/* --- Community Profile Pages --- */
 .profile-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -824,6 +823,7 @@ body.no-scroll {
     font-size: 0.9rem;
     word-break: break-all;
 }
+
 .role-definitions-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -843,6 +843,40 @@ body.no-scroll {
     margin: 0;
 }
 
+/* --- Get Involved Page --- */
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.action-card {
+    border: 1px solid var(--color-border);
+    background: var(--color-background);
+    text-align: center;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.action-icon {
+    font-size: 3rem;
+    color: var(--color-accent-red);
+    margin-bottom: 1.5rem;
+}
+.action-card h3 {
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+.action-card p {
+    flex-grow: 1;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.action-card .btn-primary {
+    margin-top: 1.5rem;
+}
+
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 992px) {
@@ -855,7 +889,7 @@ body.no-scroll {
 }
 @media (max-width: 768px) {
     .page-title { font-size: 2.2rem; }
-    .two-column-layout, .three-fold-path, .footer-main .container, .role-grid, .role-definitions-list { grid-template-columns: 1fr; }
+    .two-column-layout, .three-fold-path, .footer-main .container, .role-grid, .role-definitions-list, .action-grid { grid-template-columns: 1fr; }
     .main-navigation .container { justify-content: flex-end; }
     .menu-toggle {
         display: block;
