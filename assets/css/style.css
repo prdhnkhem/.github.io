@@ -581,7 +581,7 @@ body.no-scroll {
 .color-coded-list .zone-green::before { color: #2ecc71; }
 .color-coded-list .zone-blue::before { color: #3498db; }
 
-/* --- Manifesto, Hunateculture, Movement Page Styles --- */
+/* --- Various Page Styles --- */
 .charter-box, .timeline, .curriculum, .single-column-narrative {
     max-width: 900px;
     margin: 0 auto;
@@ -876,7 +876,6 @@ body.no-scroll {
     margin-top: 1.5rem;
 }
 
-/* --- Join The Team Page --- */
 .opportunity-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -902,6 +901,35 @@ body.no-scroll {
     display: flex;
     gap: 1rem;
     justify-content: center;
+}
+
+/* --- Contact Page Form --- */
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--color-accent-blue);
+    border-color: var(--color-accent-blue);
+}
+.contact-form button {
+    width: 100%;
+    font-size: 1.1rem;
 }
 
 
