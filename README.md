@@ -1,5 +1,3 @@
-START OF README CONTENT
-
 PROJECT NAME
 Khem Raj Pradhan Personal Brand Website
 
@@ -53,5 +51,3 @@ To update your email or physical location, go to the footer section at the botto
 
 PROJECT ETHICS
 This website and the researcher it represents operate outside of mainstream profit-based norms. The goal is balance, truth, and the preservation of future generations.
-
-END OF README CONTENT
