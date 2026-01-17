@@ -1,6 +1,0 @@
-# Allow all web crawlers to access all content
-User-agent: *
-Disallow:
-
-# Point crawlers to the sitemap for a list of all pages
-Sitemap: https://khemrajpradhan.com.np/sitemap.xml
