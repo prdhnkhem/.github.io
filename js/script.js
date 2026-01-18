@@ -1,80 +1,78 @@
-// SERVICE AVAILABILITY STATUS
-// Change the text below to update your schedule across all pages.
 const currentAvailability = "NOW ACCEPTING 2 NEW CLIENTS FOR FEBRUARY";
 
-document.addEventListener(DOMContentLoaded, () => {
+document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. Update Availability Text
-    const statusLabel = document.getElementById(availability-text);
+    updateStatusLabel();
+    initMobileMenu();
+    initBackgroundCanvas();
+    initReviewScrollers();
+    initQRModal();
+});
+
+function updateStatusLabel() {
+    const statusLabel = document.getElementById("availability-text");
     if (statusLabel) {
         statusLabel.innerText = "SYSTEM STATUS: BIAS-FREE OBSERVATION ACTIVE | " + currentAvailability;
     }
+}
 
-    // 2. Digital Vastu: Background Animation
-    initBackgroundAnimation();
-
-    // 3. Transformation Records: Scroller Logic
-    initReviewScrollers();
-
-    // 4. Sincerity Gate: Modal Logic
-    initModalLogic();
-
-    // 5. Mobile Menu Logic
-    const mobileBtn = document.getElementById(mobile-toggle);
-    const navLinks = document.querySelector(.nav-links);
-    if (mobileBtn) {
-        mobileBtn.addEventListener(click, () => {
-            navLinks.classList.toggle(active);
-            mobileBtn.classList.toggle(open);
+function initMobileMenu() {
+    const trigger = document.getElementById("menu-trigger");
+    const nav = document.getElementById("mobile-nav");
+    
+    if (trigger && nav) {
+        trigger.addEventListener("click", () => {
+            nav.classList.toggle("active");
+            trigger.classList.toggle("open");
         });
     }
-});
+}
 
-function initBackgroundAnimation() {
-    const canvas = document.getElementById(digital-vastu-canvas);
+function initBackgroundCanvas() {
+    const canvas = document.getElementById("digital-vastu-canvas");
     if (!canvas) return;
-    const ctx = canvas.getContext(2d);
-    
+    const ctx = canvas.getContext("2d");
+
     let width, height;
-    let particles = [];
+    let shapes = [];
 
     function resize() {
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
     }
 
-    window.addEventListener(resize, resize);
+    window.addEventListener("resize", resize);
     resize();
 
-    class Particle {
+    class GeometricShape {
         constructor() {
             this.x = Math.random() * width;
             this.y = Math.random() * height;
-            this.size = Math.random() * 40 + 20;
-            this.speedX = (Math.random() - 0.5) * 0.5;
-            this.speedY = (Math.random() - 0.5) * 0.5;
+            this.size = Math.random() * 50 + 30;
+            this.speedX = (Math.random() - 0.5) * 0.4;
+            this.speedY = (Math.random() - 0.5) * 0.4;
             this.type = Math.floor(Math.random() * 3); // 0: Hexagon, 1: Triangle, 2: Compass
-            this.rotation = Math.random() * Math.PI * 2;
+            this.angle = Math.random() * Math.PI * 2;
         }
 
         update() {
             this.x += this.speedX;
             this.y += this.speedY;
-            this.rotation += 0.002;
+            this.angle += 0.001;
 
-            if (this.x > width) this.x = 0;
-            if (this.x < 0) this.x = width;
-            if (this.y > height) this.y = 0;
-            if (this.y < 0) this.y = height;
+            if (this.x > width + this.size) this.x = -this.size;
+            if (this.x < -this.size) this.x = width + this.size;
+            if (this.y > height + this.size) this.y = -this.size;
+            if (this.y < -this.size) this.y = height + this.size;
         }
 
         draw() {
-            ctx.strokeStyle = rgba(240, 180, 41, 0.3);
-            ctx.lineWidth = 1;
-            ctx.beginPath();
             ctx.save();
             ctx.translate(this.x, this.y);
-            ctx.rotate(this.rotation);
+            ctx.rotate(this.angle);
+            ctx.strokeStyle = "rgba(240, 180, 41, 0.15)";
+            ctx.lineWidth = 1;
+            ctx.beginPath();
 
             if (this.type === 0) { // Hexagon
                 for (let i = 0; i < 6; i++) {
@@ -84,11 +82,11 @@ function initBackgroundAnimation() {
                 for (let i = 0; i < 3; i++) {
                     ctx.lineTo(this.size * Math.cos(i * 2 * Math.PI / 3), this.size * Math.sin(i * 2 * Math.PI / 3));
                 }
-            } else { // Compass Needle
+            } else { // Compass Marker
                 ctx.moveTo(-this.size, 0);
                 ctx.lineTo(this.size, 0);
-                ctx.moveTo(0, -this.size / 2);
-                ctx.lineTo(0, this.size / 2);
+                ctx.moveTo(0, -this.size);
+                ctx.lineTo(0, this.size);
             }
 
             ctx.closePath();
@@ -97,15 +95,15 @@ function initBackgroundAnimation() {
         }
     }
 
-    for (let i = 0; i < 20; i++) {
-        particles.push(new Particle());
+    for (let i = 0; i < 25; i++) {
+        shapes.push(new GeometricShape());
     }
 
     function animate() {
         ctx.clearRect(0, 0, width, height);
-        particles.forEach(p => {
-            p.update();
-            p.draw();
+        shapes.forEach(s => {
+            s.update();
+            s.draw();
         });
         requestAnimationFrame(animate);
     }
@@ -113,30 +111,35 @@ function initBackgroundAnimation() {
 }
 
 function initReviewScrollers() {
-    // This logic ensures the scrollers loop continuously from right to left
-    const tracks = document.querySelectorAll(.scroller-track);
+    const tracks = document.querySelectorAll(".scroller-track");
     tracks.forEach(track => {
-        const content = track.innerHTML;
-        track.innerHTML = content + content; // Duplicate for seamless loop
+        if (track.children.length > 0) {
+            const content = track.innerHTML;
+            track.innerHTML = content + content; // Duplicate for loop
+        }
     });
 }
 
-function initModalLogic() {
-    const modal = document.getElementById(qr-modal);
-    const openBtn = document.getElementById(open-qr-btn);
-    const closeBtn = document.getElementById(close-qr-btn);
+function initQRModal() {
+    const modal = document.getElementById("qr-modal");
+    const openBtn = document.getElementById("open-qr-btn");
+    const closeBtn = document.getElementById("close-qr-btn");
 
     if (openBtn && modal) {
-        openBtn.onclick = () => modal.style.display = flex;
+        openBtn.addEventListener("click", () => {
+            modal.style.display = "flex";
+        });
     }
 
     if (closeBtn && modal) {
-        closeBtn.onclick = () => modal.style.display = none;
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
     }
 
-    window.onclick = (event) => {
-        if (event.target == modal) {
-            modal.style.display = none;
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
         }
-    };
+    });
 }
