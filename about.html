@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Research Lab | Khem Raj Pradhan</title>
     
-    <meta name="description" content="The lived experience and research methodology of Khem Raj Pradhan. A journey from deconstruction to systemic architecture.">
-    <meta property="og:title" content="Khem Raj Pradhan | Systems Researcher">
-    <meta property="og:description" content="Independent Systems Researcher & Life Architect. Deconstructing failing structures to restore balance.">
-    <meta property="og:image" content="https://khemrajpradhan.com.np/khemrajpradhan.webp">
-    <meta property="og:url" content="https://khemrajpradhan.com.np/">
-    <meta property="og:type" content="website">
+    <meta name="description" content="The lived experience, technical masteries, and philosophy of Khem Raj Pradhan. From 12 years of hostel isolation to systemic architectural research.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=IBM+Plex+Mono&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 <body>
 
@@ -30,250 +25,167 @@
 
     <canvas id="digital-vastu-canvas"></canvas>
 
-    <header class="glass">
-        <div class="container nav-flex">
-            <a href="index.html" class="logo">KHEM RAJ</a>
-            <nav>
+    <header class="glass-header">
+        <div class="container nav-row">
+            <a href="index.html" class="nav-logo">:KHEM RAJ:</a>
+            <nav class="desktop-nav">
                 <ul class="nav-links">
-                    <li><a href="about.html" class="active">Research Lab</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html" class="nav-cta">Booking</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-toggle" id="mobile-toggle">
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <a href="https://forms.gle/oUjcrJpiPMUnJNSy7" target="_blank" class="btn-cta">BOOK APPOINTMENT</a>
+                <button class="burger-menu" id="menu-trigger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- The Researcher's Vow -->
-        <section class="vow container">
-            <div class="vow-box glass">
-                <h1 class="h-lg">The Researcher’s Vow</h1>
-                <p class="display-md">I detatched myself from the profit-based economy and mainstream social norms to become a pure, bias-free observer. I have sacrificed the noise of modern "success" to find the truth hidden in our failing structures. My life is the laboratory.</p>
+        <!-- Narrative: The Origin Story -->
+        <section class="about-hero container">
+            <h1 class="h-xl">Life is the Laboratory.</h1>
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h2 class="mono label">:: NARRATIVE HISTORY ::</h2>
+                    <p class="p-lg">Born from a Newari and Brahmin rebel family in the hills of Bhojpur, Nepal, my path was forged in the tension between tradition and revolution. For 12 years, I lived in the strict isolation of a Christian hostel, far from home, while witnessing the raw brutality of civil war and the reality of family incarceration.</p>
+                    <p class="p-lg">I have lived within Muslim communities, explored the depths of Western culture, and navigated the shadows of chemical addiction. I did not just study these systems; I survived them. I self-healed, evolved, and detatched myself from the profit-based economy to become a bias-free observer of the human condition.</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="image-mask">
+                        <img src="assets/img/khem_raj_pradhan.webp" alt="Khem Raj Pradhan">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- System Log: Timeline of Lived Experience -->
-        <section class="timeline container">
-            <h2 class="section-title">System Log: Lived Experience</h2>
-            <div class="timeline-track">
-                <!-- Log Entry 1 -->
-                <div class="log-entry">
-                    <div class="log-meta mono">1991 — 2011</div>
-                    <div class="log-content">
-                        <h4>Hostel Isolation</h4>
-                        <p>12 years lived in the strict isolation of hostels, far from family. This period developed the internal discipline and the "outsider's lens" required for objective research.</p>
+        <!-- Experience: Industry Lab -->
+        <section class="industry-lab glass-dark">
+            <div class="container">
+                <h2 class="section-title">The Industry Laboratory</h2>
+                <p class="text-center p-md">Mastery through immersion across multiple sectors.</p>
+                
+                <div class="experience-grid mono">
+                    <div class="exp-col">
+                        <h4>[ SERVICE & TECH ]</h4>
+                        <ul>
+                            <li>US-Based Call Centers (Sales & Leads)</li>
+                            <li>5-Star International Resorts</li>
+                            <li>Airline Ticketing & Logistics</li>
+                            <li>Web Development & IT Systems</li>
+                        </ul>
                     </div>
-                </div>
-                <!-- Log Entry 2 -->
-                <div class="log-entry">
-                    <div class="log-meta mono">2012 — 2015</div>
-                    <div class="log-content">
-                        <h4>Observation of Conflict</h4>
-                        <p>Witnessed the raw reality of civil war and the fragility of human governance. Navigated the addiction-loops of youth and chose the path of radical detoxification and self-discovery.</p>
+                    <div class="exp-col">
+                        <h4>[ RAW INDUSTRY ]</h4>
+                        <ul>
+                            <li>Sawmill Industry & Furniture Manufacture</li>
+                            <li>Lumber Harvesting & Logistics</li>
+                            <li>Transport Industry Operations</li>
+                            <li>Eco-Building & Natural Materials</li>
+                        </ul>
                     </div>
-                </div>
-                <!-- Log Entry 3 -->
-                <div class="log-entry">
-                    <div class="log-meta mono">2016 — 2023</div>
-                    <div class="log-content">
-                        <h4>The Multi-Industry Lab</h4>
-                        <p>Immersive research across diverse systems: from the precision of US call centers and 5-star hospitality to the raw labor of Himalayan sawmill industries and remote organic farms in Cambodia.</p>
-                    </div>
-                </div>
-                <!-- Log Entry 4 -->
-                <div class="log-entry">
-                    <div class="log-meta mono">2024 — PRESENT</div>
-                    <div class="log-content">
-                        <h4>Systemic Detachment</h4>
-                        <p>Full exit from profit-oriented survival. Established a private practice to architect regenerative alternatives based on Natural Law and the five pillars of human-nature-tech balance.</p>
+                    <div class="exp-col">
+                        <h4>[ SOCIAL & ECOLOGY ]</h4>
+                        <ul>
+                            <li>School Principalship (Maya Universe)</li>
+                            <li>Orphanage Management (Hamro Bal Ashram)</li>
+                            <li>Permaculture Farm Design</li>
+                            <li>Social Enterprise Incubation</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills Matrix -->
-        <section class="skills glass-dark">
-            <div class="container">
-                <h2 class="h-lg text-center">Technical Masteries</h2>
-                <div class="skills-grid mono">
-                    <div class="skill-category">
-                        <span>[ SYSTEM ANALYTICS ]</span>
-                        <ul>
-                            <li>:: Root Cause Identification</li>
-                            <li>:: Bias-Free Observation</li>
-                            <li>:: Systems Deconstruction</li>
-                            <li>:: SOP Architecture</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <span>[ ANCIENT SCIENCES ]</span>
-                        <ul>
-                            <li>:: Jyotish (Biological Timing)</li>
-                            <li>:: Vastu (Spatial Harmony)</li>
-                            <li>:: Ayurveda (Elemental Health)</li>
-                            <li>:: Yoga Sutra (Mind-Body)</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <span>[ MODERN DESIGN ]</span>
-                        <ul>
-                            <li>:: Permaculture (Ecology)</li>
-                            <li>:: Eco-Architecture (Natural)</li>
-                            <li>:: Appropriate Technology</li>
-                            <li>:: Ethical Business Models</li>
-                        </ul>
-                    </div>
+        <section class="skills container">
+            <h2 class="section-title">Technical Masteries</h2>
+            <div class="skills-wrapper">
+                <div class="skill-category glass">
+                    <h3 class="mono">SYSTEM ANALYTICS</h3>
+                    <p>Root Cause Identification, Bias-Free Observation, SOP Architecture, and System Deconstruction.</p>
+                </div>
+                <div class="skill-category glass">
+                    <h3 class="mono">ANCIENT SCIENCES</h3>
+                    <p>Jyotish (Biological Space Timing), Vastu (Spatial Harmony), Ayurveda (Elemental Health), and Yoga Sutra (Human Science).</p>
+                </div>
+                <div class="skill-category glass">
+                    <h3 class="mono">MODERN DESIGN</h3>
+                    <p>Permaculture Design, Eco-Architecture, Branding, Marketing, Filming, and Digital Systems.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Segmented Review Engine -->
-        <section id="reviews" class="transformation-records container">
-            <h2 class="section-title">Transformation Records</h2>
-            <p class="sub-title">Evidence of systemic redesign across multiple sectors.</p>
-
-            <!-- Segment: Personal -->
-            <div class="review-segment">
-                <h3 class="mono label">:: Personal Impact</h3>
-                <div class="scroller-track" id="scroller-personal">
-                    <!-- Merina -->
-                    <div class="review-card glass" onclick="window.open('https://www.instagram.com/merina.bishwakarma/', '_blank')">
-                        <img src="merinabishwakarma.jpg" class="bw-to-color" alt="Merina">
-                        <p>"Guided me to overcome deep systemic traumas and find mental equilibrium."</p>
-                        <span class="mono">Merina Bishwakarma</span>
-                    </div>
-                    <!-- Prima -->
-                    <div class="review-card glass" onclick="window.open('https://www.instagram.com/primabishwakarma/', '_blank')">
-                        <img src="primabishwakarma.PNG" class="bw-to-color" alt="Prima">
-                        <p>"Instituted daily discipline and a clear visionary roadmap for my life."</p>
-                        <span class="mono">Prima Bishwakarma</span>
-                    </div>
-                    <!-- Ying -->
-                    <div class="review-card glass" onclick="window.open('https://www.instagram.com/ying.yinghe/', '_blank')">
-                        <img src="yingyinghe.jpg" class="bw-to-color" alt="Ying Yinghe">
-                        <p>"Researcher and companion in exploring identity and passion beyond borders."</p>
-                        <span class="mono">Ying Yinghe</span>
-                    </div>
-                    <!-- Anonymous -->
-                    <div class="review-card glass">
-                        <div class="anon-icon"></div>
-                        <p>"A path back from suicidal ideation and addiction toward a purposeful life."</p>
-                        <span class="mono">Anonymous (Crisis Support)</span>
-                    </div>
-                </div>
+        <!-- Philosophy: The Detachment -->
+        <section class="philosophy glass-red">
+            <div class="container max-800 text-center">
+                <h2 class="h-lg">Why I Detached</h2>
+                <p class="p-lg">The modern world is running against nature's flow. We chase fake passions and addictions implanted by manipulative media. I chose to leave the rat race to see the truth as it is—no race, no country, no religion, no side. I am helping others because any problem in the world is our collective cause and effect. We use the same air, water, and land. I sacrifice social norms to protect the future of the human race.</p>
             </div>
+        </section>
 
-            <!-- Segment: Hunate Team -->
-            <div class="review-segment">
-                <h3 class="mono label">:: Hunate Team & Circle</h3>
-                <div class="scroller-track" id="scroller-hunate">
-                    <div class="review-card glass" onclick="window.open('https://thegenmedia.com.np/', '_blank')">
-                        <img src="thegenmedia.jpg" class="bw-to-color" alt="The Gen Media">
-                        <p>"Architected our entire operating system, team rituals, and web presence."</p>
-                        <span class="mono">The Gen Media (Sabin Shrestha)</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Segment: Business -->
-            <div class="review-segment">
-                <h3 class="mono label">:: Business Advisory</h3>
-                <div class="scroller-track" id="scroller-business">
-                    <!-- The Art Cafe -->
-                    <div class="review-card glass" onclick="window.open('https://www.instagram.com/_____theartcafe_____/', '_blank')">
-                        <img src="theartcafe.jpg" class="bw-to-color" alt="The Art Cafe">
-                        <p>"Fused food and art into a single visionary brand through deep design thinking."</p>
-                        <span class="mono">The Art Café</span>
-                    </div>
-                    <!-- Khada Devi -->
-                    <div class="review-card glass">
-                        <img src="khadadevisawmill_furniture.png" class="bw-to-color" alt="Khada Devi">
-                        <p>"Restructured logistics, staff management, and wood processing systems."</p>
-                        <span class="mono">Khada Devi Saw Mill</span>
-                    </div>
-                    <!-- Mery El's -->
-                    <div class="review-card glass" onclick="window.open('https://www.instagram.com/meryels.pinchofstyle/', '_blank')">
-                        <img src="meryelspinchofstyle.jpg" class="bw-to-color" alt="Mery El's">
-                        <p>"Conducted market research and designed our physical and digital store."</p>
-                        <span class="mono">Mery El’s Pinch Of Style</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Segment: NGOs -->
-            <div class="review-segment">
-                <h3 class="mono label">:: Social Impact (NGO)</h3>
-                <div class="scroller-track" id="scroller-ngo">
-                    <!-- Maya Universe -->
-                    <div class="review-card glass" onclick="window.open('https://www.instagram.com/maya.universe/', '_blank')">
-                        <img src="mayauniverseacademyeast.jpg" class="bw-to-color" alt="Maya Universe">
-                        <p>"Led branch operations and volunteer management as School Principal."</p>
-                        <span class="mono">Maya Universe Academy</span>
-                    </div>
-                    <!-- Purba Art Fair -->
-                    <div class="review-card glass" onclick="window.open('https://www.instagram.com/purba_art_fair_and_exhibition/', '_blank')">
-                        <img src="purbaartfare&exhibition.jpg" class="bw-to-color" alt="Purba Art Fair">
-                        <p>"Redesigned the fair to provide equal visibility and respect for all artists."</p>
-                        <span class="mono">Purba Art Fair</span>
-                    </div>
-                    <!-- Hamro Bal Ashram -->
-                    <div class="review-card glass">
-                        <img src="hamrobalashram.jpg" class="bw-to-color" alt="Hamro Bal Ashram">
-                        <p>"Managed mental health routines and timetable planning for the children."</p>
-                        <span class="mono">Hamro Bal Ashram</span>
-                    </div>
+        <!-- Segment: HUNATE Movement -->
+        <section class="hunate-movement container">
+            <div class="hunate-box glass">
+                <h2 class="h-lg">The HUNATE Movement</h2>
+                <p class="p-md">Beyond my private research, I am collecting like-minded individuals to form a team of engineers for a regenerative future. We are building a community where Human, Nature, and Technology exist in perfect harmony.</p>
+                <div class="hunate-links">
+                    <a href="https://www.instagram.com/hunatemovement/" target="_blank" class="btn-gold">Join the Movement</a>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <footer class="glass-dark">
+    <footer class="footer-primary">
         <div class="container footer-grid">
-            <div class="footer-identity">
-                <div class="logo">KHEM RAJ</div>
-                <p class="mono label">Independent Systems Researcher & Life Architect</p>
-                <p class="p-sm">Researching ways to restore balance and harmony among Humanity, Nature, and Technology.</p>
+            <div class="footer-col-main">
+                <div class="footer-logo">:KHEM:</div>
+                <p class="mono p-xs">Independent Systems Researcher & Life Architect</p>
+                <p class="p-xs">Deconstructing failing structures to protect the future.</p>
             </div>
-            <div class="footer-nav">
-                <h4 class="mono">Navigation</h4>
+            <div class="footer-col-nav">
+                <h4 class="mono">LAB MAP</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Research Lab</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Booking</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </div>
-            <div class="footer-legal">
-                <h4 class="mono">Foundations</h4>
+            <div class="footer-col-legal">
+                <h4 class="mono">FOUNDATION</h4>
                 <ul>
                     <li><a href="privacy.html">Privacy Policy</a></li>
                     <li><a href="privacy.html#terms">Terms of Service</a></li>
-                    <li><a href="privacy.html#ethics">Ethics Charter</a></li>
                 </ul>
             </div>
-            <div class="footer-social">
-                <h4 class="mono">Connect</h4>
-                <div class="social-flex">
-                    <a href="https://www.linkedin.com/in/khemrajpradhan-com-np/" target="_blank" class="social-icon" id="icon-li"></a>
-                    <a href="https://www.youtube.com/@khemrajpradhan-com-np" target="_blank" class="social-icon" id="icon-yt"></a>
-                    <a href="https://www.instagram.com/khemrajpradhan.com.np/" target="_blank" class="social-icon" id="icon-ig"></a>
-                    <a href="https://www.tiktok.com/@khemrajpradhan.com.np" target="_blank" class="social-icon" id="icon-tk"></a>
+            <div class="footer-col-social">
+                <h4 class="mono">CONNECT</h4>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/khemrajpradhan-com-np/" target="_blank" class="social-link" id="soc-li"></a>
+                    <a href="https://www.youtube.com/@khemrajpradhan-com-np" target="_blank" class="social-link" id="soc-yt"></a>
+                    <a href="https://www.instagram.com/khemrajpradhan.com.np/" target="_blank" class="social-link" id="soc-ig"></a>
+                    <a href="https://www.tiktok.com/@khemrajpradhan.com.np" target="_blank" class="social-link" id="soc-tk"></a>
+                    <a href="https://www.facebook.com/khemrajpradhan.com.np" target="_blank" class="social-link" id="soc-fb"></a>
+                    <a href="https://x.com/khemrajpradhan_" target="_blank" class="social-link" id="soc-x"></a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p class="mono p-xs">&copy; 2026 KHEM RAJ PRADHAN | BIAS-FREE OBSERVATION ACTIVE</p>
+        <div class="footer-tagline text-center">
+            <span class="mono p-xs">KNOWLEDGE FROM THE PAST :: ARCHITECTING THE FUTURE</span>
         </div>
     </footer>
 
-    <a href="https://wa.me/9779840852582" class="whatsapp-btn" target="_blank">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
+    <a href="https://wa.me/9779840852582" class="wa-float" target="_blank">
+        <div class="wa-inner"></div>
     </a>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
