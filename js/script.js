@@ -1,145 +1,103 @@
 const currentAvailability = "NOW ACCEPTING 2 NEW CLIENTS FOR FEBRUARY";
 
 document.addEventListener("DOMContentLoaded", () => {
-    
-    updateStatusLabel();
-    initMobileMenu();
-    initBackgroundCanvas();
-    initReviewScrollers();
-    initQRModal();
-});
+    // 1. Availability
+    const ticker = document.querySelector(".system-status .mono");
+    if (ticker) ticker.innerText = `SYSTEM STATUS: BIAS-FREE OBSERVATION ACTIVE | ${currentAvailability}`;
 
-function updateStatusLabel() {
-    const statusLabel = document.getElementById("availability-text");
-    if (statusLabel) {
-        statusLabel.innerText = "SYSTEM STATUS: BIAS-FREE OBSERVATION ACTIVE | " + currentAvailability;
-    }
-}
-
-function initMobileMenu() {
-    const trigger = document.getElementById("menu-trigger");
-    const nav = document.getElementById("mobile-nav");
-    
-    if (trigger && nav) {
-        trigger.addEventListener("click", () => {
-            nav.classList.toggle("active");
-            trigger.classList.toggle("open");
+    // 2. Mobile Menu
+    const menuTrigger = document.getElementById("menu-trigger");
+    const mobileNav = document.getElementById("mobile-nav");
+    if (menuTrigger) {
+        menuTrigger.addEventListener("click", () => {
+            mobileNav.classList.toggle("active");
         });
     }
-}
 
-function initBackgroundCanvas() {
-    const canvas = document.getElementById("digital-vastu-canvas");
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    // 3. Background Canvas
+    initCanvas();
 
-    let width, height;
-    let shapes = [];
-
-    function resize() {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-    }
-
-    window.addEventListener("resize", resize);
-    resize();
-
-    class GeometricShape {
-        constructor() {
-            this.x = Math.random() * width;
-            this.y = Math.random() * height;
-            this.size = Math.random() * 50 + 30;
-            this.speedX = (Math.random() - 0.5) * 0.4;
-            this.speedY = (Math.random() - 0.5) * 0.4;
-            this.type = Math.floor(Math.random() * 3); // 0: Hexagon, 1: Triangle, 2: Compass
-            this.angle = Math.random() * Math.PI * 2;
-        }
-
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
-            this.angle += 0.001;
-
-            if (this.x > width + this.size) this.x = -this.size;
-            if (this.x < -this.size) this.x = width + this.size;
-            if (this.y > height + this.size) this.y = -this.size;
-            if (this.y < -this.size) this.y = height + this.size;
-        }
-
-        draw() {
-            ctx.save();
-            ctx.translate(this.x, this.y);
-            ctx.rotate(this.angle);
-            ctx.strokeStyle = "rgba(240, 180, 41, 0.15)";
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-
-            if (this.type === 0) { // Hexagon
-                for (let i = 0; i < 6; i++) {
-                    ctx.lineTo(this.size * Math.cos(i * Math.PI / 3), this.size * Math.sin(i * Math.PI / 3));
-                }
-            } else if (this.type === 1) { // Triangle
-                for (let i = 0; i < 3; i++) {
-                    ctx.lineTo(this.size * Math.cos(i * 2 * Math.PI / 3), this.size * Math.sin(i * 2 * Math.PI / 3));
-                }
-            } else { // Compass Marker
-                ctx.moveTo(-this.size, 0);
-                ctx.lineTo(this.size, 0);
-                ctx.moveTo(0, -this.size);
-                ctx.lineTo(0, this.size);
-            }
-
-            ctx.closePath();
-            ctx.stroke();
-            ctx.restore();
-        }
-    }
-
-    for (let i = 0; i < 25; i++) {
-        shapes.push(new GeometricShape());
-    }
-
-    function animate() {
-        ctx.clearRect(0, 0, width, height);
-        shapes.forEach(s => {
-            s.update();
-            s.draw();
-        });
-        requestAnimationFrame(animate);
-    }
-    animate();
-}
-
-function initReviewScrollers() {
+    // 4. Scroller Loop
     const tracks = document.querySelectorAll(".scroller-track");
     tracks.forEach(track => {
-        if (track.children.length > 0) {
-            const content = track.innerHTML;
-            track.innerHTML = content + content; // Duplicate for loop
-        }
+        track.innerHTML += track.innerHTML; // Double the content for infinite effect
     });
-}
 
-function initQRModal() {
-    const modal = document.getElementById("qr-modal");
+    // 5. Payment Modal Fix
     const openBtn = document.getElementById("open-qr-btn");
+    const modal = document.getElementById("qr-modal");
     const closeBtn = document.getElementById("close-qr-btn");
 
     if (openBtn && modal) {
-        openBtn.addEventListener("click", () => {
+        openBtn.addEventListener("click", (e) => {
+            e.preventDefault();
             modal.style.display = "flex";
         });
     }
 
-    if (closeBtn && modal) {
+    if (closeBtn) {
         closeBtn.addEventListener("click", () => {
             modal.style.display = "none";
         });
     }
 
-    window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+    window.onclick = (event) => {
+        if (event.target === modal) modal.style.display = "none";
+    };
+});
+
+function initCanvas() {
+    const canvas = document.getElementById("digital-vastu-canvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    let width, height;
+
+    const resize = () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    };
+    window.addEventListener("resize", resize);
+    resize();
+
+    const particles = Array.from({ length: 15 }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        size: Math.random() * 80 + 40,
+        type: Math.floor(Math.random() * 3)
+    }));
+
+    function draw() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.strokeStyle = "rgba(240, 180, 41, 0.1)";
+        ctx.lineWidth = 1;
+
+        particles.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+
+            ctx.beginPath();
+            if (p.type === 0) { // Triangle
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p.x + p.size, p.y);
+                ctx.lineTo(p.x + p.size/2, p.y - p.size);
+            } else if (p.type === 1) { // Hexagon
+                for(let i=0; i<6; i++) {
+                    ctx.lineTo(p.x + p.size * Math.cos(i * Math.PI / 3), p.y + p.size * Math.sin(i * Math.PI / 3));
+                }
+            } else { // Compass
+                ctx.moveTo(p.x - p.size, p.y);
+                ctx.lineTo(p.x + p.size, p.y);
+                ctx.moveTo(p.x, p.y - p.size);
+                ctx.lineTo(p.x, p.y + p.size);
+            }
+            ctx.closePath();
+            ctx.stroke();
+        });
+        requestAnimationFrame(draw);
+    }
+    draw();
 }
