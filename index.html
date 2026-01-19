@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khem Raj Pradhan | Systems Researcher & Life Architect</title>
+    <title>Khem Raj Pradhan | Systems Researcher and Life Architect</title>
     
-    <!-- SEO & Social Media Previews -->
-    <meta name="description" content="Independent Systems Researcher & Life Architect. Deconstructing failing personal and organizational systems through a multilens approach.">
+    <meta name="description" content="Independent Systems Researcher and Life Architect. Deconstructing failing structures through the lenses of Space, Earth, Nature, Human Science, and Technology.">
     <meta property="og:title" content="Khem Raj Pradhan | Systems Researcher">
     <meta property="og:description" content="Orientation, Not Promotion. Redesigning human systems for the soul in transition.">
-    <meta property="og:image" content="assets/img/khem_raj_pradhan.webp">
+    <meta property="og:image" content="https://khemrajpradhan.com.np/assets/img/khem_raj_pradhan.webp">
     <meta property="og:url" content="https://khemrajpradhan.com.np/">
     <meta property="og:type" content="website">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=IBM+Plex+Mono&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -23,50 +21,43 @@
 </head>
 <body>
 
-    <!-- Top Ticker -->
     <div class="ticker-wrap">
-        <div class="ticker">
-            <span class="ticker-item ticker-text mono gold-text"></span>
+        <div class="ticker" id="master-ticker">
+            <!-- Populated by JS -->
         </div>
     </div>
 
-    <!-- Header Navigation -->
-    <header>
+    <canvas id="digital-vastu-canvas"></canvas>
+
+    <header class="glass-header">
         <div class="container nav-row">
             <a href="index.html" class="nav-logo">:KHEM RAJ:</a>
             
             <nav class="desktop-nav">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Orientation</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="worldview.html">Worldview</a></li>
-                    <li><a href="experience.html">Experience</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="cases.html">Records</a></li>
-                    <li><a href="lab.html">Lab</a></li>
+                    <li><a href="blog.html" class="blog-box">Blog</a></li>
                 </ul>
             </nav>
 
             <div class="nav-right">
                 <a href="https://forms.gle/oUjcrJpiPMUnJNSy7" target="_blank" class="btn-cta">BOOK APPOINTMENT</a>
-                <button class="burger" id="burger-menu">
-                    <span></span>
-                    <span></span>
+                <button class="burger" id="burger-trigger">
+                    <span class="line"></span>
+                    <span class="line"></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-overlay" id="mobile-overlay">
+    <div class="mobile-overlay" id="mobile-menu">
         <ul class="mobile-links">
-            <li><a href="index.html">Orientation</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="worldview.html">Worldview</a></li>
-            <li><a href="experience.html">Experience</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="cases.html">Records</a></li>
-            <li><a href="lab.html">Lab</a></li>
+            <li><a href="blog.html">Blog</a></li>
         </ul>
     </div>
 
@@ -74,65 +65,138 @@
         <section class="hero container section-spacing">
             <div class="hero-layout">
                 <div class="hero-text">
-                    <h1 class="h-xl">Orientation, Not Promotion.</h1>
-                    <p class="p-lg">Most advice treats symptoms. If your business is failing, you are told to market more. If your body is failing, you are given a pill. If your mind is failing, you are told to think positively.</p>
-                    <p class="p-lg"><strong>I help individuals and organizations stop fixing the surface and start deconstructing the root.</strong></p>
-                    <a href="work-with-me.html" class="btn-boxed">Enter the Research Loop</a>
+                    <h1 class="h-xl">I see the patterns that modern systems are designed to hide.</h1>
+                    <p class="p-lg">From 12 years of hostel isolation to the raw labor of Himalayan sawmill industries, my life has been a multi-industry laboratory. I have navigated the extremes of existence: from 5-star resorts to hitchhiking solo without a single rupee.</p>
+                    <p class="p-lg">I detatched myself from the profit-based economy to become a bias-free observer. I deconstruct failing structures to architect solutions aligned with Natural Law.</p>
+                    <div class="hero-actions">
+                        <a href="about.html" class="btn-boxed">Understand the Journey</a>
+                    </div>
                 </div>
                 <div class="hero-visual">
-                    <img src="assets/img/khem_raj_pradhan.webp" alt="Khem Raj Pradhan" class="hero-img">
+                    <div class="image-mask">
+                        <img src="assets/img/khem_raj_pradhan.webp" alt="Khem Raj Pradhan">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Worldview Summary -->
-        <section class="container section-spacing">
+        <section class="services-context container section-spacing">
             <div class="glass">
-                <h2 class="gold-text h-lg">The Systems Lens</h2>
-                <p class="p-lg">I am an Independent Systems Researcher. I identify the root causes of friction by analyzing the interactions between your Timing, your Environment, and your Tools. I am here to help you stop managing chaos and start redesigning the engine.</p>
+                <h2 class="h-lg gold-text">Why I am here</h2>
+                <p class="p-lg">I help individuals, families, and businesses identify the hidden root causes of their friction. By deconstructing the noise of modern social pressure and addictions, I provide the systemic blueprints required to shift into a regenerative, sustainable, and ethical life.</p>
+                <a href="services.html" class="btn-boxed">Explore Solutions</a>
+            </div>
+        </section>
+
+        <section class="lenses container section-spacing">
+            <div class="text-center">
+                <h2 class="h-lg">Perspectives and lenses I use</h2>
+                <p class="label">:: BRIDGING MODERN AND ANCIENT SCIENCE ::</p>
+            </div>
+            
+            <div class="pillar-grid">
+                <div class="lens-card glass">
+                    <div class="icon-label">/ SPACE</div>
+                    <h3>Space Science (Jyotish)</h3>
+                    <p>Mapping biological timing to exit chaotic cycles.</p>
+                </div>
+                <div class="lens-card glass">
+                    <div class="icon-label">/ EARTH</div>
+                    <h3>Earth Science (Vastu)</h3>
+                    <p>Aligning physical environments to stop energy leaks.</p>
+                </div>
+                <div class="lens-card glass">
+                    <div class="icon-label">/ NATURE</div>
+                    <h3>Nature Science (Ayurveda)</h3>
+                    <p>Using elemental nutrition to heal the vessel.</p>
+                </div>
+                <div class="lens-card glass">
+                    <div class="icon-label">/ HUMAN</div>
+                    <h3>Human Science (Yoga / Mind)</h3>
+                    <p>Mastering conscious and subconscious habits.</p>
+                </div>
+                <div class="lens-card glass">
+                    <div class="icon-label">/ TOOLS</div>
+                    <h3>Tools & Technology</h3>
+                    <p>Transitioning from dopamine loops to tool mastery.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="readiness glass-red section-spacing">
+            <div class="container text-center">
+                <h2 class="h-lg">Are you ready for Transformation?</h2>
+                <p class="p-lg">I only work with individuals and organizations ready for radical truth. Every assessment begins with a commitment deposit.</p>
+                <a href="services.html#tiers" class="btn-boxed-white">Understand the Process</a>
+            </div>
+        </section>
+
+        <section class="reviews container section-spacing">
+            <h2 class="section-title">Transformation Records</h2>
+            <div class="scroller-container">
+                <div class="scroller-track">
+                    <div class="review-card glass">
+                        <img src="assets/review_images/personal/merina_bishwakarma.jpg" class="bw-to-color" alt="Merina">
+                        <p>"Helped overcome deep traumas and regain equilibrium."</p>
+                        <span class="mono">Merina Bishwakarma</span>
+                    </div>
+                    <div class="review-card glass">
+                        <img src="assets/review_images/hunate/the_gen_media.jpg" class="bw-to-color" alt="Sabin">
+                        <p>"Architected our entire OS and team rituals from zero."</p>
+                        <span class="mono">The Gen Media (Sabin Shrestha)</span>
+                    </div>
+                    <div class="review-card glass">
+                        <img src="assets/review_images/business/mery_els_pinch_of_style.jpg" class="bw-to-color" alt="Mery">
+                        <p>"Designed our digital store presence and market research."</p>
+                        <span class="mono">Mery El’s Pinch Of Style</span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Professional Footer -->
-    <footer>
+    <footer class="footer-primary">
         <div class="container footer-grid">
-            <div class="footer-brand">
+            <div class="footer-col-main">
                 <div class="footer-logo">:KHEM:</div>
-                <p class="p-sm">Independent Systems Researcher & Life Architect.<br>Researching ways to restore balance.</p>
+                <p class="gold-text mono">Independent Systems Researcher & Life Architect</p>
+                <p class="p-xs">Researching ways to restore balance and harmony among Humanity, Nature, and Technology.</p>
             </div>
-            
-            <div class="footer-menu">
-                <h4 class="mono">NAVIGATION</h4>
-                <ul class="footer-links">
+            <div class="footer-col-nav">
+                <h4 class="mono">MENU</h4>
+                <ul class="clean-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="lab.html">Lab</a></li>
-                    <li><a href="privacy.html">Privacy & Terms</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </div>
-
-            <div class="footer-social">
+            <div class="footer-col-legal">
+                <h4 class="mono">FOUNDATION</h4>
+                <ul class="clean-list">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="privacy.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-social">
                 <h4 class="mono">CONNECT</h4>
                 <div class="social-icons">
                     <a href="https://linkedin.com/in/khemrpradhan" target="_blank" class="soc-link">LI</a>
                     <a href="https://facebook.com/khemrajpradhan.com.np" target="_blank" class="soc-link">FB</a>
-                    <a href="https://instagram.com/khemrajpradhan.com.np" target="_blank" class="soc-link">IG</a>
+                    <a href="https://instagram.com/khemrajpradhan.com.np/" target="_blank" class="soc-link">IG</a>
                     <a href="https://x.com/khemrajpradhan_" target="_blank" class="soc-link">X</a>
                     <a href="https://youtube.com/@khemrajpradhan-com-np" target="_blank" class="soc-link">YT</a>
                     <a href="https://tiktok.com/@khemrajpradhan.com.np" target="_blank" class="soc-link">TK</a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p class="p-xs mono">© 2026 KHEM RAJ PRADHAN | BIAS-FREE OBSERVATION ACTIVE</p>
+        <div class="footer-tagline text-center">
+            <span class="mono p-xs">KNOWLEDGE FROM THE PAST :: ARCHITECTING THE FUTURE</span>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Icon -->
     <a href="https://wa.me/9779840852582" class="wa-float" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.767 5.767 0 1.267.405 2.436 1.096 3.391L6.444 18.5l3.292-.863c.854.49 1.846.767 2.895.767 3.181 0 5.767-2.586 5.767-5.767 0-3.181-2.586-5.766-5.767-5.766zm3.375 8.203c-.144.406-.833.758-1.148.801-.315.043-.605.105-1.975-.436-1.37-.541-2.254-1.928-2.322-2.02-.068-.092-.544-.725-.544-1.391 0-.666.341-.994.463-1.128.122-.134.269-.168.358-.168.089 0 .179.001.256.005.083.003.193-.031.302.236.113.276.386.939.421 1.011.035.072.058.156.01.251-.048.095-.072.156-.144.239-.072.084-.151.188-.216.251-.072.072-.147.151-.063.295.084.144.376.621.808 1.006.558.496 1.031.65 1.184.726.153.076.242.063.331-.04.089-.104.383-.448.486-.6.103-.153.206-.128.347-.077.141.051.895.422 1.049.499.154.077.256.116.294.181.039.065.039.375-.105.781z"/></svg>
+        <div class="wa-inner"></div>
     </a>
 
     <script src="js/script.js"></script>
