@@ -1,20 +1,22 @@
-// SYSTEM CAPACITY LOGIC
 const currentAvailability = "NOW ACCEPTING 4 RESEARCH ENGAGEMENTS PER MONTH";
-const openPositions = "2 SLOTS REMAINING FOR FEBRUARY";
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Update Ticker Text
-    const tickerItems = document.querySelectorAll(".ticker-text");
-    tickerItems.forEach(item => {
-        item.innerText = `SYSTEM STATUS: BIAS-FREE OBSERVATION ACTIVE | ${currentAvailability} | ${openPositions}`;
-    });
+    // 1. Mobile Menu Logic
+    const burger = document.getElementById("burger-menu");
+    const overlay = document.getElementById("mobile-overlay");
+    const body = document.body;
 
-    // 2. Clone Ticker for Infinite Loop
-    const ticker = document.querySelector(".ticker");
-    if (ticker) {
-        ticker.innerHTML += ticker.innerHTML;
+    if (burger) {
+        burger.addEventListener("click", () => {
+            overlay.classList.toggle("active");
+            body.style.overflow = overlay.classList.contains("active") ? "hidden" : "auto";
+        });
     }
 
-    // 3. Simple Mobile Menu (Placeholder for future Burger logic)
-    console.log("Khem Raj Pradhan OS: Systems Online");
+    // 2. Ticker Sync
+    const tickerText = `SYSTEM STATUS: BIAS-FREE OBSERVATION ACTIVE | ${currentAvailability} | 10 AM — 5 PM NST`;
+    const ticker = document.querySelector(".ticker");
+    if (ticker) {
+        ticker.innerHTML = `<span class="ticker-item mono gold-text">${tickerText}</span>`.repeat(4);
+    }
 });
