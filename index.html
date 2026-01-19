@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khem Raj Pradhan | Orientation</title>
+    <title>Khem Raj Pradhan | Systems Researcher & Life Architect</title>
+    
+    <!-- SEO & Social Media Previews -->
+    <meta name="description" content="Independent Systems Researcher & Life Architect. Deconstructing failing personal and organizational systems through a multilens approach.">
+    <meta property="og:title" content="Khem Raj Pradhan | Systems Researcher">
+    <meta property="og:description" content="Orientation, Not Promotion. Redesigning human systems for the soul in transition.">
+    <meta property="og:image" content="assets/img/khem_raj_pradhan.webp">
+    <meta property="og:url" content="https://khemrajpradhan.com.np/">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=IBM+Plex+Mono&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 <body>
 
+    <!-- Top Ticker -->
     <div class="ticker-wrap">
         <div class="ticker">
             <span class="ticker-item ticker-text mono gold-text"></span>
         </div>
     </div>
 
+    <!-- Header Navigation -->
     <header>
         <div class="container nav-row">
             <a href="index.html" class="nav-logo">:KHEM RAJ:</a>
-            <nav>
+            
+            <nav class="desktop-nav">
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Orientation</a></li>
                     <li><a href="about.html">About</a></li>
@@ -29,14 +44,33 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="cases.html">Records</a></li>
                     <li><a href="lab.html">Lab</a></li>
-                    <li><a href="work-with-me.html">Contact</a></li>
                 </ul>
             </nav>
+
+            <div class="nav-right">
+                <a href="https://forms.gle/oUjcrJpiPMUnJNSy7" target="_blank" class="btn-cta">BOOK APPOINTMENT</a>
+                <button class="burger" id="burger-menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay">
+        <ul class="mobile-links">
+            <li><a href="index.html">Orientation</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="worldview.html">Worldview</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="cases.html">Records</a></li>
+            <li><a href="lab.html">Lab</a></li>
+        </ul>
+    </div>
+
     <main>
-        <!-- Hero: Positioning -->
         <section class="hero container section-spacing">
             <div class="hero-layout">
                 <div class="hero-text">
@@ -55,62 +89,51 @@
         <section class="container section-spacing">
             <div class="glass">
                 <h2 class="gold-text h-lg">The Systems Lens</h2>
-                <p class="p-lg">I am an Independent Systems Researcher. I identify the root causes of friction by analyzing the interactions between your <strong>Timing</strong>, your <strong>Environment</strong>, and your <strong>Tools</strong>. I am here to help you stop managing chaos and start redesigning the engine.</p>
-            </div>
-        </section>
-
-        <!-- What I Work On -->
-        <section class="container section-spacing">
-            <h2 class="section-title">Areas of Intervention</h2>
-            <div class="grid-3">
-                <div class="glass">
-                    <h3 class="mono gold-text">01. Individual</h3>
-                    <p>Deconstructing addiction loops, mental friction, and biological timing for seekers and founders.</p>
-                </div>
-                <div class="glass">
-                    <h3 class="mono gold-text">02. Organizational</h3>
-                    <p>Building ethical OS, SOP architecture, and team rituals for startups and small firms.</p>
-                </div>
-                <div class="glass">
-                    <h3 class="mono gold-text">03. Environmental</h3>
-                    <p>Spatial energy audits (Vastu) and regenerative resource flow (Permaculture).</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Filter: Ideal Audience -->
-        <section class="container section-spacing">
-            <div class="grid-3">
-                <div>
-                    <h4 class="mono gold-text">/ IDEAL FOR</h4>
-                    <p class="p-sm">Founders in transition, individuals at a "zero point," and groups seeking objective, non-mainstream solutions.</p>
-                </div>
-                <div>
-                    <h4 class="mono gold-text">/ NOT FOR</h4>
-                    <p class="p-sm">Those seeking quick fixes, traditional corporate coaching, or anyone unwilling to change their physical environment.</p>
-                </div>
+                <p class="p-lg">I am an Independent Systems Researcher. I identify the root causes of friction by analyzing the interactions between your Timing, your Environment, and your Tools. I am here to help you stop managing chaos and start redesigning the engine.</p>
             </div>
         </section>
     </main>
 
+    <!-- Professional Footer -->
     <footer>
         <div class="container footer-grid">
-            <div>
-                <a href="index.html" class="footer-logo">:KHEM:</a>
-                <p class="p-sm">Independent Systems Researcher & Life Architect. Reseaching ways to restore balance.</p>
+            <div class="footer-brand">
+                <div class="footer-logo">:KHEM:</div>
+                <p class="p-sm">Independent Systems Researcher & Life Architect.<br>Researching ways to restore balance.</p>
             </div>
-            <div>
+            
+            <div class="footer-menu">
                 <h4 class="mono">NAVIGATION</h4>
-                <p class="p-sm"><a href="privacy.html" class="soc-link">Privacy & Terms</a></p>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="lab.html">Lab</a></li>
+                    <li><a href="privacy.html">Privacy & Terms</a></li>
+                </ul>
             </div>
+
             <div class="footer-social">
                 <h4 class="mono">CONNECT</h4>
                 <div class="social-icons">
-                    <a href="https://linkedin.com/in/khemrpradhan" class="soc-link"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                    <a href="https://linkedin.com/in/khemrpradhan" target="_blank" class="soc-link">LI</a>
+                    <a href="https://facebook.com/khemrajpradhan.com.np" target="_blank" class="soc-link">FB</a>
+                    <a href="https://instagram.com/khemrajpradhan.com.np" target="_blank" class="soc-link">IG</a>
+                    <a href="https://x.com/khemrajpradhan_" target="_blank" class="soc-link">X</a>
+                    <a href="https://youtube.com/@khemrajpradhan-com-np" target="_blank" class="soc-link">YT</a>
+                    <a href="https://tiktok.com/@khemrajpradhan.com.np" target="_blank" class="soc-link">TK</a>
                 </div>
             </div>
         </div>
+        <div class="footer-bottom text-center">
+            <p class="p-xs mono">© 2026 KHEM RAJ PRADHAN | BIAS-FREE OBSERVATION ACTIVE</p>
+        </div>
     </footer>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/9779840852582" class="wa-float" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.767 5.767 0 1.267.405 2.436 1.096 3.391L6.444 18.5l3.292-.863c.854.49 1.846.767 2.895.767 3.181 0 5.767-2.586 5.767-5.767 0-3.181-2.586-5.766-5.767-5.766zm3.375 8.203c-.144.406-.833.758-1.148.801-.315.043-.605.105-1.975-.436-1.37-.541-2.254-1.928-2.322-2.02-.068-.092-.544-.725-.544-1.391 0-.666.341-.994.463-1.128.122-.134.269-.168.358-.168.089 0 .179.001.256.005.083.003.193-.031.302.236.113.276.386.939.421 1.011.035.072.058.156.01.251-.048.095-.072.156-.144.239-.072.084-.151.188-.216.251-.072.072-.147.151-.063.295.084.144.376.621.808 1.006.558.496 1.031.65 1.184.726.153.076.242.063.331-.04.089-.104.383-.448.486-.6.103-.153.206-.128.347-.077.141.051.895.422 1.049.499.154.077.256.116.294.181.039.065.039.375-.105.781z"/></svg>
+    </a>
 
     <script src="js/script.js"></script>
 </body>
